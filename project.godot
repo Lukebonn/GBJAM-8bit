@@ -14,10 +14,24 @@ config/name="GBJAM-8bit"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=160
+window/size/viewport_height=144
+
+[layer_names]
+
+2d_physics/layer_1="Fence"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Bullets"
+2d_physics/layer_5="Items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
