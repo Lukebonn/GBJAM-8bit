@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6wpksk73mi8x"]
+
+[node name="First Scene" type="Node2D" unique_id=906174970]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=545724787]
+offset_right = 382.0
+offset_bottom = 186.0
+text = "There's Nothing Here Yet!"
