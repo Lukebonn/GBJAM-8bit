@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bohvbn2p0xrb2"]
+
+[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_e4s1m"]
+[ext_resource type="Resource" uid="uid://d1khwsbgrsksx" path="res://objects/resources/super_health_potion.tres" id="2_e4s1m"]
+
+[node name="Node2D" type="Node2D" unique_id=2111680303]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_e4s1m")
+potion_stats = ExtResource("2_e4s1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]

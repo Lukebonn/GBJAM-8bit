@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://d1khwsbgrsksx"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_n374m"]
+[ext_resource type="Texture2D" uid="uid://dpuhlw0xrx0vw" path="res://temp_art/Potions/potion2 (6).png" id="2_y2jeb"]
+
+[resource]
+script = ExtResource("1_n374m")
+rarity = 1
+ingredient_hierarchy = 2
+name = "Super Health Potion"
+description = "Health Potion + Invisibility Potion "
+sprite = ExtResource("2_y2jeb")
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
