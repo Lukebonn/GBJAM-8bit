@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvjhhk4uiuogw"
-path="res://.godot/imported/text adv.png-dd977a0f61d3a824be7965fe0eb6ae79.ctex"
+uid="uid://chl25xps1dda3"
+path="res://.godot/imported/menu inv slot b.png-8afe1a4fa84ef805d0388b0fbfa20c4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/ui/text adv.png"
-dest_files=["res://.godot/imported/text adv.png-dd977a0f61d3a824be7965fe0eb6ae79.ctex"]
+source_file="res://art/final_art/ui/pause menu/inventory/menu inv slot b.png"
+dest_files=["res://.godot/imported/menu inv slot b.png-8afe1a4fa84ef805d0388b0fbfa20c4c.ctex"]
 
 [params]
 

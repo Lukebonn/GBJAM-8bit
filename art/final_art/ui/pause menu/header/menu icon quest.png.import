@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5r718stk0ife"
-path="res://.godot/imported/menu tab.png-5c1d939b55465ecdbffc5244f5da8438.ctex"
+uid="uid://dxky8ue4llmqa"
+path="res://.godot/imported/menu icon quest.png-8e6e6d82344fae9551569eae16f4739e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/ui/pause menu/header/menu tab.png"
-dest_files=["res://.godot/imported/menu tab.png-5c1d939b55465ecdbffc5244f5da8438.ctex"]
+source_file="res://art/final_art/ui/pause menu/header/menu icon quest.png"
+dest_files=["res://.godot/imported/menu icon quest.png-8e6e6d82344fae9551569eae16f4739e.ctex"]
 
 [params]
 

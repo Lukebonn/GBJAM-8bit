@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy4n785vun5v4"
-path="res://.godot/imported/menu icon recipe.png-06142f75668b4f424a02bb3310a25455.ctex"
+uid="uid://dvjhhk4uiuogw"
+path="res://.godot/imported/text adv.png-64ddc0339d26cffbd9d799fc889d72b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/ui/pause menu/header/menu icon recipe.png"
-dest_files=["res://.godot/imported/menu icon recipe.png-06142f75668b4f424a02bb3310a25455.ctex"]
+source_file="res://art/final_art/ui/text adv.png"
+dest_files=["res://.godot/imported/text adv.png-64ddc0339d26cffbd9d799fc889d72b2.ctex"]
 
 [params]
 

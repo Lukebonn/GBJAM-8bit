@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cxihpbboqwux5"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_lcac8"]
+[ext_resource type="Resource" uid="uid://dl0ap08cvqh4e" path="res://objects/resources/health_potion.tres" id="2_dresl"]
+[ext_resource type="Resource" uid="uid://cq015nuvglp0w" path="res://objects/resources/fire_potion.tres" id="3_8sdt4"]
+[ext_resource type="Resource" uid="uid://668iag3bfa2p" path="res://objects/resources/invisibility_potion.tres" id="4_rjm85"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_k87bn"]
+
+[resource]
+script = ExtResource("5_k87bn")
+recipe_name = "Invisibility Potion"
+recipe_output = ExtResource("4_rjm85")
+recipe_material_array = Array[ExtResource("1_lcac8")]([ExtResource("2_dresl"), ExtResource("3_8sdt4")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

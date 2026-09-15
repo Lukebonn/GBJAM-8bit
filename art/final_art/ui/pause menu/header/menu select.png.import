@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3h5o3wqra7q"
-path="res://.godot/imported/menu inv slot a.png-e01e07d33fbf0cc8500d2029f84c806a.ctex"
+uid="uid://c2g3g2gnag5wd"
+path="res://.godot/imported/menu select.png-2b3afe21e8494d465efd8888bc0b07bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/ui/pause menu/inventory/menu inv slot a.png"
-dest_files=["res://.godot/imported/menu inv slot a.png-e01e07d33fbf0cc8500d2029f84c806a.ctex"]
+source_file="res://art/final_art/ui/pause menu/header/menu select.png"
+dest_files=["res://.godot/imported/menu select.png-2b3afe21e8494d465efd8888bc0b07bc.ctex"]
 
 [params]
 

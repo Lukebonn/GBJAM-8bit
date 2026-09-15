@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0bsy3ufsjh5d"
-path="res://.godot/imported/menu small tabs.png-49e842efc300cc2cbf4dd21dada90a2c.ctex"
+uid="uid://cbqgqxhjyp6w0"
+path="res://.godot/imported/menu arrow r.png-09828aac83eb57cdaadf9a4029e2a3da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/ui/pause menu/menu small tabs.png"
-dest_files=["res://.godot/imported/menu small tabs.png-49e842efc300cc2cbf4dd21dada90a2c.ctex"]
+source_file="res://art/final_art/ui/menu arrow r.png"
+dest_files=["res://.godot/imported/menu arrow r.png-09828aac83eb57cdaadf9a4029e2a3da.ctex"]
 
 [params]
 

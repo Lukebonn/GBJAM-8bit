@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cxlu5hbkm7cpp"]
+
+[ext_resource type="Texture2D" uid="uid://dbt1u4mev1hwj" path="res://art/temp_art/UI/item_slot_default_background.png" id="1_2ohio"]
+[ext_resource type="Script" uid="uid://bijd50h3o1nw0" path="res://UI/Inventory/inventory_slot.gd" id="2_c5hg6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf0od"]
+texture = ExtResource("1_2ohio")
+
+[node name="Slot1" type="Panel" unique_id=1629741074]
+custom_minimum_size = Vector2(18, 18)
+theme_override_styles/panel = SubResource("StyleBoxTexture_qf0od")
+script = ExtResource("2_c5hg6")
