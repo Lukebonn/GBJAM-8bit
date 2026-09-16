@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cftsf8nmwg0i4"]
+
+[ext_resource type="FontFile" uid="uid://5iilwrordjal" path="res://art/temp_art/Font/TLOZ-Links-Awakening.ttf" id="1_lbqto"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=605555251]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1880607012]
+offset_right = 160.0
+offset_bottom = 144.0
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=735843565]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("1_lbqto")
+theme_override_font_sizes/font_size = 5
+text = "Gameboy Controls
+
+D-pad WASD  / ↑↓←→
+A --> J
+B --> K
+start --> ESCs"

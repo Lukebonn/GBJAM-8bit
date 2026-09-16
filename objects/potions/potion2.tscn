@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://4nj4o4mb1tm2"]
+
+[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_6bmhd"]
+[ext_resource type="Resource" uid="uid://668iag3bfa2p" path="res://objects/resources/invisibility_potion.tres" id="2_6bmhd"]
+[ext_resource type="Texture2D" uid="uid://jjrevmmym0qe" path="res://art/temp_art/Potions/8.png" id="3_8mb28"]
+
+[node name="Node2D" type="Node2D" unique_id=153120466]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6bmhd")
+potion_stats = ExtResource("2_6bmhd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8mb28")
+
+[node name="Label" type="Label" parent="." unique_id=1603451411]
+offset_left = 5.9999995
+offset_top = 6.0
+offset_right = 25.0
+offset_bottom = 29.0
+scale = Vector2(0.2, 0.2)
+text = "99"

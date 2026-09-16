@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cpjnwjxvilulc"]
+
+[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_nh0yc"]
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="2_wyy6j"]
+[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="3_tdcet"]
+
+[sub_resource type="Resource" id="Resource_xmfuu"]
+script = ExtResource("2_wyy6j")
+sprite = ExtResource("3_tdcet")
+ingredient_hierarchy = 1
+name = "Health Potion "
+description = "Life Herb + Moon Water + Rabbit Root"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
+
+[node name="Node2D" type="Node2D" unique_id=797666612]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_nh0yc")
+potion_stats = SubResource("Resource_xmfuu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
+position = Vector2(4, 4)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_tdcet")
+
+[node name="Label" type="Label" parent="." unique_id=1319244245]
+offset_left = 5.9999995
+offset_top = 6.0
+offset_right = 25.0
+offset_bottom = 29.0
+scale = Vector2(0.2, 0.2)
+text = "99"

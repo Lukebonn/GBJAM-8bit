@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://oxa1m1qhcbkf"]
+
+[ext_resource type="Script" uid="uid://ctnmhmbwljdy5" path="res://objects/potion_craft_station.gd" id="1_kw2fn"]
+[ext_resource type="Texture2D" uid="uid://ci68o8nsevkba" path="res://art/temp_art/KenneyTinyDungeon/Tiles/tile_0074.png" id="2_jy0cu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7w3vv"]
+radius = 12.0
+
+[node name="PotionCraftStation" type="Area2D" unique_id=966884031]
+script = ExtResource("1_kw2fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156503912]
+shape = SubResource("CircleShape2D_7w3vv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=185805958]
+texture = ExtResource("2_jy0cu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dl0ap08cvqh4e"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_4l8ln"]
-[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://temp_art/Potions/1.png" id="2_ncnk8"]
+[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="2_ncnk8"]
 
 [resource]
 script = ExtResource("1_4l8ln")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dnbu7wdqgbsi6"]
+
+[ext_resource type="FontFile" uid="uid://5iilwrordjal" path="res://art/temp_art/Font/TLOZ-Links-Awakening.ttf" id="1_nw1lt"]
+
+[node name="Credits" type="CanvasLayer" unique_id=238040745]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=36736185]
+offset_right = 160.0
+offset_bottom = 144.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=254468692]
+offset_right = 160.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("1_nw1lt")
+theme_override_font_sizes/font_size = 5
+text = "Luke Bonniwell --> Programmer
+"

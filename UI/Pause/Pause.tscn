@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d0uxfjtwce167"]
+
+[ext_resource type="FontFile" uid="uid://5iilwrordjal" path="res://art/temp_art/Font/TLOZ-Links-Awakening.ttf" id="1_pjo5m"]
+
+[node name="Pause" type="CanvasLayer" unique_id=24034120]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1150848301]
+offset_right = 160.0
+offset_bottom = 144.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1767259065]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 96.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("1_pjo5m")
+theme_override_font_sizes/font_size = 8
+text = "Resume"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=1893805936]
+offset_left = 56.0
+offset_top = 80.0
+offset_right = 96.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("1_pjo5m")
+theme_override_font_sizes/font_size = 8
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="." unique_id=175835592]
+offset_left = 56.0
+offset_top = 104.0
+offset_right = 105.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("1_pjo5m")
+theme_override_font_sizes/font_size = 8
+text = "Credits"
+metadata/_edit_use_anchors_ = true
