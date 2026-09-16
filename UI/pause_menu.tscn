@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://b0ruhqv63h61x"]
+
+[ext_resource type="Script" uid="uid://bojh733loicqd" path="res://Scripts/UI/pause_menu.gd" id="1_03fe5"]
+[ext_resource type="Texture2D" uid="uid://bbsfapi30inhh" path="res://art/final_art/ui/pause menu/header/menu header.png" id="1_jfm1e"]
+[ext_resource type="PackedScene" uid="uid://bum0gw6jd1y80" path="res://scenes/UI/menu_tab.tscn" id="2_03fe5"]
+[ext_resource type="Texture2D" uid="uid://bhqy8md78io8x" path="res://art/final_art/ui/pause menu/header/menu icon inv.png" id="4_xv4gp"]
+[ext_resource type="Texture2D" uid="uid://dxky8ue4llmqa" path="res://art/final_art/ui/pause menu/header/menu icon quest.png" id="5_mxjhc"]
+[ext_resource type="Texture2D" uid="uid://cy4n785vun5v4" path="res://art/final_art/ui/pause menu/header/menu icon recipe.png" id="6_k6dah"]
+[ext_resource type="Texture2D" uid="uid://jssj66j6gay4" path="res://art/final_art/ui/pause menu/header/menu icon set.png" id="7_mexjk"]
+[ext_resource type="Texture2D" uid="uid://c2g3g2gnag5wd" path="res://art/final_art/ui/pause menu/header/menu select.png" id="8_mexjk"]
+[ext_resource type="Texture2D" uid="uid://b08yam8frupoj" path="res://art/final_art/ui/menu rect.png" id="9_fu28r"]
+[ext_resource type="Script" uid="uid://cqcnn1ur08qpy" path="res://Scripts/UI/inventory_screen.gd" id="9_onkq6"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="10_pwekk"]
+[ext_resource type="Texture2D" uid="uid://p3h5o3wqra7q" path="res://art/final_art/ui/pause menu/inventory/menu inv slot a.png" id="11_pwekk"]
+[ext_resource type="Texture2D" uid="uid://chl25xps1dda3" path="res://art/final_art/ui/pause menu/inventory/menu inv slot b.png" id="12_onkq6"]
+[ext_resource type="Script" uid="uid://cbq53javscg62" path="res://Scripts/UI/quest_screen.gd" id="14_7suen"]
+[ext_resource type="FontFile" uid="uid://dgov6lt2otnti" path="res://art/final_art/ZeldaOracles.ttf" id="15_dwxn8"]
+[ext_resource type="PackedScene" uid="uid://58ss4ghv7128" path="res://UI/quest_tab.tscn" id="15_ljfgm"]
+[ext_resource type="Script" uid="uid://7k10vixqgj1w" path="res://Scripts/UI/recipe_screen.gd" id="16_kwemj"]
+[ext_resource type="Texture2D" uid="uid://b7vv8oew4g3f2" path="res://art/final_art/ui/check toggle on.png" id="17_v5kkt"]
+[ext_resource type="Script" uid="uid://y2iybrnm7hrf" path="res://Scripts/UI/settings_screen.gd" id="17_xgiv2"]
+[ext_resource type="Texture2D" uid="uid://c8dr7w16af443" path="res://art/final_art/ui/check toggle off.png" id="18_ei8j6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kwemj"]
+
+[node name="PauseMenu" type="Control" unique_id=253037086 node_paths=PackedStringArray("menu_tabs", "screens")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03fe5")
+menu_tabs = [NodePath("Header/HBoxContainer/MenuTab"), NodePath("Header/HBoxContainer/MenuTab2"), NodePath("Header/HBoxContainer/MenuTab3"), NodePath("Header/HBoxContainer/MenuTab4")]
+screens = [NodePath("Inventory"), NodePath("Quests"), NodePath("Recipes"), NodePath("Settings")]
+metadata/_edit_horizontal_guides_ = [128.0, 48.0, 32.0]
+metadata/_edit_vertical_guides_ = [144.0, 61.0, 71.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=913162283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.89411765, 0.6509804, 1)
+metadata/_edit_lock_ = true
+
+[node name="Header" type="Control" parent="." unique_id=179620888]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeaderDiv" type="TextureRect" parent="Header" unique_id=77913535]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 24.0
+texture = ExtResource("1_jfm1e")
+stretch_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Header" unique_id=1450943604]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 46.0
+offset_bottom = 41.0
+theme_override_constants/separation = 15
+
+[node name="MenuTab" parent="Header/HBoxContainer" unique_id=1300191816 instance=ExtResource("2_03fe5")]
+layout_mode = 2
+icon = ExtResource("4_xv4gp")
+
+[node name="MenuTab2" parent="Header/HBoxContainer" unique_id=1482230390 instance=ExtResource("2_03fe5")]
+layout_mode = 2
+icon = ExtResource("5_mxjhc")
+
+[node name="MenuTab3" parent="Header/HBoxContainer" unique_id=465941415 instance=ExtResource("2_03fe5")]
+layout_mode = 2
+icon = ExtResource("6_k6dah")
+
+[node name="MenuTab4" parent="Header/HBoxContainer" unique_id=441832273 instance=ExtResource("2_03fe5")]
+layout_mode = 2
+icon = ExtResource("7_mexjk")
+
+[node name="TextureRect" type="TextureRect" parent="Header" unique_id=1788262728]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 15.0
+texture = ExtResource("8_mexjk")
+
+[node name="Inventory" type="Control" parent="." unique_id=1306434133 node_paths=PackedStringArray("item_name_label", "inv_slot_a", "inv_slot_b")]
+anchors_preset = 0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 144.0
+script = ExtResource("9_onkq6")
+item_name_label = NodePath("ItemName")
+inv_slot_a = NodePath("SlotA/SlotAMarker")
+inv_slot_b = NodePath("SlotB/SlotBMarker")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Inventory" unique_id=1755206203]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 148.0
+offset_bottom = 108.0
+texture = ExtResource("9_fu28r")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="GridContainer" type="GridContainer" parent="Inventory" unique_id=187008264]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 144.0
+offset_bottom = 104.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 7
+
+[node name="ItemName" type="Label" parent="Inventory" unique_id=1304838185]
+layout_mode = 0
+offset_left = 85.0
+offset_top = -3.0
+offset_right = 160.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("10_pwekk")
+theme_override_font_sizes/font_size = 11
+text = "Item
+Name"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="SlotA" type="TextureRect" parent="Inventory" unique_id=1211311348]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 27.0
+offset_bottom = 17.0
+texture = ExtResource("11_pwekk")
+
+[node name="SlotAMarker" type="Marker2D" parent="Inventory/SlotA" unique_id=920507439]
+position = Vector2(11, 7)
+
+[node name="SlotB" type="TextureRect" parent="Inventory" unique_id=473115118]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 2.0
+offset_right = 59.0
+offset_bottom = 17.0
+texture = ExtResource("12_onkq6")
+
+[node name="SlotBMarker" type="Marker2D" parent="Inventory/SlotB" unique_id=351779926]
+position = Vector2(11, 7)
+
+[node name="Quests" type="Control" parent="." unique_id=1809532262]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("14_7suen")
+
+[node name="TabContainer" type="NinePatchRect" parent="Quests" unique_id=983409718]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 71.0
+offset_bottom = 132.0
+texture = ExtResource("9_fu28r")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="MessageContainer" type="NinePatchRect" parent="Quests" unique_id=18528504]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 30.0
+offset_right = 148.0
+offset_bottom = 132.0
+texture = ExtResource("9_fu28r")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Quests" unique_id=358976293]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 33.0
+offset_right = 67.0
+offset_bottom = 130.0
+theme_override_constants/separation = 15
+
+[node name="QuestTab" parent="Quests/VBoxContainer" unique_id=355040918 instance=ExtResource("15_ljfgm")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Quests" unique_id=587168028]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 32.0
+offset_right = 146.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_pwekk")
+theme_override_font_sizes/font_size = 11
+autowrap_mode = 3
+
+[node name="Recipes" type="Control" parent="." unique_id=752773274]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_kwemj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Recipes" unique_id=1960866648]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 148.0
+offset_bottom = 132.0
+texture = ExtResource("9_fu28r")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Settings" type="Control" parent="." unique_id=1754612273]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_xgiv2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Settings" unique_id=334469750]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 148.0
+offset_bottom = 132.0
+texture = ExtResource("9_fu28r")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/NinePatchRect" unique_id=123589953]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 133.0
+offset_bottom = 100.0
+theme_override_constants/separation = 0
+
+[node name="CheckButton" type="CheckButton" parent="Settings/NinePatchRect/VBoxContainer" unique_id=1481215845]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("15_dwxn8")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kwemj")
+theme_override_icons/checked = ExtResource("17_v5kkt")
+theme_override_icons/unchecked = ExtResource("18_ei8j6")
+text = "Fullscreen"
+
+[node name="Button" type="Button" parent="Settings/NinePatchRect/VBoxContainer" unique_id=1985887770]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("15_dwxn8")
+theme_override_font_sizes/font_size = 10
+text = "Quit Game"
+
+[connection signal="toggled" from="Settings/NinePatchRect/VBoxContainer/CheckButton" to="Settings" method="_on_check_button_toggled"]
+[connection signal="pressed" from="Settings/NinePatchRect/VBoxContainer/Button" to="Settings" method="_on_button_pressed"]
