@@ -18,6 +18,9 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
+window/size/window_width_override=800
+window/size/window_height_override=720
+window/stretch/scale=5.0
 
 [layer_names]
 

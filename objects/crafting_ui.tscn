@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://cbkjxxojnodg2"]
 
 [ext_resource type="Texture2D" uid="uid://jjrevmmym0qe" path="res://art/temp_art/Potions/8.png" id="1_rcjll"]
+[ext_resource type="Script" uid="uid://cyrcas1w1gyf1" path="res://objects/crafting_ui.gd" id="1_thnvu"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="2_xbadq"]
+[ext_resource type="PackedScene" uid="uid://cxlu5hbkm7cpp" path="res://UI/Inventory/inventory_slot.tscn" id="3_5sykh"]
+[ext_resource type="Resource" uid="uid://rlcao5oefxrx" path="res://objects/Recipes/fire_potion_recipe.tres" id="3_q0rma"]
+[ext_resource type="Resource" uid="uid://cxihpbboqwux5" path="res://objects/Recipes/invisibility_potion.tres" id="4_ekpr0"]
+[ext_resource type="Resource" uid="uid://bx26jc3bjsw2a" path="res://objects/Recipes/super_health_potion_recipe.tres" id="5_jeq8v"]
 
 [node name="Crafting UI" type="PanelContainer" unique_id=1787058420]
 anchors_preset = 15
@@ -8,37 +14,44 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_thnvu")
+recipe_array = Array[ExtResource("2_xbadq")]([ExtResource("3_q0rma"), ExtResource("4_ekpr0"), ExtResource("5_jeq8v")])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1741288719]
 layout_mode = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=354473534]
 layout_mode = 2
 alignment = 1
 
 [node name="Tree" type="Tree" parent="MarginContainer/HBoxContainer" unique_id=612381322]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme_override_constants/item_margin = 0
+theme_override_constants/button_margin = 0
+theme_override_font_sizes/font_size = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1249665181]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 46
+theme_override_constants/separation = 3
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1274045721]
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1274045721]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_font_sizes/font_size = 5
 text = "TEST ITEM NAME LABEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=348956464]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=884318442]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(12, 12)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -51,7 +64,51 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer" unique_id=2071999257]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 5
+columns = 3
+
+[node name="Slot1" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1629741074 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot2" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1846510959 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot3" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1917644978 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot4" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1405805082 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot5" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=401713685 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot6" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1787632014 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot7" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=452203094 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot8" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1257495758 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot9" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=1295049445 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot10" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=707362447 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot11" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=2050687468 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="Slot12" parent="MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridContainer" unique_id=162497202 instance=ExtResource("3_5sykh")]
+layout_mode = 2
+
+[node name="CraftBtn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=297301784]
+layout_mode = 2
+theme_override_font_sizes/font_size = 3
+text = "Craft"
+
+[connection signal="cell_selected" from="MarginContainer/HBoxContainer/Tree" to="." method="_on_tree_cell_selected"]

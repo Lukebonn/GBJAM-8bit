@@ -19,7 +19,7 @@ potion_stats = SubResource("Resource_xmfuu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
 position = Vector2(4, 4)
-scale = Vector2(0.09375, 0.09375)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_tdcet")
 
 [node name="Label" type="Label" parent="." unique_id=1319244245]

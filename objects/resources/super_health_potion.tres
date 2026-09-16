@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("1_n374m")
+sprite = ExtResource("2_y2jeb")
 rarity = 1
 ingredient_hierarchy = 2
 name = "Super Health Potion"
 description = "Health Potion + Invisibility Potion "
-sprite = ExtResource("2_y2jeb")
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
