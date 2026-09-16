@@ -15,6 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_thnvu")
+inventory_slot = ExtResource("3_5sykh")
 recipe_array = Array[ExtResource("2_xbadq")]([ExtResource("3_q0rma"), ExtResource("4_ekpr0"), ExtResource("5_jeq8v")])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1741288719]

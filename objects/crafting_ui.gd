@@ -10,13 +10,18 @@ extends PanelContainer
 @onready var texture_rect: TextureRect = %TextureRect
 
 var recipe_material_dictionary : Dictionary = {}
+var player_inventory : InventoryComponent = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	build_recipe_tree()
+	
+func set_player_inventory(new_inventory : InventoryComponent) -> void:
+	player_inventory = new_inventory
 
 #this populates the available recipes you can see
 func build_recipe_tree() -> void:
+	clean_material_window()
 	tree.hide_root = true
 	var tree_root : TreeItem = tree.create_item()
 	
@@ -38,6 +43,8 @@ func _on_tree_cell_selected() -> void:
 			return
 
 func build_recipe_material_window(selected_recipe : ItemRecipe) -> void:
+	clean_material_window()
+	
 	title_label.text = selected_recipe.recipe_output.name
 	texture_rect.texture = selected_recipe.recipe_output.sprite
 	
@@ -46,3 +53,14 @@ func build_recipe_material_window(selected_recipe : ItemRecipe) -> void:
 			recipe_material_dictionary[recipe_material] += 1
 		else:
 			recipe_material_dictionary[recipe_material] = 1
+			
+	for material_key in recipe_material_dictionary:
+		var new_material = inventory_slot.instantiate() as InventorySlot
+		grid_container.add_child(new_material)
+		new_material.set_recipe_item_data(material_key, recipe_material_dictionary[material_key])
+
+func clean_material_window() -> void:
+	recipe_material_dictionary.clear()
+	
+	for child in grid_container.get_children():
+		child.queue_free()
