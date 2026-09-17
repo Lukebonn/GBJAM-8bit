@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://58ss4ghv7128"]
+
+[ext_resource type="Script" uid="uid://8wvgo80ei13h" path="res://Scripts/UI/quest_tab.gd" id="1_mxueq"]
+[ext_resource type="Texture2D" uid="uid://b0bsy3ufsjh5d" path="res://art/final_art/ui/pause menu/menu small tabs.png" id="2_uvloi"]
+[ext_resource type="FontFile" uid="uid://dgov6lt2otnti" path="res://art/final_art/ZeldaOracles.ttf" id="3_gph7q"]
+
+[node name="QuestTab" type="Control" unique_id=355040918]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mxueq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526932769]
+position = Vector2(25.5, 7)
+texture = ExtResource("2_uvloi")
+vframes = 2
+
+[node name="Label" type="Label" parent="." unique_id=1969587152]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("3_gph7q")
+theme_override_font_sizes/font_size = 7
+text = "Quest name"
+vertical_alignment = 2
+clip_text = true
+text_overrun_behavior = 6

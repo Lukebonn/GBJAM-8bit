@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bum0gw6jd1y80"]
+
+[ext_resource type="Texture2D" uid="uid://b5r718stk0ife" path="res://art/final_art/ui/pause menu/header/menu tab.png" id="1_al37l"]
+[ext_resource type="Script" uid="uid://ctw4066bc3smn" path="res://Scripts/UI/menu_tab.gd" id="1_mv2ub"]
+[ext_resource type="Texture2D" uid="uid://bhqy8md78io8x" path="res://art/final_art/ui/pause menu/header/menu icon inv.png" id="2_mv2ub"]
+
+[node name="MenuTab" type="Control" unique_id=1300191816 node_paths=PackedStringArray("tab_spr", "icon_spr")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 16.0
+script = ExtResource("1_mv2ub")
+tab_spr = NodePath("TabSpr")
+icon_spr = NodePath("IconSpr")
+
+[node name="TabSpr" type="Sprite2D" parent="." unique_id=1545761131]
+position = Vector2(7, 7.5)
+texture = ExtResource("1_al37l")
+hframes = 2
+frame = 1
+
+[node name="IconSpr" type="Sprite2D" parent="." unique_id=561460695]
+position = Vector2(7, 12)
+texture = ExtResource("2_mv2ub")
