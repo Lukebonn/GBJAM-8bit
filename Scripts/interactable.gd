@@ -25,12 +25,12 @@ func _unhandled_input(event : InputEvent) -> void:
 func _on_player_enter(body : Node2D) -> void:
 	print("can interact")
 	print(node)
-	if body is Player:
+	if body is PlayerEntity:
 		player = body
 		can_interact = true
 
 func _on_player_exit(body : Node2D) -> void:
 	print("cant interact")
-	if body is Player:
+	if body is PlayerEntity:
 		player = null
 		can_interact = false

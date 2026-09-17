@@ -12,13 +12,15 @@ name = "Health Potion "
 description = "Life Herb + Moon Water + Rabbit Root"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
 
-[node name="Node2D" type="Node2D" unique_id=797666612]
+[sub_resource type="CircleShape2D" id="CircleShape2D_nh0yc"]
+radius = 18.0
+
+[node name="HealthPotion" type="Node2D" unique_id=797666612]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_nh0yc")
 potion_stats = SubResource("Resource_xmfuu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
-position = Vector2(4, 4)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_tdcet")
 
@@ -29,3 +31,10 @@ offset_right = 25.0
 offset_bottom = 29.0
 scale = Vector2(0.2, 0.2)
 text = "99"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=134158238]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=847818728]
+shape = SubResource("CircleShape2D_nh0yc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

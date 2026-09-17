@@ -6,6 +6,7 @@
 
 [node name="Inventory" type="Node2D" unique_id=1314813432]
 script = ExtResource("1_0tksl")
+inventory_slot = ExtResource("2_k5s52")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1417454181]
 offset_right = 40.0
