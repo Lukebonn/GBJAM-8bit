@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b0d3n42osuvky"]
 
-[ext_resource type="Texture2D" uid="uid://ba03prd45w133" path="res://art/final_art/mapsprites/old-gold-kitchen-02.png" id="1_7ilqw"]
+[ext_resource type="Texture2D" uid="uid://ba03prd45w133" path="res://final_art/mapsprites/old-gold-kitchen-02.png" id="1_7ilqw"]
 [ext_resource type="PackedScene" uid="uid://oxa1m1qhcbkf" path="res://objects/potion_craft_station.tscn" id="2_mrp8g"]
+[ext_resource type="PackedScene" uid="uid://cbkjxxojnodg2" path="res://objects/crafting_ui.tscn" id="3_2b6py"]
 
 [node name="Kitchen" type="Node2D" unique_id=1289256332]
 
@@ -11,3 +12,12 @@ texture = ExtResource("1_7ilqw")
 
 [node name="PotionCraftStation" parent="." unique_id=966884031 instance=ExtResource("2_mrp8g")]
 position = Vector2(96, 80)
+
+[node name="UI" type="Node" parent="." unique_id=351846494]
+
+[node name="Crafting UI" parent="UI" unique_id=1787058420 instance=ExtResource("3_2b6py")]
+unique_name_in_owner = true
+offset_left = -76.5
+offset_top = -27.0
+offset_right = -76.5
+offset_bottom = -27.0

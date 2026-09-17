@@ -1,6 +1,8 @@
 class_name CraftingBench
 extends Area2D
 
+@onready var crafting_ui: Crafting_UI = %"Crafting UI"
+
 var is_interactable : bool = false
 
 func _on_body_entered(body: Node2D) -> void:
@@ -15,3 +17,7 @@ func _on_body_exited(body: Node2D) -> void:
 		#print("Player Exited")
 		#is_interactable = false
 	pass
+
+func _unhandled_input(event : InputEvent) -> void:
+	if event.is_action_pressed("GB_SELECT") and is_interactable:
+		crafting_ui.set_player_inventory(player.inventory_component)
