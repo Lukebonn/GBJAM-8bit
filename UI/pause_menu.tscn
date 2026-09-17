@@ -80,14 +80,15 @@ layout_mode = 2
 icon = ExtResource("6_k6dah")
 
 [node name="MenuTab4" parent="Header/HBoxContainer" unique_id=441832273 instance=ExtResource("2_03fe5")]
+visible = false
 layout_mode = 2
 icon = ExtResource("7_mexjk")
 
 [node name="TextureRect" type="TextureRect" parent="Header" unique_id=1788262728]
 layout_mode = 0
-offset_left = 62.0
+offset_left = 47.0
 offset_top = 10.0
-offset_right = 100.0
+offset_right = 85.0
 offset_bottom = 15.0
 texture = ExtResource("8_mexjk")
 
