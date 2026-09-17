@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ccb3gw6tunf1o"]
+
+[ext_resource type="Texture2D" uid="uid://ce8fduicfetru" path="res://art/final_art/ui/textbox.png" id="1_hfdop"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="2_6wktd"]
+
+[node name="Textbox" type="Sprite2D" unique_id=1496281426]
+position = Vector2(80, 28)
+texture = ExtResource("1_hfdop")
+
+[node name="Label" type="Label" parent="." unique_id=195461117]
+offset_left = -64.0
+offset_top = -14.0
+offset_right = 64.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(1, 0.89411765, 0.6509804, 1)
+theme_override_fonts/font = ExtResource("2_6wktd")
+theme_override_font_sizes/font_size = 12
+text = "asdafasdavasdasdccasdascasfasc"
+autowrap_mode = 3
