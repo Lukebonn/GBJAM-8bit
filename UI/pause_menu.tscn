@@ -170,6 +170,7 @@ layout_mode = 2
 texture = ExtResource("14_f6idw")
 
 [node name="ItemName" type="Label" parent="Inventory" unique_id=1304838185]
+visible = false
 layout_mode = 0
 offset_left = 85.0
 offset_top = -3.0

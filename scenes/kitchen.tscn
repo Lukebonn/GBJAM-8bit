@@ -36,31 +36,31 @@ position = Vector2(128, 56)
 [node name="Node" type="Node" parent="." unique_id=142006575]
 
 [node name="HealthPotion" parent="Node" unique_id=797666612 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="HealthPotion2" parent="Node" unique_id=1879218576 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="HealthPotion3" parent="Node" unique_id=1350769545 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="InvisPotion" parent="Node" unique_id=153120466 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="InvisPotion2" parent="Node" unique_id=308395354 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="InvisPotion3" parent="Node" unique_id=591445578 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="SuperHealthPotion" parent="Node" unique_id=2111680303 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="SuperHealthPotion2" parent="Node" unique_id=1527481353 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="SuperHealthPotion3" parent="Node" unique_id=1797885342 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(83, 52)
 
 [node name="theme" type="AudioStreamPlayer2D" parent="." unique_id=1178990755]
 unique_name_in_owner = true
