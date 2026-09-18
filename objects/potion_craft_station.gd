@@ -39,6 +39,7 @@ var recipe3_num : int = 0
 var num_recipe_items : int = 0
 var is_interactable : bool = false
 var recipe_material_dictionary : Dictionary = {}
+#var player : PlayerEntity = null
 
 func _ready() -> void:
 	pass
@@ -56,6 +57,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is PlayerEntity:
 		print("Player Entered")
 		is_interactable = true
+		player = body
 	#pass
 
 func _on_body_exited(body: Node2D) -> void:
@@ -69,7 +71,7 @@ func _unhandled_input(event : InputEvent) -> void:
 	print("button pushed")
 	if event.is_action_pressed("GB_SELECT") and is_interactable:
 		print("button pushed and interactable")
-		if crafting_item_pickup:
+		if crafting_item_pickup and not player.inventory_potion:
 			SignalBus.item_pickup.emit(crafting_item_pickup)
 		else: 
 			if num_recipe_items == 0:
@@ -81,14 +83,13 @@ func _on_item_crafted(item : PotionResource) -> void:
 	clear_recipe_UI()
 	crafting_item_pickup = item
 	item_crafted.show()
-	#panel.bg_color = Color(1, 0, 0) 
+	#panel.bg_color = Color(1, 0, 0)
 	panel.bg_color = Color(34, 139, 34)
 	slot_1.set_recipe_item_data(crafting_item_pickup, 1)
 
 func _on_potion_dropped(item : PotionResource) -> void:
 	if is_interactable:
 		add_recipe_item_UI(item)
-	#sprite_2d_2.texture = null
 
 func _on_potion_pickup(item : PotionResource) -> void:
 	if is_interactable:
@@ -102,7 +103,6 @@ func _on_potion_pickup(item : PotionResource) -> void:
 			label.hide()
 		else:
 			remove_recipe_item_UI(item)
-			
 
 func add_recipe_item_UI(item : PotionResource) -> void:
 	if num_recipe_items == 0:
