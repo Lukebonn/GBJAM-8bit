@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var speed = 50
+var inventory_potion : PotionResource = null
 var input_dir = Vector2(0,0)
 var PreviousDirection = ""
 
@@ -14,6 +15,7 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
 	SignalBus.item_pickup.connect(_on_potion_pickup)
 	SignalBus.item_dropped.connect(_on_potion_dropped)
+	sprite_2d.texture = null
 
 func _process(delta: float) -> void:
 	move_and_slide();
@@ -22,7 +24,7 @@ func _process(delta: float) -> void:
 
 func player_movement():
 	input_dir = Input.get_vector("left", "right", "up", "down")
-	velocity = input_dir * speed
+	velocity = input_dir * 50
 
 func player_rotate():
 	if input_dir == Vector2(0, 1):
@@ -49,6 +51,7 @@ func player_rotate():
 
 func _on_potion_pickup(item : PotionResource) -> void:
 	sprite_2d.texture = item.sprite
+	inventory_potion = item
 
 func _on_potion_dropped(item : PotionResource) -> void:
 	sprite_2d.texture = null

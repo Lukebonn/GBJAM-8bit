@@ -32,7 +32,8 @@ func set_position_in_slot(slot_size: Vector2) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	inventory.add_inventory_item(potion_stats)
+	#inventory.add_inventory_item(potion_stats)
+	SignalBus.item_pickup.emit(potion_stats)
 	sprite_2d.hide()
 	#print(inventory.get_inventory_contents())
 	collision_shape_2d.set_deferred("disabled", true)

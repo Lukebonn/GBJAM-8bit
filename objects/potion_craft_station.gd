@@ -66,9 +66,16 @@ func _on_body_exited(body: Node2D) -> void:
 	#pass
 
 func _unhandled_input(event : InputEvent) -> void:
+	print("button pushed")
 	if event.is_action_pressed("GB_SELECT") and is_interactable:
+		print("button pushed and interactable")
 		if crafting_item_pickup:
 			SignalBus.item_pickup.emit(crafting_item_pickup)
+		else: 
+			if num_recipe_items == 0:
+				print("no items to pickup")
+			elif num_recipe_items == 1:
+				SignalBus.item_pickup
 
 func _on_item_crafted(item : PotionResource) -> void:
 	clear_recipe_UI()

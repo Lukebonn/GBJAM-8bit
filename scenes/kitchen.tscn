@@ -41,28 +41,28 @@ visible = false
 position = Vector2(80, 48)
 
 [node name="HealthPotion2" parent="PotionPickups" unique_id=1879218576 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(128, 104)
 
 [node name="HealthPotion3" parent="PotionPickups" unique_id=1350769545 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="InvisPotion" parent="PotionPickups" unique_id=153120466 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="InvisPotion2" parent="PotionPickups" unique_id=308395354 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="InvisPotion3" parent="PotionPickups" unique_id=591445578 instance=ExtResource("7_mwmjw")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="SuperHealthPotion" parent="PotionPickups" unique_id=2111680303 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="SuperHealthPotion2" parent="PotionPickups" unique_id=1527481353 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="SuperHealthPotion3" parent="PotionPickups" unique_id=1797885342 instance=ExtResource("8_cwf2y")]
-position = Vector2(80, 48)
+position = Vector2(40, 56)
 
 [node name="theme" type="AudioStreamPlayer2D" parent="." unique_id=1178990755]
 unique_name_in_owner = true
