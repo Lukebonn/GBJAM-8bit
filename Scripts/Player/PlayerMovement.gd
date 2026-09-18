@@ -1,7 +1,10 @@
 class_name PlayerEntity
 extends CharacterBody2D
 
-#OH THANK GOD
+#OH THANK GOD 
+#-- if you can read this message you're cool
+
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var speed = 50
 var input_dir = Vector2(0,0)
@@ -9,6 +12,8 @@ var PreviousDirection = ""
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
+	SignalBus.item_pickup.connect(_on_potion_pickup)
+	SignalBus.item_dropped.connect(_on_potion_dropped)
 
 func _process(delta: float) -> void:
 	move_and_slide();
@@ -41,3 +46,9 @@ func player_rotate():
 			$AnimatedSprite2D.play("Idle Right");
 		else:
 			$AnimatedSprite2D.play("Idle");
+
+func _on_potion_pickup(item : PotionResource) -> void:
+	sprite_2d.texture = item.sprite
+
+func _on_potion_dropped(item : PotionResource) -> void:
+	sprite_2d.texture = null

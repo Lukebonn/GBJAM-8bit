@@ -2,18 +2,103 @@
 
 [ext_resource type="Script" uid="uid://ctnmhmbwljdy5" path="res://objects/potion_craft_station.gd" id="1_kw2fn"]
 [ext_resource type="Texture2D" uid="uid://ci68o8nsevkba" path="res://art/temp_art/KenneyTinyDungeon/Tiles/tile_0074.png" id="2_jy0cu"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="3_7w3vv"]
+[ext_resource type="PackedScene" uid="uid://cxlu5hbkm7cpp" path="res://UI/Inventory/inventory_slot.tscn" id="4_7w3vv"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7w3vv"]
-radius = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w3vv"]
+size = Vector2(23, 36)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7w3vv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f58w"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="PotionCraftStation" type="Area2D" unique_id=966884031]
 script = ExtResource("1_kw2fn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156503912]
-shape = SubResource("CircleShape2D_7w3vv")
+position = Vector2(0.5, -6)
+shape = SubResource("RectangleShape2D_7w3vv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=185805958]
 texture = ExtResource("2_jy0cu")
+
+[node name="Label" type="Label" parent="." unique_id=1999802068]
+offset_left = -48.0
+offset_top = 6.0
+offset_right = 135.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.78826416, 0, 0.08031102, 1)
+theme_override_fonts/font = ExtResource("3_7w3vv")
+theme_override_font_sizes/font_size = 7
+text = "Not enough ingredients"
+
+[node name="ItemCrafted" type="CanvasLayer" parent="." unique_id=143678723]
+visible = false
+
+[node name="Panel" type="Panel" parent="ItemCrafted" unique_id=149769469]
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 10.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7w3vv")
+
+[node name="Slot1" parent="ItemCrafted" unique_id=1629741074 instance=ExtResource("4_7w3vv")]
+
+[node name="OneIngredientUI" type="CanvasLayer" parent="." unique_id=162201243]
+visible = false
+
+[node name="Panel2" type="Panel" parent="OneIngredientUI" unique_id=684221105]
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 10.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
+
+[node name="Slot2" parent="OneIngredientUI" unique_id=2141691236 instance=ExtResource("4_7w3vv")]
+
+[node name="TwoIngredientUI" type="CanvasLayer" parent="." unique_id=1798651957]
+visible = false
+
+[node name="Panel2" type="Panel" parent="TwoIngredientUI" unique_id=285811047]
+offset_left = -12.0
+offset_top = -23.0
+offset_right = 13.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
+
+[node name="Slot3" parent="TwoIngredientUI" unique_id=115892119 instance=ExtResource("4_7w3vv")]
+
+[node name="Slot4" parent="TwoIngredientUI" unique_id=1192700687 instance=ExtResource("4_7w3vv")]
+
+[node name="ThreeIngredientUI" type="CanvasLayer" parent="." unique_id=220556398]
+visible = false
+
+[node name="Panel2" type="Panel" parent="ThreeIngredientUI" unique_id=157668829]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = -23.0
+offset_right = -65.0
+offset_bottom = -8.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
+
+[node name="Slot5" parent="ThreeIngredientUI" unique_id=1250574718 instance=ExtResource("4_7w3vv")]
+
+[node name="Slot6" parent="ThreeIngredientUI" unique_id=536104633 instance=ExtResource("4_7w3vv")]
+
+[node name="Slot7" parent="ThreeIngredientUI" unique_id=601805661 instance=ExtResource("4_7w3vv")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -57,14 +57,14 @@ func build_recipe_material_window(selected_recipe : ItemRecipe) -> void:
 	title_label.text = selected_recipe.recipe_output.name
 	texture_rect.texture = selected_recipe.recipe_output.sprite
 	
-	#sets the label on each recipe material of how much of each is required
+	#builds the recipe_material_dictionary
 	for recipe_material in selected_recipe.recipe_material_array:
 		if recipe_material_dictionary.has(recipe_material):
 			recipe_material_dictionary[recipe_material] += 1
 		else:
 			recipe_material_dictionary[recipe_material] = 1
 	
-	
+	#builds the viewport that shows potions and number of potions per
 	for material_key in recipe_material_dictionary:
 		var new_material = inventory_slot.instantiate() as InventorySlot
 		grid_container.add_child(new_material)
@@ -108,6 +108,7 @@ func _on_craft_btn_button_down() -> void:
 		player_inventory.remove_inventory_item(recipe_material, recipe_material_dictionary[recipe_material])
 		#pass
 	
-	player_inventory.add_inventory_item(selected_recipe.recipe_output)
+	SignalBus.item_crafted.emit(selected_recipe.recipe_output)
+	#player_inventory.add_inventory_item(selected_recipe.recipe_output)
 	
 	check_recipe_craftable()

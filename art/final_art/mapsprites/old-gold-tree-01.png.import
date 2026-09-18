@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciuv2vbftcepq"
-path="res://.godot/imported/old-gold-kitchen-01.png-38a2daa0744f31fa5a08bfb4ba63b2b7.ctex"
+uid="uid://ekfddr54xv03"
+path="res://.godot/imported/old-gold-tree-01.png-817bf5d0aab28f842acd9eaf08689a49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://final_art/mapsprites/old-gold-kitchen-01.png"
-dest_files=["res://.godot/imported/old-gold-kitchen-01.png-38a2daa0744f31fa5a08bfb4ba63b2b7.ctex"]
+source_file="res://art/final_art/mapsprites/old-gold-tree-01.png"
+dest_files=["res://.godot/imported/old-gold-tree-01.png-817bf5d0aab28f842acd9eaf08689a49.ctex"]
 
 [params]
 

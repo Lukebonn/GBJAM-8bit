@@ -25,3 +25,13 @@ func decrease_item_quantity(amount_to_remove):
 	label.text = str(item_quantity)
 	if item_quantity == 0:
 		queue_free()
+
+
+func _on_button_pressed() -> void:
+	if (potion_held):
+		SignalBus.emit(potion_held)
+	else: 
+		print("no potion in this slot for some reason. I didn't think empty inventory_slots could exist.")
+
+func destroy() -> void:
+	queue_free()
