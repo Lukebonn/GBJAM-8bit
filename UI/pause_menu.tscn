@@ -14,12 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://iidx7x3a00nn" path="res://UI/inv_slot.tscn" id="10_y6gxk"]
 [ext_resource type="Texture2D" uid="uid://cd1103v6yp1pk" path="res://art/final_art/ui/pause menu/inventory/menu cursor.png" id="11_f6idw"]
 [ext_resource type="Texture2D" uid="uid://p3h5o3wqra7q" path="res://art/final_art/ui/pause menu/inventory/menu inv slot a.png" id="11_pwekk"]
-[ext_resource type="Texture2D" uid="uid://cpf2g70fskx" path="res://art/final_art/item icons/old-gold-fireroot.png" id="11_sa73n"]
 [ext_resource type="Texture2D" uid="uid://chl25xps1dda3" path="res://art/final_art/ui/pause menu/inventory/menu inv slot b.png" id="12_onkq6"]
-[ext_resource type="Texture2D" uid="uid://dsqqepfesw781" path="res://art/final_art/item icons/old-gold-lifeherb.png" id="12_tqnyd"]
-[ext_resource type="Texture2D" uid="uid://d4m6c64c62b7x" path="res://art/final_art/item icons/old-gold-moonwater.png" id="13_y6gxk"]
 [ext_resource type="Script" uid="uid://cbq53javscg62" path="res://Scripts/UI/quest_screen.gd" id="14_7suen"]
-[ext_resource type="Texture2D" uid="uid://dxd11e5yqw5ju" path="res://art/final_art/item icons/old-gold-shroombell.png" id="14_f6idw"]
 [ext_resource type="FontFile" uid="uid://dgov6lt2otnti" path="res://art/final_art/ZeldaOracles.ttf" id="15_dwxn8"]
 [ext_resource type="PackedScene" uid="uid://58ss4ghv7128" path="res://UI/quest_tab.tscn" id="15_ljfgm"]
 [ext_resource type="Script" uid="uid://7k10vixqgj1w" path="res://Scripts/UI/recipe_screen.gd" id="16_kwemj"]
@@ -120,14 +116,15 @@ offset_right = 85.0
 offset_bottom = 15.0
 texture = ExtResource("8_mexjk")
 
-[node name="Inventory" type="Control" parent="." unique_id=1306434133 node_paths=PackedStringArray("cursor")]
+[node name="Inventory" type="Control" parent="." unique_id=1306434133 node_paths=PackedStringArray("menu", "cursor")]
 anchors_preset = 0
 offset_top = 24.0
 offset_right = 160.0
 offset_bottom = 144.0
 script = ExtResource("9_onkq6")
+menu = NodePath("..")
 inventory_slot = ExtResource("10_y6gxk")
-cursor = NodePath("../Cursor")
+cursor = NodePath("Cursor")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Inventory" unique_id=1755206203]
 layout_mode = 0
@@ -152,23 +149,6 @@ theme_override_constants/h_separation = -1
 theme_override_constants/v_separation = -1
 columns = 7
 
-[node name="ItemContainer" type="TextureRect" parent="Inventory/GridContainer" unique_id=1640374894]
-layout_mode = 2
-texture = ExtResource("11_sa73n")
-
-[node name="TextureRect2" type="TextureRect" parent="Inventory/GridContainer" unique_id=1979586989]
-layout_mode = 2
-texture = ExtResource("12_tqnyd")
-
-[node name="TextureRect3" type="TextureRect" parent="Inventory/GridContainer" unique_id=647660835]
-layout_mode = 2
-texture = ExtResource("13_y6gxk")
-
-[node name="TextureRect4" type="TextureRect" parent="Inventory/GridContainer" unique_id=1016421195]
-process_mode = 3
-layout_mode = 2
-texture = ExtResource("14_f6idw")
-
 [node name="ItemName" type="Label" parent="Inventory" unique_id=1304838185]
 visible = false
 layout_mode = 0
@@ -184,6 +164,14 @@ text = "Item
 Name"
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="Cursor" type="AnimatedSprite2D" parent="Inventory" unique_id=1495557659]
+position = Vector2(16, 24)
+sprite_frames = SubResource("SpriteFrames_g23cy")
+autoplay = "default"
+frame = 1
+frame_progress = 0.42237616
+offset = Vector2(8, 8)
 
 [node name="SlotA" type="TextureRect" parent="Inventory" unique_id=1211311348]
 layout_mode = 0
@@ -206,15 +194,6 @@ texture = ExtResource("12_onkq6")
 
 [node name="SlotBMarker" type="Marker2D" parent="Inventory/SlotB" unique_id=351779926]
 position = Vector2(3, -1)
-
-[node name="Cursor" type="AnimatedSprite2D" parent="." unique_id=1495557659]
-z_index = 1
-position = Vector2(16, 48)
-sprite_frames = SubResource("SpriteFrames_g23cy")
-autoplay = "default"
-frame = 1
-frame_progress = 0.42237616
-offset = Vector2(8, 8)
 
 [node name="Quests" type="Control" parent="." unique_id=1809532262]
 visible = false

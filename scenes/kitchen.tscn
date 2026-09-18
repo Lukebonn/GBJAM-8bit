@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dsqoug05lldhd" path="res://Scripts/Player/player.tscn" id="4_bems3"]
 [ext_resource type="PackedScene" uid="uid://ch6uotmy1wrxf" path="res://UI/Inventory/inventory.tscn" id="4_v3ycp"]
 [ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion1.tscn" id="6_ibrlr"]
+[ext_resource type="PackedScene" uid="uid://b0ruhqv63h61x" path="res://UI/pause_menu.tscn" id="6_vpxcu"]
 [ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_mwmjw"]
 [ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_cwf2y"]
 [ext_resource type="AudioStream" uid="uid://csse8xrm5xkw2" path="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3" id="9_mwmjw"]
@@ -29,6 +30,9 @@ visible = false
 
 [node name="Inventory" parent="UI" unique_id=1314813432 instance=ExtResource("4_v3ycp")]
 visible = false
+
+[node name="PauseMenu" parent="UI" unique_id=253037086 node_paths=PackedStringArray("inv") instance=ExtResource("6_vpxcu")]
+inv = NodePath("../Inventory")
 
 [node name="Player" parent="." unique_id=1247013026 instance=ExtResource("4_bems3")]
 position = Vector2(128, 56)

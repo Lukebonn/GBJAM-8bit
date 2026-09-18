@@ -1,5 +1,7 @@
 extends Control
 
+@export var inv : InventoryComponent
+
 @export var menu_tabs : Array[MenuTab]
 @export var screens : Array[Control]
 

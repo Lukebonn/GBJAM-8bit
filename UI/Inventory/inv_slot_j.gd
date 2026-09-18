@@ -4,7 +4,7 @@ extends TextureRect
 #@onready var sprite_2d : Sprite2D = $Sprite2D
 @onready var label : Label = $Label
 
-var potion_held : PotionResource
+@export var potion_held : PotionResource
 var item_quantity = 0
 
 func _ready() -> void:
