@@ -2,13 +2,19 @@ class_name PlayerEntity
 extends CharacterBody2D
 
 #OH THANK GOD
-
 @export var speed = 50
 var input_dir = Vector2(0,0)
 var PreviousDirection = ""
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+	
+func _on_spawn(spawn_position: Vector2, direction: String):
+	global_position = spawn_position
+	$AnimatedSprite2D.play("Walk " + direction)
+	
 
 func _process(delta: float) -> void:
 	move_and_slide();
