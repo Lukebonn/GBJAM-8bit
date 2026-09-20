@@ -24,6 +24,13 @@ func _ready() -> void:
 	SignalBus.item_pickup.connect(_on_potion_pickup)
 	SignalBus.item_dropped.connect(_on_potion_dropped)
 	sprite_2d.texture = null
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+	
+func _on_spawn(spawn_position: Vector2, direction: String):
+	global_position = spawn_position
+	$AnimatedSprite2D.play("Walk " + direction)
+	
 
 func _process(delta: float) -> void:
 	move_and_slide();

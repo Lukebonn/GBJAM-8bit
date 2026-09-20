@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*uid://chh2ldlh7iufq"
+Transition="*uid://cja1yb554ytu5"
+NavigationManager="*uid://c11y7tilampyg"
 
 [display]
 

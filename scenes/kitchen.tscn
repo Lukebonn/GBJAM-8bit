@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_mwmjw"]
 [ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_cwf2y"]
 [ext_resource type="AudioStream" uid="uid://csse8xrm5xkw2" path="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3" id="9_mwmjw"]
+[ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="11_vpxcu"]
 [ext_resource type="PackedScene" uid="uid://bxva2wu42ture" path="res://objects/inventory_stash_station.tscn" id="10_cwf2y"]
 [ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="11_ktc20"]
 [ext_resource type="Resource" uid="uid://rlcao5oefxrx" path="res://objects/Recipes/fire_potion_recipe.tres" id="12_bs8bs"]
@@ -151,3 +152,24 @@ offset_bottom = 74.0
 metadata/_edit_use_anchors_ = true
 
 [editable path="Stations/PotionCraftStation"]
+[node name="Doors" type="Node" parent="." unique_id=2074049798]
+
+[node name="Door_NE" parent="Doors" unique_id=1068040432 instance=ExtResource("11_vpxcu")]
+position = Vector2(133, 25)
+destination_level_tag = "bedroom"
+destination_door_tag = "S"
+
+[node name="Spawn" parent="Doors/Door_NE" index="1" unique_id=1146609794]
+position = Vector2(0, 10)
+
+[node name="Door_SE" parent="Doors" unique_id=367883436 instance=ExtResource("11_vpxcu")]
+position = Vector2(144, 122)
+destination_level_tag = "world"
+destination_door_tag = "W"
+spawn_direction = "right"
+
+[node name="Spawn" parent="Doors/Door_SE" index="1" unique_id=1146609794]
+position = Vector2(-8, -11)
+
+[editable path="Doors/Door_NE"]
+[editable path="Doors/Door_SE"]
