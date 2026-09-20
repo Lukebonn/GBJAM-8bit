@@ -8,7 +8,7 @@ var can_interact : bool = false
 
 signal interact
 
-var player : Player
+var player : PlayerEntity
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
