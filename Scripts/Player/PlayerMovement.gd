@@ -4,6 +4,7 @@ extends CharacterBody2D
 #OH THANK GOD 
 #-- if you can read this message you're cool
 
+#sprite for the potion on player's head
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var speed = 50
@@ -55,3 +56,4 @@ func _on_potion_pickup(item : PotionResource) -> void:
 
 func _on_potion_dropped(item : PotionResource) -> void:
 	sprite_2d.texture = null
+	inventory_potion = null

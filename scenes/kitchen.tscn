@@ -38,31 +38,19 @@ visible = false
 [node name="PotionPickups" type="Node" parent="." unique_id=142006575]
 
 [node name="HealthPotion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("6_ibrlr")]
-position = Vector2(80, 48)
+position = Vector2(152, 40)
 
 [node name="HealthPotion2" parent="PotionPickups" unique_id=1879218576 instance=ExtResource("6_ibrlr")]
-position = Vector2(128, 104)
-
-[node name="HealthPotion3" parent="PotionPickups" unique_id=1350769545 instance=ExtResource("6_ibrlr")]
-position = Vector2(40, 56)
+position = Vector2(176, 104)
 
 [node name="InvisPotion" parent="PotionPickups" unique_id=153120466 instance=ExtResource("7_mwmjw")]
-position = Vector2(40, 56)
-
-[node name="InvisPotion2" parent="PotionPickups" unique_id=308395354 instance=ExtResource("7_mwmjw")]
-position = Vector2(40, 56)
+position = Vector2(168, 64)
 
 [node name="InvisPotion3" parent="PotionPickups" unique_id=591445578 instance=ExtResource("7_mwmjw")]
-position = Vector2(40, 56)
+position = Vector2(184, 40)
 
 [node name="SuperHealthPotion" parent="PotionPickups" unique_id=2111680303 instance=ExtResource("8_cwf2y")]
-position = Vector2(40, 56)
-
-[node name="SuperHealthPotion2" parent="PotionPickups" unique_id=1527481353 instance=ExtResource("8_cwf2y")]
-position = Vector2(40, 56)
-
-[node name="SuperHealthPotion3" parent="PotionPickups" unique_id=1797885342 instance=ExtResource("8_cwf2y")]
-position = Vector2(40, 56)
+position = Vector2(112, 16)
 
 [node name="theme" type="AudioStreamPlayer2D" parent="." unique_id=1178990755]
 unique_name_in_owner = true
@@ -71,8 +59,90 @@ parameters/looping = true
 
 [node name="Stations" type="Node" parent="." unique_id=1595047793]
 
-[node name="PotionCraftStation" parent="Stations" unique_id=966884031 instance=ExtResource("2_mrp8g")]
-position = Vector2(96, 80)
-
 [node name="InventoryStashStation" parent="Stations" unique_id=1416888601 instance=ExtResource("10_cwf2y")]
 position = Vector2(80, 128)
+
+[node name="PotionCraftStation" parent="Stations" unique_id=966884031 instance=ExtResource("2_mrp8g")]
+position = Vector2(99, 81)
+
+[node name="Label" parent="Stations/PotionCraftStation" index="2" unique_id=1999802068]
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" parent="Stations/PotionCraftStation/ItemCrafted" parent_id_path=PackedInt32Array(966884031, 143678723) index="0" unique_id=149769469]
+offset_left = 89.0
+offset_top = 58.0
+offset_right = 109.0
+offset_bottom = 73.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot1" parent="Stations/PotionCraftStation/ItemCrafted" parent_id_path=PackedInt32Array(966884031, 143678723) index="1" unique_id=1629741074]
+offset_left = 90.0
+offset_top = 56.0
+offset_right = 108.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" parent="Stations/PotionCraftStation/OneIngredientUI" parent_id_path=PackedInt32Array(966884031, 162201243) index="0" unique_id=684221105]
+offset_left = 89.0
+offset_top = 58.0
+offset_right = 109.0
+offset_bottom = 73.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot2" parent="Stations/PotionCraftStation/OneIngredientUI" parent_id_path=PackedInt32Array(966884031, 162201243) index="1" unique_id=2141691236]
+offset_left = 90.0
+offset_top = 56.0
+offset_right = 108.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="0" unique_id=285811047]
+offset_left = 87.0
+offset_top = 58.0
+offset_right = 112.0
+offset_bottom = 73.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot3" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="1" unique_id=197959471]
+offset_left = 81.0
+offset_top = 56.0
+offset_right = 99.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot4" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="2" unique_id=537870948]
+offset_left = 99.0
+offset_top = 56.0
+offset_right = 117.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel4" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="0" unique_id=157668829]
+offset_left = 4.0
+offset_top = 58.0
+offset_right = 34.0
+offset_bottom = 73.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot5" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="1" unique_id=1250574718]
+offset_left = 72.0
+offset_top = 56.0
+offset_right = 90.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot6" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="2" unique_id=536104633]
+offset_left = 90.0
+offset_top = 56.0
+offset_right = 108.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot7" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="3" unique_id=601805661]
+offset_left = 108.0
+offset_top = 56.0
+offset_right = 126.0
+offset_bottom = 74.0
+metadata/_edit_use_anchors_ = true
+
+[editable path="Stations/PotionCraftStation"]
