@@ -17,7 +17,8 @@ static var GUESTS_DATA: Dictionary[String, Dictionary] = {
 		potion. Quickly, before everyone points and laughs."
 	},
 	"The Newt 4": {
-		
+		DESCRIPTION: "Oh no, I’ve somehow gotten into an even worse predicament! I have turned myself 
+		into a dragon! Can you send me a dragon potion to change me back!"
 	},
 	"The Newt 5": {
 		DESCRIPTION: "Help me, I have turned into the worst thing possible this time. I have turned 
