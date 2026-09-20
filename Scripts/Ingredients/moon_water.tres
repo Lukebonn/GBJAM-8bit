@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dfsu0asxjbmmp"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_erh5a"]
+
+[resource]
+script = ExtResource("1_erh5a")
+item_category = 1
+name = "Moon Water"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

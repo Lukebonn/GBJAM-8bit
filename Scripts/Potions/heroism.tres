@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://c2uo0m36lnp0b"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_mslns"]
+
+[resource]
+script = ExtResource("1_mslns")
+ingredient_hierarchy = 2
+name = "Heroism"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

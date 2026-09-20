@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://c32g28ojjrtrk"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_1legu"]
+
+[resource]
+script = ExtResource("1_1legu")
+ingredient_hierarchy = 2
+name = "Antidote"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

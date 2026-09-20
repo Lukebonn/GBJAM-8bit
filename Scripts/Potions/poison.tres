@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bvrakbv5dyr2c"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_x6y7h"]
+
+[resource]
+script = ExtResource("1_x6y7h")
+ingredient_hierarchy = 1
+name = "Poison"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

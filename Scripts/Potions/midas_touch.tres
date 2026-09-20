@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bapnikljh5f7i"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_bf778"]
+
+[resource]
+script = ExtResource("1_bf778")
+ingredient_hierarchy = 6
+name = "Midas Touch"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

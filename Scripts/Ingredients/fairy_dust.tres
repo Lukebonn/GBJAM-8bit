@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bsdjec2ntuxuv"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_s21wf"]
+
+[resource]
+script = ExtResource("1_s21wf")
+item_category = 1
+name = "Fairy Dust"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
