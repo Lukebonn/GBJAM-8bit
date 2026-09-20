@@ -15,12 +15,14 @@ metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
 [sub_resource type="CircleShape2D" id="CircleShape2D_nh0yc"]
 radius = 18.0
 
-[node name="HealthPotion" type="Node2D" unique_id=797666612]
+[node name="HealthPotion" type="Node2D" unique_id=797666612 node_paths=PackedStringArray("sprite_2d")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_nh0yc")
 potion_stats = SubResource("Resource_xmfuu")
+sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
+unique_name_in_owner = true
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_tdcet")
 
@@ -38,3 +40,4 @@ text = "99"
 shape = SubResource("CircleShape2D_nh0yc")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

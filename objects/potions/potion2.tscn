@@ -7,12 +7,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mb28"]
 radius = 18.0
 
-[node name="InvisPotion" type="Node2D" unique_id=153120466]
+[node name="InvisPotion" type="Node2D" unique_id=153120466 node_paths=PackedStringArray("sprite_2d")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6bmhd")
 potion_stats = ExtResource("2_6bmhd")
+sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
+unique_name_in_owner = true
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_8mb28")
 

@@ -29,6 +29,9 @@ extends Area2D
 @onready var slot_7: InventorySlot = $ThreeIngredientUI/Slot7
 
 
+const POTION_1 = preload("uid://cpjnwjxvilulc")
+@onready var potion_pickups: Node = $"../../PotionPickups"
+
 var crafting_item_pickup : PotionResource
 var recipe1_item_pickup : PotionResource
 var recipe1_num : int = 0
@@ -44,26 +47,24 @@ var recipe_material_dictionary : Dictionary = {}
 func _ready() -> void:
 	#SignalBus.item_dropped.connect(_on_potion_dropped)
 	#SignalBus.item_pickup.connect(_on_potion_pickup)
-	#SignalBus.item_crafted.connect(_on_item_crafted)
+	SignalBus.item_crafted.connect(_on_item_crafted)
 	#SignalBus.potion_station_interact.connect(_on_potion_station_interact)
 	clear_recipe_UI()
 
 func _process(delta: float) -> void:
-	#just a heads up as the # of recipes increase this for loop might put strain on RAM lol
-	if (num_recipe_items > 1) and crafting_item_pickup == null:
+	if num_recipe_items > 0 and crafting_item_pickup == null:
 		for recipe in recipe_array:
-			check_recipe_craftable(recipe)
+			if check_recipe_craftable(recipe):
+				break
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is PlayerEntity:
-		print("Player Entered")
 		is_interactable = true
 		player = body
 	#pass
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is PlayerEntity:
-		print("Player Exited")
 		is_interactable = false
 		crafting_ui.hide()
 	#pass
@@ -71,51 +72,43 @@ func _on_body_exited(body: Node2D) -> void:
 func _unhandled_input(event : InputEvent) -> void:
 	#print("button pushed")
 	if event.is_action_pressed("GB_SELECT") and is_interactable:
-		print("button pushed and interactable")
 		#for the player to pickup a successfully crafted item
 		if crafting_item_pickup and player.inventory_potion == null:
-			player.inventory_potion = crafting_item_pickup
+			SignalBus.item_pickup.emit(crafting_item_pickup)
+			#player.inventory_potion = crafting_item_pickup
 			crafting_item_pickup = null
+			clear_recipe_UI()
 			
-		#for the player to place a an item into a recipe
+		#for the player to place an item into a recipe
 		elif not crafting_item_pickup and player.inventory_potion:
-			if num_recipe_items == 3:
-				if recipe3_item_pickup.name == player.inventory_potion.name:
-					recipe1_num += 1
-				elif recipe2_item_pickup.name == player.inventory_potion.name:
-					recipe2_num += 1
-				elif recipe1_item_pickup.name == player.inventory_potion.name:
-					recipe3_num += 1
-				else:
-					label.show()
-					label.text = "Max recipe items reached"
-					await get_tree().create_timer(2.5).timeout
-					label.hide()
-			elif num_recipe_items == 2:
-				if recipe2_item_pickup.name != player.inventory_potion.name and recipe1_item_pickup.name != player.inventory_potion.name:
-					recipe3_item_pickup = player.inventory_potion
-				#recipe3_num += 1
-				SignalBus.item_dropped.emit(recipe3_item_pickup)
-				add_recipe_item_UI(recipe3_item_pickup)
-			elif num_recipe_items == 1:
-				if recipe1_item_pickup.name != player.inventory_potion.name:
-					recipe2_item_pickup = player.inventory_potion
-				recipe2_num += 1
-				SignalBus.item_dropped.emit(recipe2_item_pickup)
-				add_recipe_item_UI(recipe2_item_pickup)
-			elif num_recipe_items == 0:
-				recipe1_item_pickup = player.inventory_potion
-				recipe1_num += 1
-				SignalBus.item_dropped.emit(recipe1_item_pickup)
-				add_recipe_item_UI(recipe1_item_pickup)
+			var held : PotionResource = player.inventory_potion
+			var already_on_bench : bool = is_on_bench(held)
+			if num_recipe_items == 3 and not already_on_bench:
+				label.show()
+				label.text = "Max recipe items reached"
+				await get_tree().create_timer(2.5).timeout
+				label.hide()
+			else:
+				if not already_on_bench:
+					if num_recipe_items == 0:
+						recipe1_item_pickup = held
+						recipe1_num = 1
+					elif num_recipe_items == 1:
+						recipe2_item_pickup = held
+						recipe2_num = 1
+					elif num_recipe_items == 2:
+						recipe3_item_pickup = held
+						recipe3_num = 1
+				SignalBus.item_dropped.emit(held)
+				add_recipe_item_UI(held)
 		#for the player to pickup a recipe item
 		elif crafting_item_pickup == null and player.inventory_potion == null:
 			if num_recipe_items == 3:
-				recipe3_num -= 1
+				#recipe3_num -= 1
 				SignalBus.item_pickup.emit(recipe3_item_pickup)
 				remove_recipe_item_UI(recipe3_item_pickup)
-				if recipe3_num == 0:
-					recipe3_item_pickup = null
+				#if recipe3_num == 0:
+					#recipe3_item_pickup = null
 			elif num_recipe_items == 2:
 				SignalBus.item_pickup.emit(recipe2_item_pickup)
 				remove_recipe_item_UI(recipe2_item_pickup)
@@ -132,14 +125,23 @@ func _unhandled_input(event : InputEvent) -> void:
 				print("no items to pickup")
 			elif num_recipe_items == 1:
 				SignalBus.item_pickup
+	elif event.is_action_pressed("GB_SELECT") and not is_interactable and player.inventory_potion:
+		var new_potion = POTION_1.instantiate()
+		potion_pickups.add_child(new_potion)
+		new_potion.create_instantiated_potion(player.global_position, player.inventory_potion)
+		player.sprite_2d.texture = null
+		player.inventory_potion = null
+		
 	await get_tree().create_timer(1).timeout
-#func _on_item_crafted(item : PotionResource) -> void:
-	#clear_recipe_UI()
-	#crafting_item_pickup = item
-	#item_crafted.show()
-	##panel.bg_color = Color(1, 0, 0)
+func _on_item_crafted(item : PotionResource) -> void:
+	print("item crafted")
+	clear_recipe_UI()
+	crafting_item_pickup = item
+	item_crafted.show()
+	slot_1.show()
+	#panel.bg_color = Color(1, 0, 0)
 	#panel.bg_color = Color(34, 139, 34)
-	#slot_1.set_recipe_item_data(crafting_item_pickup, 1)
+	slot_1.set_recipe_item_data(crafting_item_pickup, 1)
 
 #func _on_potion_dropped(item : PotionResource) -> void:
 	#if is_interactable:
@@ -166,8 +168,6 @@ func add_recipe_item_UI(item : PotionResource) -> void:
 		one_ingredient_ui.show()
 		slot_2.show()
 		slot_2.set_recipe_item_data(recipe1_item_pickup, 1)
-		print(recipe1_item_pickup.name)
-		print(slot_2.potion_held.name)
 		num_recipe_items += 1
 	
 	elif num_recipe_items == 1:
@@ -176,19 +176,14 @@ func add_recipe_item_UI(item : PotionResource) -> void:
 			slot_2.increase_item_quantity(1)
 			return
 		else:
-			print("increase slots")
 			one_ingredient_ui.hide()
 			slot_2.hide()
 			two_ingredient_ui.show()
 			slot_3.show()
 			slot_4.show()
 			#slot_3 = slot_2
-			slot_3.set_recipe_item_data(recipe1_item_pickup, 1)
+			slot_3.set_recipe_item_data(recipe1_item_pickup, recipe1_num)
 			slot_4.set_recipe_item_data(recipe2_item_pickup, 1)
-			print(recipe1_item_pickup.name)
-			print(recipe2_item_pickup.name)
-			print(slot_3.potion_held.name)
-			print(slot_4.potion_held.name)
 			num_recipe_items += 1
 	
 	elif num_recipe_items == 2:
@@ -211,12 +206,6 @@ func add_recipe_item_UI(item : PotionResource) -> void:
 			slot_5.set_recipe_item_data(recipe1_item_pickup, recipe1_num)
 			slot_6.set_recipe_item_data(recipe2_item_pickup, recipe2_num)
 			slot_7.set_recipe_item_data(recipe3_item_pickup, 1)
-			print(recipe1_item_pickup.name)
-			print(recipe2_item_pickup.name)
-			print(recipe3_item_pickup.name)
-			print(slot_5.potion_held.name)
-			print(slot_6.potion_held.name)
-			print(slot_7.potion_held.name)
 			num_recipe_items += 1
 	
 	elif num_recipe_items == 3:
@@ -248,50 +237,36 @@ func remove_recipe_item_UI(item : PotionResource) -> void:
 			slot_1.decrease_item_quantity(1)
 			if recipe1_num == 0:
 				recipe1_item_pickup = null
-			return
-		else:
-			one_ingredient_ui.hide()
-			recipe1_item_pickup = null
-	
+				slot_2.hide()
+				one_ingredient_ui.hide()
+				num_recipe_items -= 1
 	elif num_recipe_items == 2:
-		if item.name == recipe1_item_pickup.name:
-			recipe1_num -= 1
-			slot_3.decrease_item_quantity(1)
-			if recipe1_num == 0:
-				recipe1_item_pickup = null
-		elif item.name == recipe2_item_pickup.name:
-			recipe2_num -= 1
-			slot_4.decrease_item_quantity(1)
-			if recipe2_num == 0:
-				recipe2_item_pickup = null
-		else:
-			two_ingredient_ui.hide()
-			one_ingredient_ui.show()
-			slot_2 = slot_3
+		recipe2_num -= 1
+		slot_4.decrease_item_quantity(1)
+		if recipe2_num == 0:
 			recipe2_item_pickup = null
-	
+			slot_3.hide()
+			slot_4.hide()
+			two_ingredient_ui.hide()
+			slot_2.show()
+			one_ingredient_ui.show()
+			num_recipe_items -= 1
+			slot_2.set_recipe_item_data(recipe1_item_pickup, recipe1_num)
 	elif num_recipe_items == 3:
-		if item.name == recipe1_item_pickup.name:
-			recipe1_num -= 1
-			slot_5.decrease_item_quantity(1)
-			if recipe1_num == 0:
-				recipe1_item_pickup = null
-		elif item.name == recipe2_item_pickup.name:
-			recipe2_num += 1
-			slot_6.decrease_item_quantity(1)
-			if recipe2_num == 0:
-				recipe2_item_pickup = null
-		elif item.name == recipe3_item_pickup.name:
-			recipe3_num += 1
-			slot_7.decrease_item_quantity(1)
-			if recipe3_num == 0:
-				recipe3_item_pickup = null
-		else:
-			three_ingredient_ui.hide()
-			two_ingredient_ui.show()
-			slot_3 = slot_5
-			slot_4 = slot_6
+		recipe3_num -= 1
+		slot_7.decrease_item_quantity(1)
+		if recipe3_num == 0:
 			recipe3_item_pickup = null
+			slot_5.hide()
+			slot_6.hide()
+			slot_7.hide()
+			three_ingredient_ui.hide()
+			slot_3.show()
+			slot_4.show()
+			two_ingredient_ui.show()
+			num_recipe_items -= 1
+			slot_3.set_recipe_item_data(recipe1_item_pickup, recipe1_num)
+			slot_4.set_recipe_item_data(recipe2_item_pickup, recipe2_num)
 
 func clear_recipe_UI() -> void:
 	crafting_item_pickup = null
@@ -316,33 +291,36 @@ func clear_recipe_UI() -> void:
 	recipe1_num = 0
 	recipe2_num = 0
 	recipe3_num = 0
+	num_recipe_items = 0
+
+#create a dictionary of items currently in the pot for smaller search function
+func get_bench_contents() -> Dictionary:
+	var contents : Dictionary = {}
+	var items := [recipe1_item_pickup, recipe2_item_pickup, recipe3_item_pickup]
+	var counts := [recipe1_num, recipe2_num, recipe3_num]
+	for i in items.size():
+		if items[i] != null and counts[i] > 0:
+			contents[items[i].name] = contents.get(items[i].name, 0) + counts[i]
+	return contents
+
+#what a recipe needs, in the same shape
+func get_recipe_requirements(recipe : ItemRecipe) -> Dictionary:
+	var required : Dictionary = {}
+	for recipe_material in recipe.recipe_material_array:
+		if recipe_material != null:
+			required[recipe_material.name] = required.get(recipe_material.name, 0) + 1
+	return required
+
+#current items cooking in the pot
+func is_on_bench(item : PotionResource) -> bool:
+	for bench_item in [recipe1_item_pickup, recipe2_item_pickup, recipe3_item_pickup]:
+		if bench_item != null and bench_item.name == item.name:
+			return true
+	return false
 
 
-func check_recipe_craftable(recipe) -> void:
-	var total_keys : int = 0
-	for key in recipe_material_dictionary:
-		total_keys += recipe_material_dictionary[key]
-	for recipe_material in recipe:
-		if recipe_material_dictionary.has(recipe_material):
-			recipe_material_dictionary[recipe_material] += 1
-		else:
-			recipe_material_dictionary[recipe_material] = 1
-	var materials = 0
-	for material in recipe_material_dictionary:
-		if recipe1_item_pickup:
-			if material.name == recipe1_item_pickup.name:
-				if recipe1_num < recipe_material_dictionary[material]:
-					materials += 1
-					break
-		elif recipe2_item_pickup:
-			if material.name == recipe2_item_pickup.name:
-				if recipe2_num < recipe_material_dictionary[material]:
-					materials += 1
-					break
-		elif recipe3_item_pickup:
-			if material.name == recipe3_item_pickup.name:
-				if recipe3_num < recipe_material_dictionary[material]:
-					materials += 1
-					break
-	if materials == total_keys:
-		SignalBus.item_crafted.emit(recipe.recipe_output)
+func check_recipe_craftable(recipe : ItemRecipe) -> bool:
+	if get_bench_contents() != get_recipe_requirements(recipe):
+		return false
+	SignalBus.item_crafted.emit(recipe.recipe_output)
+	return true

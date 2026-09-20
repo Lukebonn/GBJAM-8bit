@@ -6,11 +6,18 @@ extends CharacterBody2D
 
 #sprite for the potion on player's head
 @onready var sprite_2d: Sprite2D = $Sprite2D
+#node to add potion objects to
+@onready var potion_pickups: Node = $"../PotionPickups"
+const POTION_1 = preload("uid://cpjnwjxvilulc")
 
 @export var speed = 50
-var inventory_potion : PotionResource = null
+
 var input_dir = Vector2(0,0)
 var PreviousDirection = ""
+
+#potion stuff
+var inventory_potion : PotionResource = null
+var standing_on_potion : bool = false
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
@@ -29,28 +36,63 @@ func player_movement():
 
 func player_rotate():
 	if input_dir == Vector2(0, 1):
-		$AnimatedSprite2D.play("Walk Down")
+		if inventory_potion:
+			$AnimatedSprite2D.play("Carry Down")
+		else:
+			$AnimatedSprite2D.play("Walk Down")
 		PreviousDirection = "Down"
 	elif input_dir == Vector2(0, -1):
-		$AnimatedSprite2D.play("Walk Up")
+		if inventory_potion:
+			$AnimatedSprite2D.play("Carry Up")
+		else:
+			$AnimatedSprite2D.play("Walk Up")
 		PreviousDirection = "Up"
 	elif input_dir.x < 0:
-		$AnimatedSprite2D.play("Walk Left");
+		if inventory_potion:
+			$AnimatedSprite2D.play("Carry Left")
+		else:
+			$AnimatedSprite2D.play("Walk Left");
 		PreviousDirection = "Left";
 	elif input_dir.x > 0:
-		$AnimatedSprite2D.play("Walk Right");
+		if inventory_potion:
+			$AnimatedSprite2D.play("Carry Right")
+		else:
+			$AnimatedSprite2D.play("Walk Right");
 		PreviousDirection = "Right"
 	if input_dir == Vector2(0,0):
 		if PreviousDirection == "Up":
-			$AnimatedSprite2D.play("Idle Up");
+			if inventory_potion:
+				$AnimatedSprite2D.play("Carry Up Idle")
+			else:
+				$AnimatedSprite2D.play("Idle Up");
 		elif PreviousDirection == "Left":
-			$AnimatedSprite2D.play("Idle Left");
+			if inventory_potion:
+				$AnimatedSprite2D.play("Carry Left Idle")
+			else:
+				$AnimatedSprite2D.play("Idle Left");
 		elif PreviousDirection == "Right":
-			$AnimatedSprite2D.play("Idle Right");
+			if inventory_potion:
+				$AnimatedSprite2D.play("Carry Right Idle")
+			else:
+				$AnimatedSprite2D.play("Idle Right");
 		else:
-			$AnimatedSprite2D.play("Idle");
+			if inventory_potion:
+				$AnimatedSprite2D.play("Carry Down Idle")
+			else:
+				$AnimatedSprite2D.play("Idle");
+
+func _unhandled_input(event : InputEvent) -> void:
+	#print("button pushed")
+	if event.is_action_pressed("GB_SELECT"):
+		#time is meant to make it wait just long enough so that if something else is goign to get pickedup by the player it will first and then check
+		await get_tree().create_timer(.2).timeout
+		#if inventory_potion:
+			#var new_potion = POTION_1.instantiate()
+			#new_potion.create_instantiated_potion(global_position, inventory_potion)
 
 func _on_potion_pickup(item : PotionResource) -> void:
+	print("potion picked up")
+	standing_on_potion = true
 	sprite_2d.texture = item.sprite
 	inventory_potion = item
 

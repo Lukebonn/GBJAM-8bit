@@ -7,12 +7,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1h73"]
 radius = 18.0
 
-[node name="SuperHealthPotion" type="Node2D" unique_id=2111680303]
+[node name="SuperHealthPotion" type="Node2D" unique_id=2111680303 node_paths=PackedStringArray("sprite_2d")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_e4s1m")
 potion_stats = ExtResource("2_e4s1m")
+sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
+unique_name_in_owner = true
 texture = ExtResource("3_t1h73")
 
 [node name="Label" type="Label" parent="." unique_id=2102421988]
