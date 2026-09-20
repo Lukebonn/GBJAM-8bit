@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bgdlvub131rgc"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_k8eyt"]
+
+[resource]
+script = ExtResource("1_k8eyt")
+item_category = 1
+name = "Life Herb"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

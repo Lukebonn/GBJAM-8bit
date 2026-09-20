@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csse8xrm5xkw2"
+path="res://.godot/imported/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3-4c27e337a4824403b2f5a402a3fda96b.mp3str"
+
+[deps]
+
+source_file="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3"
+dest_files=["res://.godot/imported/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3-4c27e337a4824403b2f5a402a3fda96b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -10,3 +10,24 @@ texture = ExtResource("1_2ohio")
 custom_minimum_size = Vector2(18, 18)
 theme_override_styles/panel = SubResource("StyleBoxTexture_qf0od")
 script = ExtResource("2_c5hg6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517801332]
+position = Vector2(9.000001, 9.000001)
+scale = Vector2(0.21875, 0.21875)
+
+[node name="Label" type="Label" parent="." unique_id=1910918579]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 33.0
+offset_bottom = 36.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Button" type="Button" parent="." unique_id=1814596455]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(2.2301831, 2.228036)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

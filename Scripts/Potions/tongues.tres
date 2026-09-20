@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://d03kru7dj38ne"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_fp6dh"]
+
+[resource]
+script = ExtResource("1_fp6dh")
+ingredient_hierarchy = 5
+name = "Tongues"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

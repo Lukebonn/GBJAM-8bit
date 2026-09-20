@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://drlm2l824fq2f"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_gkbai"]
+
+[resource]
+script = ExtResource("1_gkbai")
+item_category = 1
+name = "Hair of Firstborn"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

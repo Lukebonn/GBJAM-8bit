@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bhibqi3vyrjw3"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_llh11"]
+
+[resource]
+script = ExtResource("1_llh11")
+item_category = 1
+name = "Phoenix Blood"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

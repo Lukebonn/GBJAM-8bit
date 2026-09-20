@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bxva2wu42ture"]
+
+[ext_resource type="Script" uid="uid://owsewiwpkcib" path="res://objects/inventory_stash_station.gd" id="1_qjlsj"]
+[ext_resource type="Texture2D" uid="uid://ci68o8nsevkba" path="res://art/temp_art/KenneyTinyDungeon/Tiles/tile_0074.png" id="2_w3qo1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrebk"]
+radius = 12.0
+
+[node name="InventoryStashStation" type="Area2D" unique_id=1416888601]
+script = ExtResource("1_qjlsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012303927]
+shape = SubResource("CircleShape2D_lrebk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=192352988]
+texture = ExtResource("2_w3qo1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

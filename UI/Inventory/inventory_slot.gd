@@ -1,19 +1,43 @@
+class_name InventorySlot
 extends Panel
 
-var item1 = preload("uid://cpjnwjxvilulc")
-var item2 = preload("uid://4nj4o4mb1tm2")
-var item3 = preload("uid://bohvbn2p0xrb2")
-var item = null
-var rand = randi_range(1, 3)
+@onready var sprite_2d : Sprite2D = $Sprite2D
+@onready var label : Label = $Label
 
-# Called when the node enters the scene tree for the first time.
+var potion_held : PotionResource
+var item_quantity = 0
+
 func _ready() -> void:
-	if rand % 4 == 0:
-		item = item1.instantiate()
-	elif rand % 3 == 1:
-		item = item2.instantiate()
-	elif rand % 3 == 2:
-		item = item3.instantiate()
-	
-	add_child(item)
-	item.set_position_in_slot(size)
+	pass
+
+func set_recipe_item_data(ItemData : PotionResource, StackSize : int) -> void:
+	potion_held = ItemData
+	sprite_2d.texture = ItemData.sprite
+	label.text = str(StackSize)
+	item_quantity = StackSize
+
+func increase_item_quantity(amount_to_add):
+	item_quantity += amount_to_add
+	label.text = str(item_quantity)
+
+func decrease_item_quantity(amount_to_remove):
+	item_quantity -= amount_to_remove
+	label.text = str(item_quantity)
+	#if item_quantity == 0:
+		#queue_free()
+
+
+func _on_button_pressed() -> void:
+	if (potion_held):
+		SignalBus.emit(potion_held)
+	else: 
+		print("no potion in this slot for some reason. I didn't think empty inventory_slots could exist.")
+
+func destroy() -> void:
+	queue_free()
+
+func hide_panel() -> void:
+	$".".hide()
+
+func show_panel() -> void:
+	$".".show()

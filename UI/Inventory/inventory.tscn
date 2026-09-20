@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://ch6uotmy1wrxf"]
 
+[ext_resource type="Script" uid="uid://c877occil76q3" path="res://UI/Inventory/inventory_component.gd" id="1_0tksl"]
 [ext_resource type="Texture2D" uid="uid://bgphnub236u1q" path="res://art/temp_art/UI/default_inventory_background.png" id="1_fxcd2"]
 [ext_resource type="PackedScene" uid="uid://cxlu5hbkm7cpp" path="res://UI/Inventory/inventory_slot.tscn" id="2_k5s52"]
 
 [node name="Inventory" type="Node2D" unique_id=1314813432]
+script = ExtResource("1_0tksl")
+inventory_slot = ExtResource("2_k5s52")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1417454181]
 offset_right = 40.0

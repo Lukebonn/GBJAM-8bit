@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bysx5buacfvvc" path="res://art/temp_art/Sproutlands/Tilesets/Grass.png" id="1_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://cs804cs41bgsk" path="res://art/temp_art/Sproutlands/Tilesets/Fences.png" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://dsqoug05lldhd" path="res://Scripts/Player/player.tscn" id="4_k0juu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i86av"]
 texture = ExtResource("1_rwgxs")
@@ -120,3 +122,22 @@ use_parent_material = true
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAAAAAAAQABAAAAAAAQAAAAAQACAAAAAAABAAAAAQACAAMAAAACAAAAAQACAAMAAAADAAAAAQACAAMAAAAEAAAAAQACAAMAAAAFAAAAAQACAAMAAAANAAAAAQACAAMAAAAOAAAAAQACAAMAAAAPAAAAAQACAAMAAAAGAAAAAQACAAMAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAQAAQAAAAEAAAAAAAUAAQAAAAEAAAAAAAYAAQAAAAIAAAAAAAwAAQAAAAEAAAAAAA0AAQAAAAEAAAAAAA4AAQAAAAEAAAAAAA8AAQAAAAEAAAAAABEAAQABAAIAAAAAABAAAQAAAAEAAAAAAAsAAQAAAAAAAAABABEAAQACAAMAAAACABEAAQACAAMAAAADABEAAQACAAMAAAAEABEAAQACAAMAAAAFABEAAQACAAMAAAAGABEAAQACAAMAAAAHABEAAQADAAMAAAAMABEAAQABAAMAAAANABEAAQACAAMAAAAOABEAAQACAAMAAAAPABEAAQACAAMAAAAQABEAAQACAAMAAAARABEAAQACAAMAAAASABEAAQACAAMAAAATABEAAQADAAIAAAATAAAAAQADAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAAHAAAAAQADAAMAAAATAAEAAQAAAAEAAAATAAIAAQAAAAEAAAATAAMAAQAAAAEAAAATAAQAAQAAAAEAAAATAAUAAQAAAAEAAAATAAYAAQAAAAIAAAATAA0AAQAAAAAAAAATAA4AAQAAAAEAAAATAA8AAQAAAAEAAAATABAAAQAAAAEAAAATAAwAAQAAAAEAAAATAAsAAQAAAAAAAAAMAAAAAQABAAMAAAA=")
 tile_set = SubResource("TileSet_slp24")
+
+[node name="Doors" type="Node" parent="." unique_id=1974174702]
+
+[node name="Door_W" parent="Doors" unique_id=1068040432 instance=ExtResource("3_4wyf3")]
+position = Vector2(7, 72)
+destination_level_tag = "kitchen"
+destination_door_tag = "SE"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="Doors/Door_W" index="0" unique_id=1444992409]
+position = Vector2(-8, 0)
+
+[node name="Spawn" parent="Doors/Door_W" index="1" unique_id=1146609794]
+position = Vector2(7, 0)
+
+[node name="Player" parent="." unique_id=1247013026 instance=ExtResource("4_k0juu")]
+position = Vector2(50, 72)
+
+[editable path="Doors/Door_W"]

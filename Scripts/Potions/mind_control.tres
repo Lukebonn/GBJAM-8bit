@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dg2f084gow545"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_8tb1r"]
+
+[resource]
+script = ExtResource("1_8tb1r")
+ingredient_hierarchy = 5
+name = "Mind Control"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
