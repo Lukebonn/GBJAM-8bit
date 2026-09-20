@@ -42,10 +42,12 @@ var recipe_material_dictionary : Dictionary = {}
 #var player : PlayerEntity = null
 
 func _ready() -> void:
-	pass
 	SignalBus.item_dropped.connect(_on_potion_dropped)
 	SignalBus.item_pickup.connect(_on_potion_pickup)
 	SignalBus.item_crafted.connect(_on_item_crafted)
+	SignalBus.potion_station_interact.connect(_on_potion_station_interact)
+	slot_3.show_panel()
+	slot_4.hide_panel()
 
 func _process(delta: float) -> void:
 	#just a heads up as the # of recipes increase this for loop might put strain on RAM lol
@@ -71,14 +73,57 @@ func _unhandled_input(event : InputEvent) -> void:
 	print("button pushed")
 	if event.is_action_pressed("GB_SELECT") and is_interactable:
 		print("button pushed and interactable")
-		if crafting_item_pickup and not player.inventory_potion:
-			SignalBus.item_pickup.emit(crafting_item_pickup)
+		#for the player to pickup a successfully crafted item
+		if crafting_item_pickup and player.inventory_potion == null:
+			player.inventory_potion = crafting_item_pickup
+			crafting_item_pickup = null
+			
+		#for the player to place a an item into a recipe
+		elif not crafting_item_pickup and player.inventory_potion:
+			if num_recipe_items == 3:
+				label.show()
+				label.text = "Max recipe items reached"
+				await get_tree().create_timer(2.5).timeout
+				label.hide()
+			elif num_recipe_items == 2:
+				recipe3_item_pickup = player.inventory_potion
+				recipe3_num += 1
+				player.inventory_potion = null
+			elif num_recipe_items == 1:
+				recipe2_item_pickup = player.inventory_potion
+				recipe2_num += 1
+				player.inventory_potion = null
+			elif num_recipe_items == 0:
+				recipe1_item_pickup = player.inventory_potion
+				recipe1_num += 1
+				player.inventory_potion = null
+		#for the player to pickup a recipe item
+		elif crafting_item_pickup == null and player.inventory_potion == null:
+			if num_recipe_items == 3:
+				recipe3_num -= 1
+				player.inventory_potion = recipe3_item_pickup
+				if recipe3_num == 0:
+					recipe3_item_pickup = null
+			elif num_recipe_items == 2:
+				recipe2_num -= 1
+				player.inventory_potion = recipe2_item_pickup
+				if recipe2_num == 0:
+					recipe2_item_pickup = null
+			elif num_recipe_items == 1:
+				recipe1_num -= 1
+				player.inventory_potion = recipe1_item_pickup
+				if recipe1_num == 0:
+					recipe1_item_pickup = null
+			elif num_recipe_items == 0:
+				label.show()
+				label.text = "No items to pickup"
+				await get_tree().create_timer(2.5).timeout
+				label.hide()
 		else: 
 			if num_recipe_items == 0:
 				print("no items to pickup")
 			elif num_recipe_items == 1:
 				SignalBus.item_pickup
-
 func _on_item_crafted(item : PotionResource) -> void:
 	clear_recipe_UI()
 	crafting_item_pickup = item
@@ -103,6 +148,9 @@ func _on_potion_pickup(item : PotionResource) -> void:
 			label.hide()
 		else:
 			remove_recipe_item_UI(item)
+
+func _on_potion_station_interact(item : PotionResource) -> void:
+	player
 
 func add_recipe_item_UI(item : PotionResource) -> void:
 	if num_recipe_items == 0:
@@ -207,7 +255,9 @@ func clear_recipe_UI() -> void:
 	two_ingredient_ui.hide()
 	two_ingredient_ui.hide()
 	item_crafted.hide()
-
+	recipe1_num = 0
+	recipe2_num = 0
+	recipe3_num = 0
 
 
 func check_recipe_craftable(recipe) -> void:

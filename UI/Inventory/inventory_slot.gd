@@ -23,8 +23,8 @@ func increase_item_quantity(amount_to_add):
 func decrease_item_quantity(amount_to_remove):
 	item_quantity -= amount_to_remove
 	label.text = str(item_quantity)
-	if item_quantity == 0:
-		queue_free()
+	#if item_quantity == 0:
+		#queue_free()
 
 
 func _on_button_pressed() -> void:
@@ -35,3 +35,9 @@ func _on_button_pressed() -> void:
 
 func destroy() -> void:
 	queue_free()
+
+func hide_panel() -> void:
+	$".".hide()
+
+func show_panel() -> void:
+	$".".show()
