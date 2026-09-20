@@ -1,0 +1,9 @@
+class_name Quests
+
+enum {
+	QUEST_NAME,
+	DESCRIPTION,
+	POTION,
+	LOOT_REWARD,
+	GOLD_REWARD,
+}
