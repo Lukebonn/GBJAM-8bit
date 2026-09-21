@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://b5gjhx704a01p"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_4cncq"]
+[ext_resource type="Resource" uid="uid://py8frxx5mwyk" path="res://Scripts/Ingredients/forbidden_rose.tres" id="2_6wnl3"]
+[ext_resource type="Resource" uid="uid://eqtwdte8xtwb" path="res://Scripts/Ingredients/vampyrs_ash.tres" id="3_p15j4"]
+[ext_resource type="Resource" uid="uid://bb42ejjieah0g" path="res://Scripts/Potions/invisibility.tres" id="4_h0ow8"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_x18rg"]
+
+[resource]
+script = ExtResource("5_x18rg")
+recipe_name = "Invisibility"
+recipe_output = ExtResource("4_h0ow8")
+recipe_material_array = Array[ExtResource("1_4cncq")]([ExtResource("2_6wnl3"), ExtResource("3_p15j4")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

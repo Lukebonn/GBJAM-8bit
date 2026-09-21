@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://bly4s5b8tcbsv"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_p6dk6"]
+[ext_resource type="Resource" uid="uid://cenjrapgs1bdm" path="res://Scripts/Potions/frog.tres" id="2_bfvaw"]
+[ext_resource type="Resource" uid="uid://c32g28ojjrtrk" path="res://Scripts/Potions/antidote.tres" id="3_c4xgv"]
+[ext_resource type="Resource" uid="uid://bs5j0l476ds1q" path="res://Scripts/Potions/gigantify.tres" id="4_7bkkk"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_p4gww"]
+
+[resource]
+script = ExtResource("5_p4gww")
+recipe_name = "Gigantify"
+recipe_output = ExtResource("4_7bkkk")
+recipe_material_array = Array[ExtResource("1_p6dk6")]([ExtResource("2_bfvaw"), ExtResource("3_c4xgv")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

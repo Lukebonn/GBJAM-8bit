@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://c32wefc72prl3"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_kse1l"]
+[ext_resource type="Resource" uid="uid://6t30h7ro0owl" path="res://Scripts/Potions/Dragontification.tres" id="2_e32cj"]
+[ext_resource type="Resource" uid="uid://j5ufpov27d0l" path="res://Scripts/Potions/flight.tres" id="3_3kgwt"]
+[ext_resource type="Resource" uid="uid://bih2bqtccxy7o" path="res://Scripts/Potions/true_form.tres" id="4_xpc1f"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_rua08"]
+
+[resource]
+script = ExtResource("5_rua08")
+recipe_name = "True Form"
+recipe_output = ExtResource("4_xpc1f")
+recipe_material_array = Array[ExtResource("1_kse1l")]([ExtResource("2_e32cj"), ExtResource("3_3kgwt")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

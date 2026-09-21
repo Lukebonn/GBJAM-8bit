@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://3vy7lfynlysh"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_rv6s7"]
+[ext_resource type="Resource" uid="uid://cenjrapgs1bdm" path="res://Scripts/Potions/frog.tres" id="2_sf376"]
+[ext_resource type="Resource" uid="uid://dghxp1fvco440" path="res://Scripts/Potions/love.tres" id="3_yygjj"]
+[ext_resource type="Resource" uid="uid://dv836em5114rs" path="res://Scripts/Potions/dragons_breath.tres" id="4_fmra7"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_602nd"]
+
+[resource]
+script = ExtResource("5_602nd")
+recipe_name = "Dragons Breath"
+recipe_output = ExtResource("4_fmra7")
+recipe_material_array = Array[ExtResource("1_rv6s7")]([ExtResource("2_sf376"), ExtResource("3_yygjj")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

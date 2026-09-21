@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cgwlnq2pe3dd3"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_xoacg"]
+[ext_resource type="Resource" uid="uid://dv836em5114rs" path="res://Scripts/Potions/dragons_breath.tres" id="2_vnq86"]
+[ext_resource type="Resource" uid="uid://bs5j0l476ds1q" path="res://Scripts/Potions/gigantify.tres" id="3_1oubv"]
+[ext_resource type="Resource" uid="uid://6t30h7ro0owl" path="res://Scripts/Potions/Dragontification.tres" id="4_2k6os"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_s6c4v"]
+
+[resource]
+script = ExtResource("5_s6c4v")
+recipe_name = "Dragantification"
+recipe_output = ExtResource("4_2k6os")
+recipe_material_array = Array[ExtResource("1_xoacg")]([ExtResource("2_vnq86"), ExtResource("3_1oubv")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

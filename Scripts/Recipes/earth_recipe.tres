@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://7gsujb1xdet0"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_xl7de"]
+[ext_resource type="Resource" uid="uid://bdsxng0jw02un" path="res://Scripts/Ingredients/shroom_bell.tres" id="2_0vdcs"]
+[ext_resource type="Resource" uid="uid://bfbx5drp4mvxv" path="res://Scripts/Ingredients/giants_stone.tres" id="3_d3oha"]
+[ext_resource type="Resource" uid="uid://bxxpdtfs0kivi" path="res://Scripts/Potions/earth.tres" id="4_3xw1i"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_u2l28"]
+
+[resource]
+script = ExtResource("5_u2l28")
+recipe_name = "Earth"
+recipe_output = ExtResource("4_3xw1i")
+recipe_material_array = Array[ExtResource("1_xl7de")]([ExtResource("2_0vdcs"), ExtResource("3_d3oha")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

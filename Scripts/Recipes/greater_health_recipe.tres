@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cqp35ebw81f22"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_2yil5"]
+[ext_resource type="Resource" uid="uid://hro4ohc6nyw1" path="res://Scripts/Potions/healing.tres" id="2_liste"]
+[ext_resource type="Resource" uid="uid://df6hhp8mctwow" path="res://Scripts/Potions/greater_strength.tres" id="3_rdn0v"]
+[ext_resource type="Resource" uid="uid://drceiiwh8josk" path="res://Scripts/Potions/greater_healing.tres" id="4_e6vgf"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_3xlep"]
+
+[resource]
+script = ExtResource("5_3xlep")
+recipe_name = "Greater Health"
+recipe_output = ExtResource("4_e6vgf")
+recipe_material_array = Array[ExtResource("1_2yil5")]([ExtResource("2_liste"), ExtResource("3_rdn0v")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

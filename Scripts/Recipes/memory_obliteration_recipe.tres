@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://boyfdpnflwr6m"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_h2gmg"]
+[ext_resource type="Resource" uid="uid://dg2f084gow545" path="res://Scripts/Potions/mind_control.tres" id="2_t6m8i"]
+[ext_resource type="Resource" uid="uid://d03kru7dj38ne" path="res://Scripts/Potions/tongues.tres" id="3_12pp0"]
+[ext_resource type="Resource" uid="uid://dllkaiv53veh7" path="res://Scripts/Potions/memory_obliteration.tres" id="4_jq4m4"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_pf4oy"]
+
+[resource]
+script = ExtResource("5_pf4oy")
+recipe_name = "Memory Obliteration"
+recipe_output = ExtResource("4_jq4m4")
+recipe_material_array = Array[ExtResource("1_h2gmg")]([ExtResource("2_t6m8i"), ExtResource("3_12pp0")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

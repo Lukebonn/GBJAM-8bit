@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://wusp1yqlddxx"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_cj6e7"]
+[ext_resource type="Resource" uid="uid://clcbyxhs4tq04" path="res://Scripts/Potions/death.tres" id="2_rqqmc"]
+[ext_resource type="Resource" uid="uid://ctklcgob55wie" path="res://Scripts/Potions/invincibility.tres" id="3_r0muy"]
+[ext_resource type="Resource" uid="uid://bapnikljh5f7i" path="res://Scripts/Potions/midas_touch.tres" id="4_4ss87"]
+[ext_resource type="Resource" uid="uid://b5fn23x1m5ewu" path="res://Scripts/Potions/immorality.tres" id="5_favm5"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="6_e6kfv"]
+
+[resource]
+script = ExtResource("6_e6kfv")
+recipe_output = ExtResource("5_favm5")
+recipe_material_array = Array[ExtResource("1_cj6e7")]([ExtResource("2_rqqmc"), ExtResource("3_r0muy"), ExtResource("4_4ss87")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

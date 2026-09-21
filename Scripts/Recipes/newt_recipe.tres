@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://7ls817fycf77"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_0lafk"]
+[ext_resource type="Resource" uid="uid://b483rvy83asyg" path="res://Scripts/Ingredients/triton_tail.tres" id="2_trebw"]
+[ext_resource type="Resource" uid="uid://bgjrot68mjbpg" path="res://Scripts/Ingredients/wart_of_cherub.tres" id="3_ko0eg"]
+[ext_resource type="Resource" uid="uid://bbfslhv1j8tqi" path="res://Scripts/Potions/newt.tres" id="4_oiqxv"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_55vu3"]
+
+[resource]
+script = ExtResource("5_55vu3")
+recipe_name = "Newt"
+recipe_output = ExtResource("4_oiqxv")
+recipe_material_array = Array[ExtResource("1_0lafk")]([ExtResource("2_trebw"), ExtResource("3_ko0eg")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

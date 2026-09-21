@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://c0bg6euukktki"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_fukh3"]
+[ext_resource type="Resource" uid="uid://b3b1luppxp232" path="res://Scripts/Ingredients/spine_apple.tres" id="2_erndv"]
+[ext_resource type="Resource" uid="uid://bhibqi3vyrjw3" path="res://Scripts/Ingredients/phoenix_blood.tres" id="3_p7xlh"]
+[ext_resource type="Resource" uid="uid://bvrakbv5dyr2c" path="res://Scripts/Potions/poison.tres" id="4_cyw4t"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_cd7ec"]
+
+[resource]
+script = ExtResource("5_cd7ec")
+recipe_name = "Poison"
+recipe_output = ExtResource("4_cyw4t")
+recipe_material_array = Array[ExtResource("1_fukh3")]([ExtResource("2_erndv"), ExtResource("3_p7xlh")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

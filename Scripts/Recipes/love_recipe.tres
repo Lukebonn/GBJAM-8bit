@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cvw2u0vj7du2q"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_d4uu3"]
+[ext_resource type="Resource" uid="uid://bbfslhv1j8tqi" path="res://Scripts/Potions/newt.tres" id="2_t258m"]
+[ext_resource type="Resource" uid="uid://bxxpdtfs0kivi" path="res://Scripts/Potions/earth.tres" id="3_4bue8"]
+[ext_resource type="Resource" uid="uid://dghxp1fvco440" path="res://Scripts/Potions/love.tres" id="4_m6sbl"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_ywn72"]
+
+[resource]
+script = ExtResource("5_ywn72")
+recipe_name = "Love"
+recipe_output = ExtResource("4_m6sbl")
+recipe_material_array = Array[ExtResource("1_d4uu3")]([ExtResource("2_t258m"), ExtResource("3_4bue8")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

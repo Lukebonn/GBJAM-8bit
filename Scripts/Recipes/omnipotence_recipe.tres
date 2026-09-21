@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://dfylxvebucq78"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_fb1vx"]
+[ext_resource type="Resource" uid="uid://j5ufpov27d0l" path="res://Scripts/Potions/flight.tres" id="2_jor71"]
+[ext_resource type="Resource" uid="uid://bthqqg2r7abx" path="res://Scripts/Potions/absolute_healing.tres" id="3_1mnru"]
+[ext_resource type="Resource" uid="uid://djlhegepssp8k" path="res://Scripts/Potions/omnipotence.tres" id="4_l88ae"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_dnjvf"]
+
+[resource]
+script = ExtResource("5_dnjvf")
+recipe_name = "Omnipotence"
+recipe_output = ExtResource("4_l88ae")
+recipe_material_array = Array[ExtResource("1_fb1vx")]([ExtResource("2_jor71"), ExtResource("3_1mnru")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

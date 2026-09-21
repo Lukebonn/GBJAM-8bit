@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cs1bk76npt1b6"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_uahlp"]
+[ext_resource type="Resource" uid="uid://bgdlvub131rgc" path="res://Scripts/Ingredients/life_herb.tres" id="2_t5h0m"]
+[ext_resource type="Resource" uid="uid://dfsu0asxjbmmp" path="res://Scripts/Ingredients/moon_water.tres" id="3_2t5uy"]
+[ext_resource type="Resource" uid="uid://doc5wjcg3gvoh" path="res://Scripts/Potions/lesser_health.tres" id="4_n1liu"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_0r7bv"]
+
+[resource]
+script = ExtResource("5_0r7bv")
+recipe_name = "Lesser Health Potion"
+recipe_output = ExtResource("4_n1liu")
+recipe_material_array = Array[ExtResource("1_uahlp")]([ExtResource("2_t5h0m"), ExtResource("3_2t5uy")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

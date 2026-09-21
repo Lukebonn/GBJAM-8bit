@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cgdnhcf40i5ko"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_tys82"]
+[ext_resource type="Resource" uid="uid://bbfslhv1j8tqi" path="res://Scripts/Potions/newt.tres" id="2_gbrh0"]
+[ext_resource type="Resource" uid="uid://bvrakbv5dyr2c" path="res://Scripts/Potions/poison.tres" id="3_0l42g"]
+[ext_resource type="Resource" uid="uid://cenjrapgs1bdm" path="res://Scripts/Potions/frog.tres" id="4_1bvp4"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_xemfy"]
+
+[resource]
+script = ExtResource("5_xemfy")
+recipe_name = "Frog"
+recipe_output = ExtResource("4_1bvp4")
+recipe_material_array = Array[ExtResource("1_tys82")]([ExtResource("2_gbrh0"), ExtResource("3_0l42g")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

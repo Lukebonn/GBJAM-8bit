@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://bb1psma3xutvo"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_nsfhr"]
+[ext_resource type="Resource" uid="uid://drlm2l824fq2f" path="res://Scripts/Ingredients/hair_of_firstborn.tres" id="2_ojcxb"]
+[ext_resource type="Resource" uid="uid://cqcg1t843omlv" path="res://Scripts/Ingredients/fireroot.tres" id="3_qxa8r"]
+[ext_resource type="Resource" uid="uid://dpeec3qvmpc1f" path="res://Scripts/Potions/energy.tres" id="4_vbf3j"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_lq7bw"]
+
+[resource]
+script = ExtResource("5_lq7bw")
+recipe_name = "Energy"
+recipe_output = ExtResource("4_vbf3j")
+recipe_material_array = Array[ExtResource("1_nsfhr")]([ExtResource("2_ojcxb"), ExtResource("3_qxa8r")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://djess2flk8ie5"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_70fsy"]
+[ext_resource type="Resource" uid="uid://bb42ejjieah0g" path="res://Scripts/Potions/invisibility.tres" id="2_00ypo"]
+[ext_resource type="Resource" uid="uid://dpeec3qvmpc1f" path="res://Scripts/Potions/energy.tres" id="3_uty75"]
+[ext_resource type="Resource" uid="uid://b8bk7ef10u85y" path="res://Scripts/Potions/nights_bane.tres" id="4_ffjny"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_76kdj"]
+
+[resource]
+script = ExtResource("5_76kdj")
+recipe_name = "Nights Bane"
+recipe_output = ExtResource("4_ffjny")
+recipe_material_array = Array[ExtResource("1_70fsy")]([ExtResource("2_00ypo"), ExtResource("3_uty75")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

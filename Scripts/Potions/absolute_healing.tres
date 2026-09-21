@@ -7,5 +7,5 @@
 script = ExtResource("1_wfx2l")
 sprite = ExtResource("2_h6nw6")
 ingredient_hierarchy = 4
-name = "Absolute Healing"
+name = "Absolute Health"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

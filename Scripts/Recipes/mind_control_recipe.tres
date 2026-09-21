@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://dfnk0e5nen40n"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_t7w8l"]
+[ext_resource type="Resource" uid="uid://32332er5pwuk" path="res://Scripts/Potions/love_antidote.tres" id="2_qetap"]
+[ext_resource type="Resource" uid="uid://cp0aqh03h351o" path="res://Scripts/Potions/telepathy.tres" id="3_ejddw"]
+[ext_resource type="Resource" uid="uid://dg2f084gow545" path="res://Scripts/Potions/mind_control.tres" id="4_7qse5"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_tao1p"]
+
+[resource]
+script = ExtResource("5_tao1p")
+recipe_name = "Mind Control"
+recipe_output = ExtResource("4_7qse5")
+recipe_material_array = Array[ExtResource("1_t7w8l")]([ExtResource("2_qetap"), ExtResource("3_ejddw")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

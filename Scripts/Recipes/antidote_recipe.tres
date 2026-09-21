@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cvsc0rjcd0ijd"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_ckgxx"]
+[ext_resource type="Resource" uid="uid://bxtmibpg3ym5r" path="res://Scripts/Potions/strength.tres" id="2_5v0dm"]
+[ext_resource type="Resource" uid="uid://bvrakbv5dyr2c" path="res://Scripts/Potions/poison.tres" id="3_um7ji"]
+[ext_resource type="Resource" uid="uid://c32g28ojjrtrk" path="res://Scripts/Potions/antidote.tres" id="4_o1c8h"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_jqr4o"]
+
+[resource]
+script = ExtResource("5_jqr4o")
+recipe_name = "Antidote"
+recipe_output = ExtResource("4_o1c8h")
+recipe_material_array = Array[ExtResource("1_ckgxx")]([ExtResource("2_5v0dm"), ExtResource("3_um7ji")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

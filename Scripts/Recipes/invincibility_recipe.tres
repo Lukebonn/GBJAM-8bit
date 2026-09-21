@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://22lclitkd0sx"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_wkjdk"]
+[ext_resource type="Resource" uid="uid://bih2bqtccxy7o" path="res://Scripts/Potions/true_form.tres" id="2_gspye"]
+[ext_resource type="Resource" uid="uid://djlhegepssp8k" path="res://Scripts/Potions/omnipotence.tres" id="3_ylewj"]
+[ext_resource type="Resource" uid="uid://ctklcgob55wie" path="res://Scripts/Potions/invincibility.tres" id="4_s6yvu"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_6o1xg"]
+
+[resource]
+script = ExtResource("5_6o1xg")
+recipe_name = "Invincibility"
+recipe_output = ExtResource("4_s6yvu")
+recipe_material_array = Array[ExtResource("1_wkjdk")]([ExtResource("2_gspye"), ExtResource("3_ylewj")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

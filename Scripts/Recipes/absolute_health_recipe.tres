@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://cay7f3r7a3hdl"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_51p5s"]
+[ext_resource type="Resource" uid="uid://drceiiwh8josk" path="res://Scripts/Potions/greater_healing.tres" id="2_4wji7"]
+[ext_resource type="Resource" uid="uid://5cgrsb0das36" path="res://Scripts/Potions/fire_immunity.tres" id="3_t87cb"]
+[ext_resource type="Resource" uid="uid://bthqqg2r7abx" path="res://Scripts/Potions/absolute_healing.tres" id="4_tqlex"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_v531h"]
+
+[resource]
+script = ExtResource("5_v531h")
+recipe_name = "Absolute Health"
+recipe_output = ExtResource("4_tqlex")
+recipe_material_array = Array[ExtResource("1_51p5s")]([ExtResource("2_4wji7"), ExtResource("3_t87cb")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

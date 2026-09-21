@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://budhbolfqinhj"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_8xe4s"]
+[ext_resource type="Resource" uid="uid://5cgrsb0das36" path="res://Scripts/Potions/fire_immunity.tres" id="2_ydeuc"]
+[ext_resource type="Resource" uid="uid://bs5j0l476ds1q" path="res://Scripts/Potions/gigantify.tres" id="3_vuq36"]
+[ext_resource type="Resource" uid="uid://j5ufpov27d0l" path="res://Scripts/Potions/flight.tres" id="4_7es0f"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_3wc4f"]
+
+[resource]
+script = ExtResource("5_3wc4f")
+recipe_name = "Flight"
+recipe_output = ExtResource("4_7es0f")
+recipe_material_array = Array[ExtResource("1_8xe4s")]([ExtResource("2_ydeuc"), ExtResource("3_vuq36")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

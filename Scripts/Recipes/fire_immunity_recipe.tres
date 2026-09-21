@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://7ayvbrsbn6ue"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_e33ud"]
+[ext_resource type="Resource" uid="uid://df6hhp8mctwow" path="res://Scripts/Potions/greater_strength.tres" id="2_ef4gs"]
+[ext_resource type="Resource" uid="uid://c32g28ojjrtrk" path="res://Scripts/Potions/antidote.tres" id="3_6vosc"]
+[ext_resource type="Resource" uid="uid://5cgrsb0das36" path="res://Scripts/Potions/fire_immunity.tres" id="4_oyw08"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_xf8ax"]
+
+[resource]
+script = ExtResource("5_xf8ax")
+recipe_name = "Fire Immunity"
+recipe_output = ExtResource("4_oyw08")
+recipe_material_array = Array[ExtResource("1_e33ud")]([ExtResource("2_ef4gs"), ExtResource("3_6vosc")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

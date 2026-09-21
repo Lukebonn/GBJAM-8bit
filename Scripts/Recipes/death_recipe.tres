@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://c0yu7o2iyax3n"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_6eojt"]
+[ext_resource type="Resource" uid="uid://bih2bqtccxy7o" path="res://Scripts/Potions/true_form.tres" id="2_rduj0"]
+[ext_resource type="Resource" uid="uid://vtcvy8ajtaf2" path="res://Scripts/Potions/divinity.tres" id="3_4wvnl"]
+[ext_resource type="Resource" uid="uid://clcbyxhs4tq04" path="res://Scripts/Potions/death.tres" id="4_jdfqi"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_0e2rt"]
+
+[resource]
+script = ExtResource("5_0e2rt")
+recipe_name = "Death"
+recipe_output = ExtResource("4_jdfqi")
+recipe_material_array = Array[ExtResource("1_6eojt")]([ExtResource("2_rduj0"), ExtResource("3_4wvnl")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://66a81u8jl4dr"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_cpnvc"]
+[ext_resource type="Resource" uid="uid://dghxp1fvco440" path="res://Scripts/Potions/love.tres" id="2_nwhcu"]
+[ext_resource type="Resource" uid="uid://c2uo0m36lnp0b" path="res://Scripts/Potions/heroism.tres" id="3_1x726"]
+[ext_resource type="Resource" uid="uid://32332er5pwuk" path="res://Scripts/Potions/love_antidote.tres" id="4_00yyc"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_f02gj"]
+
+[resource]
+script = ExtResource("5_f02gj")
+recipe_name = "Love Antidote"
+recipe_output = ExtResource("4_00yyc")
+recipe_material_array = Array[ExtResource("1_cpnvc")]([ExtResource("2_nwhcu"), ExtResource("3_1x726")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

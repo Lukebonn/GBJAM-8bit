@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://bip72nnms4y2v"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_orr4q"]
+[ext_resource type="Resource" uid="uid://b8bk7ef10u85y" path="res://Scripts/Potions/nights_bane.tres" id="2_8aax8"]
+[ext_resource type="Resource" uid="uid://c2uo0m36lnp0b" path="res://Scripts/Potions/heroism.tres" id="3_upwlu"]
+[ext_resource type="Resource" uid="uid://cp0aqh03h351o" path="res://Scripts/Potions/telepathy.tres" id="4_cq21v"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_lpmt5"]
+
+[resource]
+script = ExtResource("5_lpmt5")
+recipe_name = "Telepathy"
+recipe_output = ExtResource("4_cq21v")
+recipe_material_array = Array[ExtResource("1_orr4q")]([ExtResource("2_8aax8"), ExtResource("3_upwlu")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

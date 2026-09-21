@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://d0dv0ee3iv0wv"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_r7bvm"]
+[ext_resource type="Resource" uid="uid://vtcvy8ajtaf2" path="res://Scripts/Potions/divinity.tres" id="2_ecks6"]
+[ext_resource type="Resource" uid="uid://dllkaiv53veh7" path="res://Scripts/Potions/memory_obliteration.tres" id="3_tyjl0"]
+[ext_resource type="Resource" uid="uid://bapnikljh5f7i" path="res://Scripts/Potions/midas_touch.tres" id="4_wep47"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_lxarv"]
+
+[resource]
+script = ExtResource("5_lxarv")
+recipe_name = "Midas Touch"
+recipe_output = ExtResource("4_wep47")
+recipe_material_array = Array[ExtResource("1_r7bvm")]([ExtResource("2_ecks6"), ExtResource("3_tyjl0")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

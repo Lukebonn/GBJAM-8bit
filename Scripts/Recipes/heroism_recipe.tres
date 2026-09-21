@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://b3lfx25fq4d6b"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_nqao6"]
+[ext_resource type="Resource" uid="uid://bxxpdtfs0kivi" path="res://Scripts/Potions/earth.tres" id="2_ju02k"]
+[ext_resource type="Resource" uid="uid://dpeec3qvmpc1f" path="res://Scripts/Potions/energy.tres" id="3_owh81"]
+[ext_resource type="Resource" uid="uid://c2uo0m36lnp0b" path="res://Scripts/Potions/heroism.tres" id="4_tsyq8"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_bmj7i"]
+
+[resource]
+script = ExtResource("5_bmj7i")
+recipe_name = "Heroism"
+recipe_output = ExtResource("4_tsyq8")
+recipe_material_array = Array[ExtResource("1_nqao6")]([ExtResource("2_ju02k"), ExtResource("3_owh81")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

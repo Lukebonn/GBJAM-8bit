@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://d2e7aeb3ggkle"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_qjqsq"]
+[ext_resource type="Resource" uid="uid://qkdgw7vqlh2d" path="res://Scripts/Ingredients/witches_eye.tres" id="2_hyesj"]
+[ext_resource type="Resource" uid="uid://bsdjec2ntuxuv" path="res://Scripts/Ingredients/fairy_dust.tres" id="3_076nn"]
+[ext_resource type="Resource" uid="uid://ccp3wa72a2rol" path="res://Scripts/Potions/speed.tres" id="4_y5sb4"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_qlfyb"]
+
+[resource]
+script = ExtResource("5_qlfyb")
+recipe_name = "Speed"
+recipe_output = ExtResource("4_y5sb4")
+recipe_material_array = Array[ExtResource("1_qjqsq")]([ExtResource("2_hyesj"), ExtResource("3_076nn")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

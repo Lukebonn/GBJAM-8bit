@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://dwlkxthqioymr"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_aki8e"]
+[ext_resource type="Resource" uid="uid://bxtmibpg3ym5r" path="res://Scripts/Potions/strength.tres" id="2_dsvc2"]
+[ext_resource type="Resource" uid="uid://ccp3wa72a2rol" path="res://Scripts/Potions/speed.tres" id="3_grg8j"]
+[ext_resource type="Resource" uid="uid://df6hhp8mctwow" path="res://Scripts/Potions/greater_strength.tres" id="4_2pa4j"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_iqdiy"]
+
+[resource]
+script = ExtResource("5_iqdiy")
+recipe_name = "Greater Strength"
+recipe_output = ExtResource("4_2pa4j")
+recipe_material_array = Array[ExtResource("1_aki8e")]([ExtResource("2_dsvc2"), ExtResource("3_grg8j")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"
