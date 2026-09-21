@@ -28,6 +28,9 @@ extends Area2D
 @onready var slot_6: InventorySlot = $ThreeIngredientUI/Slot6
 @onready var slot_7: InventorySlot = $ThreeIngredientUI/Slot7
 
+#Audio
+@onready var audio = $AudioStreamPlayer
+
 
 const POTION_1 = preload("uid://cpjnwjxvilulc")
 @onready var potion_pickups: Node = $"../../PotionPickups"
@@ -124,6 +127,8 @@ func _unhandled_input(event : InputEvent) -> void:
 			if num_recipe_items == 0:
 				print("no items to pickup")
 			elif num_recipe_items == 1:
+				$ItemPickup.play()
+				print("sound played")
 				SignalBus.item_pickup
 	elif event.is_action_pressed("GB_SELECT") and not is_interactable and player.inventory_potion:
 		var new_potion = POTION_1.instantiate()
