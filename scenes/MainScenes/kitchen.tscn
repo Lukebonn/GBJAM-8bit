@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cbkjxxojnodg2" path="res://objects/crafting_ui.tscn" id="4_6y12q"]
 [ext_resource type="PackedScene" uid="uid://ch6uotmy1wrxf" path="res://UI/Inventory/inventory.tscn" id="5_gf31d"]
 [ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion1.tscn" id="6_xeibd"]
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="7_6y12q"]
 [ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_amw7w"]
 [ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_3e70u"]
+[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="8_gf31d"]
 [ext_resource type="AudioStream" uid="uid://csse8xrm5xkw2" path="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3" id="9_vkb6d"]
 [ext_resource type="PackedScene" uid="uid://bxva2wu42ture" path="res://objects/inventory_stash_station.tscn" id="10_po357"]
 [ext_resource type="PackedScene" uid="uid://oxa1m1qhcbkf" path="res://objects/potion_craft_station.tscn" id="11_b42l8"]
@@ -18,12 +20,42 @@
 [ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="16_5weih"]
 [ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="17_c1aq1"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6y12q"]
+size = Vector2(20, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf31d"]
+size = Vector2(42, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeibd"]
+
+[sub_resource type="Resource" id="Resource_xeibd"]
+script = ExtResource("7_6y12q")
+sprite = ExtResource("8_gf31d")
+ingredient_hierarchy = 1
+name = "Health Potion "
+description = "Life Herb + Moon Water + Rabbit Root"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
+
 [node name="Kitchen" type="Node2D" unique_id=1289256332]
 script = ExtResource("1_e0lbf")
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=1610091584]
 position = Vector2(80, 72)
 texture = ExtResource("2_c1aq1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" unique_id=311362411]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1679896640]
+position = Vector2(-61, -26)
+shape = SubResource("RectangleShape2D_6y12q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1127212645]
+position = Vector2(-39, -45)
+shape = SubResource("RectangleShape2D_gf31d")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=596930179]
+position = Vector2(-52, -41)
+shape = SubResource("RectangleShape2D_xeibd")
 
 [node name="Player" parent="." unique_id=1247013026 instance=ExtResource("3_8jid5")]
 unique_name_in_owner = true
@@ -43,6 +75,7 @@ visible = false
 
 [node name="HealthPotion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("6_xeibd")]
 position = Vector2(152, 40)
+potion_stats = SubResource("Resource_xeibd")
 
 [node name="HealthPotion2" parent="PotionPickups" unique_id=1879218576 instance=ExtResource("6_xeibd")]
 position = Vector2(144, 120)
