@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://3c2sqxyv1ik3"]
+
+[ext_resource type="Texture2D" uid="uid://dhavtmvmh8kpw" path="res://art/final_art/mapsprites/old-gold-garden-01.png" id="1_w4wp5"]
+[ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="2_x0558"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="3_vco7g"]
+[ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion1.tscn" id="4_hrvla"]
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="5_fit5d"]
+[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="6_mq2g2"]
+[ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_tn4gh"]
+[ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_1cwix"]
+
+[sub_resource type="Resource" id="Resource_p2vl4"]
+script = ExtResource("5_fit5d")
+sprite = ExtResource("6_mq2g2")
+ingredient_hierarchy = 1
+name = "Health Potion "
+description = "Life Herb + Moon Water + Rabbit Root"
+metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
+
+[node name="Node2D" type="Node2D" unique_id=1179561258]
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=483859037]
+position = Vector2(80, 72)
+texture = ExtResource("1_w4wp5")
+
+[node name="Door_SW" parent="." unique_id=1068040432 instance=ExtResource("2_x0558")]
+position = Vector2(0, 120)
+destination_level_tag = "kitchen"
+destination_door_tag = "S"
+
+[node name="CollisionShape2D" parent="Door_SW" index="0" unique_id=1444992409]
+position = Vector2(6.5, 0.875)
+
+[node name="Spawn" parent="Door_SW" index="1" unique_id=1146609794]
+position = Vector2(0, 10)
+
+[node name="Label2" type="Label" parent="." unique_id=1989063341]
+offset_top = 120.0
+offset_right = 59.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vco7g")
+theme_override_font_sizes/font_size = 5
+text = "Kitchen"
+
+[node name="PotionPickups" type="Node" parent="." unique_id=37966576]
+
+[node name="HealthPotion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("4_hrvla")]
+position = Vector2(152, 40)
+
+[node name="HealthPotion2" parent="PotionPickups" unique_id=123476525 instance=ExtResource("4_hrvla")]
+position = Vector2(144, 120)
+potion_stats = SubResource("Resource_p2vl4")
+
+[node name="InvisPotion" parent="PotionPickups" unique_id=153120466 instance=ExtResource("7_tn4gh")]
+position = Vector2(32, 112)
+
+[node name="InvisPotion3" parent="PotionPickups" unique_id=1139236659 instance=ExtResource("7_tn4gh")]
+position = Vector2(32, 80)
+
+[node name="SuperHealthPotion" parent="PotionPickups" unique_id=2111680303 instance=ExtResource("8_1cwix")]
+position = Vector2(112, 16)
+
+[editable path="Door_SW"]

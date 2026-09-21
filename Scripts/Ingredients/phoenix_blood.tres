@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bhibqi3vyrjw3"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_llh11"]
+[ext_resource type="Texture2D" uid="uid://ci5c13or1c0i1" path="res://art/final_art/item icons/old-gold-pheonixblood.png" id="2_y5alc"]
 
 [resource]
 script = ExtResource("1_llh11")
 item_category = 1
+sprite = ExtResource("2_y5alc")
 name = "Phoenix Blood"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

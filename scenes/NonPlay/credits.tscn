@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dhj70bvf5lsbu"]
+
+[ext_resource type="Texture2D" uid="uid://c3kek7byyxe0y" path="res://art/final_art/mapsprites/#ffe4a6-color-image.png" id="1_gmt7b"]
+[ext_resource type="FontFile" uid="uid://dgov6lt2otnti" path="res://art/final_art/ZeldaOracles.ttf" id="2_o05ws"]
+[ext_resource type="Script" uid="uid://c4v6aijjgs5i4" path="res://scenes/NonPlay/credits.gd" id="2_wslpc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wslpc"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1102823671]
+offset_right = 160.0
+offset_bottom = 144.0
+texture = ExtResource("1_gmt7b")
+expand_mode = 1
+script = ExtResource("2_wslpc")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=357017540]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = " Luke Bonniwell"
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=1361225197]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Luke Bonniwell"
+
+[node name="TextEdit3" type="TextEdit" parent="." unique_id=1705752816]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Luke Bonniwell"
+
+[node name="TextEdit4" type="TextEdit" parent="." unique_id=1181107907]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Luke Bonniwell"
+
+[node name="TextEdit5" type="TextEdit" parent="." unique_id=1536040622]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 160.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Luke Bonniwell"
+
+[node name="TextEdit6" type="TextEdit" parent="." unique_id=694039149]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 160.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Luke Bonniwell"

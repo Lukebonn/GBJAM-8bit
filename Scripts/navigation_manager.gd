@@ -2,6 +2,8 @@ extends Node
 
 const scene_kitchen = preload('res://scenes/kitchen.tscn')
 const scene_world = preload("res://scenes/world.tscn")
+const CREDITS = preload("uid://dhj70bvf5lsbu")
+
 # const scene_bedroom = preload("res://path/to/bedroom.tscn")
 
 #var spawn_door_tag
@@ -16,6 +18,8 @@ func go_to_level(level_tag : String, destination_tag: String):
 			scene_to_load = scene_kitchen
 		"world":
 			scene_to_load = scene_world
+		"credits":
+			scene_to_load = CREDITS
 			
 	if scene_to_load != null:
 		#spawn_door_tag = destination_tag
