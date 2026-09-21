@@ -1,22 +1,25 @@
 [gd_scene format=3 uid="uid://ce0chyxxdhtrg"]
 
 [ext_resource type="Texture2D" uid="uid://di84rad4mpqjm" path="res://art/final_art/mapsprites/gb_jam_cover_final.png" id="1_j5er2"]
+[ext_resource type="Script" uid="uid://cuiq43ch2xojn" path="res://scenes/NonPlay/start.gd" id="2_5cfxl"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="2_monqm"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5cfxl"]
-texture = ExtResource("1_j5er2")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_monqm"]
 
-[node name="Start" type="Panel" unique_id=1296521852]
-theme_override_styles/panel = SubResource("StyleBoxTexture_5cfxl")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=80592545]
-position = Vector2(72, 72)
-texture = ExtResource("1_j5er2")
-region_enabled = true
-region_rect = Rect2(0, 0, 181, 144)
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=348506061]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" unique_id=348506061]
+offset_right = 160.0
+offset_bottom = 144.0
 texture = ExtResource("1_j5er2")
 expand_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1115690539]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 116.0
+offset_right = 150.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("2_monqm")
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxEmpty_monqm")
+text = "Press Any Button"
+script = ExtResource("2_5cfxl")

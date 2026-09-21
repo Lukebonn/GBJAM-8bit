@@ -4,11 +4,11 @@ const scene_kitchen = preload('res://scenes/kitchen.tscn')
 const scene_world = preload("res://scenes/world.tscn")
 # const scene_bedroom = preload("res://path/to/bedroom.tscn")
 
-var spawn_door_tag
+#var spawn_door_tag
 signal on_trigger_player_spawn
 
 
-func go_to_level(level_tag, destination_tag):
+func go_to_level(level_tag : String, destination_tag: String):
 	var scene_to_load
 	
 	match level_tag:
@@ -18,7 +18,7 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_world
 			
 	if scene_to_load != null:
-		spawn_door_tag = destination_tag
+		#spawn_door_tag = destination_tag
 		get_tree().change_scene_to_packed(scene_to_load)
 
 
