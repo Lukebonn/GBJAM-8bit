@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvlv1t2sq2llb"
-path="res://.godot/imported/old-gold-nugget.png-f920d4b64e2906acd877f12ff8773f1f.ctex"
+uid="uid://bpn833mhte00u"
+path="res://.godot/imported/fireImmunity-pot-01.png-b9abc60f991bb68e416659d4ec2f51d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-nugget.png"
-dest_files=["res://.godot/imported/old-gold-nugget.png-f920d4b64e2906acd877f12ff8773f1f.ctex"]
+source_file="res://art/final_art/item icons/fireImmunity-pot-01.png"
+dest_files=["res://.godot/imported/fireImmunity-pot-01.png-b9abc60f991bb68e416659d4ec2f51d2.ctex"]
 
 [params]
 

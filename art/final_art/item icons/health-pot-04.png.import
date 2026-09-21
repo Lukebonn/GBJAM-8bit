@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cweu85hor0k2"
-path="res://.godot/imported/old-gold-firegrass.png-baacf15e17febdddb641780b23c9ec2a.ctex"
+uid="uid://t1151hn2y3d1"
+path="res://.godot/imported/health-pot-04.png-e4536ecee3289723239a78dc737ca831.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-firegrass.png"
-dest_files=["res://.godot/imported/old-gold-firegrass.png-baacf15e17febdddb641780b23c9ec2a.ctex"]
+source_file="res://art/final_art/item icons/health-pot-04.png"
+dest_files=["res://.godot/imported/health-pot-04.png-e4536ecee3289723239a78dc737ca831.ctex"]
 
 [params]
 

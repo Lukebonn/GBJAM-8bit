@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bih2bqtccxy7o"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_c2ox0"]
+[ext_resource type="Texture2D" uid="uid://bxwpohsdnnwt0" path="res://art/final_art/item icons/trueForm-pot-01.png" id="2_yqqno"]
 
 [resource]
 script = ExtResource("1_c2ox0")
+sprite = ExtResource("2_yqqno")
 ingredient_hierarchy = 5
 name = "True Form"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

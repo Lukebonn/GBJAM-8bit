@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c547ea15ayl48"
-path="res://.godot/imported/old-gold-beetlebulb.png-7ca639f9dc395c33722283588b0d16fc.ctex"
+uid="uid://bq36kwenth3yi"
+path="res://.godot/imported/health-pot-01.png-c90b94374d5071062ea1f1a3e267352b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-beetlebulb.png"
-dest_files=["res://.godot/imported/old-gold-beetlebulb.png-7ca639f9dc395c33722283588b0d16fc.ctex"]
+source_file="res://art/final_art/item icons/health-pot-01.png"
+dest_files=["res://.godot/imported/health-pot-01.png-c90b94374d5071062ea1f1a3e267352b.ctex"]
 
 [params]
 

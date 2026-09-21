@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxd11e5yqw5ju"
-path="res://.godot/imported/old-gold-shroombell.png-926e714daac53655d5d1d604904b98cf.ctex"
+uid="uid://b10pdbsdam3al"
+path="res://.godot/imported/old-gold-spineapple.png-3b2a1cdc6c51246dffa0c4225282f047.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-shroombell.png"
-dest_files=["res://.godot/imported/old-gold-shroombell.png-926e714daac53655d5d1d604904b98cf.ctex"]
+source_file="res://art/final_art/item icons/ingredients/old-gold-spineapple.png"
+dest_files=["res://.godot/imported/old-gold-spineapple.png-3b2a1cdc6c51246dffa0c4225282f047.ctex"]
 
 [params]
 

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://df6hhp8mctwow"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_gwvmr"]
+[ext_resource type="Texture2D" uid="uid://fpwtsp3tp0tu" path="res://art/final_art/item icons/strength-pot-02.png" id="2_2ubrt"]
 
 [resource]
 script = ExtResource("1_gwvmr")
+sprite = ExtResource("2_2ubrt")
 ingredient_hierarchy = 2
 name = "Greater Strength"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://eqtwdte8xtwb"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_ux51l"]
-[ext_resource type="Texture2D" uid="uid://d3mvjh3ugyxon" path="res://art/final_art/item icons/old-gold-vampash.png" id="2_jf62e"]
+[ext_resource type="Texture2D" uid="uid://d3mvjh3ugyxon" path="res://art/final_art/item icons/ingredients/old-gold-vampash.png" id="2_jf62e"]
 
 [resource]
 script = ExtResource("1_ux51l")

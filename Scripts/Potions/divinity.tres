@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://vtcvy8ajtaf2"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_rbrxq"]
+[ext_resource type="Texture2D" uid="uid://d2kuw7ivjen26" path="res://art/final_art/item icons/divinity-pot-01.png" id="2_3i2m2"]
 
 [resource]
 script = ExtResource("1_rbrxq")
+sprite = ExtResource("2_3i2m2")
 ingredient_hierarchy = 5
 name = "divinity"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

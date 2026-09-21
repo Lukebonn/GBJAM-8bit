@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://j5ufpov27d0l"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_yagu7"]
+[ext_resource type="Texture2D" uid="uid://dwy0nx05geusr" path="res://art/final_art/item icons/flying-pot-01.png" id="2_nya3y"]
 
 [resource]
 script = ExtResource("1_yagu7")
+sprite = ExtResource("2_nya3y")
 ingredient_hierarchy = 4
 name = "Flight"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

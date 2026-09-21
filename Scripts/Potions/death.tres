@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://clcbyxhs4tq04"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_l0een"]
+[ext_resource type="Texture2D" uid="uid://2mg4nv65ghhx" path="res://art/final_art/item icons/death-pot-01.png" id="2_0c7ub"]
 
 [resource]
 script = ExtResource("1_l0een")
+sprite = ExtResource("2_0c7ub")
 ingredient_hierarchy = 6
 name = "Death"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

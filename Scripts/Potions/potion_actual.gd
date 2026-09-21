@@ -1,5 +1,5 @@
 extends Node2D
-@export var potion_stats = PotionResource
+@export var potion_stats : PotionResource
 @export var sprite_2d = Sprite2D
 
 @onready var label: Label = $Label

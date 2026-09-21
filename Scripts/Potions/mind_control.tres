@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dg2f084gow545"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_8tb1r"]
+[ext_resource type="Texture2D" uid="uid://bq5et2cph28uy" path="res://art/final_art/item icons/mindControl-pot-01.png" id="2_ustfd"]
 
 [resource]
 script = ExtResource("1_8tb1r")
+sprite = ExtResource("2_ustfd")
 ingredient_hierarchy = 5
 name = "Mind Control"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

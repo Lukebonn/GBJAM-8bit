@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4m6c64c62b7x"
-path="res://.godot/imported/old-gold-moonwater.png-bf856c919df59e81c5f44cc356d2207c.ctex"
+uid="uid://dngr0sy2gthmc"
+path="res://.godot/imported/gigantify-pot-01.png-92e0a9f9c75d015b9cdedd845c11b6c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-moonwater.png"
-dest_files=["res://.godot/imported/old-gold-moonwater.png-bf856c919df59e81c5f44cc356d2207c.ctex"]
+source_file="res://art/final_art/item icons/gigantify-pot-01.png"
+dest_files=["res://.godot/imported/gigantify-pot-01.png-92e0a9f9c75d015b9cdedd845c11b6c6.ctex"]
 
 [params]
 

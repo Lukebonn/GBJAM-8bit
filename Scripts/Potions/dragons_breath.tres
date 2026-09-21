@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dv836em5114rs"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_g28mx"]
+[ext_resource type="Texture2D" uid="uid://pp7cfi3dmrhm" path="res://art/final_art/item icons/dragonsBreath-pot-01.png" id="2_ibk67"]
 
 [resource]
 script = ExtResource("1_g28mx")
+sprite = ExtResource("2_ibk67")
 ingredient_hierarchy = 3
 name = "Dragons Breath"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

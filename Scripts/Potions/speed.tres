@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://ccp3wa72a2rol"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_26b5i"]
+[ext_resource type="Texture2D" uid="uid://dkk6dt11yox8p" path="res://art/final_art/item icons/speed-pot-01.png" id="2_j5uxl"]
 
 [resource]
 script = ExtResource("1_26b5i")
+sprite = ExtResource("2_j5uxl")
 ingredient_hierarchy = 1
 name = "Speed"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

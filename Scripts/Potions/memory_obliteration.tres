@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dllkaiv53veh7"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_7ysov"]
+[ext_resource type="Texture2D" uid="uid://cpoxuafum7t72" path="res://art/final_art/item icons/memoryWipe-pot-01.png" id="2_6qcdo"]
 
 [resource]
 script = ExtResource("1_7ysov")
+sprite = ExtResource("2_6qcdo")
 ingredient_hierarchy = 5
 name = "Memory Obliteration"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

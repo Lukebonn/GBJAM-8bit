@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4eeixrteq5l8"
-path="res://.godot/imported/old-gold-firstbornhair.png-5b79706bac508dd0df267ddc8f849359.ctex"
+uid="uid://bvlv1t2sq2llb"
+path="res://.godot/imported/old-gold-nugget.png-c3727a024cf1f948b7579bb0ecd29caa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-firstbornhair.png"
-dest_files=["res://.godot/imported/old-gold-firstbornhair.png-5b79706bac508dd0df267ddc8f849359.ctex"]
+source_file="res://art/final_art/item icons/ingredients/old-gold-nugget.png"
+dest_files=["res://.godot/imported/old-gold-nugget.png-c3727a024cf1f948b7579bb0ecd29caa.ctex"]
 
 [params]
 

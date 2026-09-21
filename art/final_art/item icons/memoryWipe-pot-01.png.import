@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b10pdbsdam3al"
-path="res://.godot/imported/old-gold-spineapple.png-cedd2d4aa256c81953aa03283f1b2536.ctex"
+uid="uid://cpoxuafum7t72"
+path="res://.godot/imported/memoryWipe-pot-01.png-fbf8270cd29a2130a92c2fd15263e983.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-spineapple.png"
-dest_files=["res://.godot/imported/old-gold-spineapple.png-cedd2d4aa256c81953aa03283f1b2536.ctex"]
+source_file="res://art/final_art/item icons/memoryWipe-pot-01.png"
+dest_files=["res://.godot/imported/memoryWipe-pot-01.png-fbf8270cd29a2130a92c2fd15263e983.ctex"]
 
 [params]
 

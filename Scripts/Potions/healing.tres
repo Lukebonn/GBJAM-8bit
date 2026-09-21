@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://hro4ohc6nyw1"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_4odau"]
+[ext_resource type="Texture2D" uid="uid://d0kjd8ljaex2" path="res://art/final_art/item icons/health-pot-03.png" id="2_7vtup"]
 
 [resource]
 script = ExtResource("1_4odau")
+sprite = ExtResource("2_7vtup")
 ingredient_hierarchy = 2
 name = "healing"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbnasuhu802ge"
-path="res://.godot/imported/old-gold-pixiedust.png-0148c8333c3463941f9605c5c621a706.ctex"
+uid="uid://pp7cfi3dmrhm"
+path="res://.godot/imported/dragonsBreath-pot-01.png-439e527a990d6dd6c5a525b2e5c6f0fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-pixiedust.png"
-dest_files=["res://.godot/imported/old-gold-pixiedust.png-0148c8333c3463941f9605c5c621a706.ctex"]
+source_file="res://art/final_art/item icons/dragonsBreath-pot-01.png"
+dest_files=["res://.godot/imported/dragonsBreath-pot-01.png-439e527a990d6dd6c5a525b2e5c6f0fd.ctex"]
 
 [params]
 

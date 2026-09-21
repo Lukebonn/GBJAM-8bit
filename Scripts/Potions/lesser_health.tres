@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://doc5wjcg3gvoh"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_1bcx5"]
+[ext_resource type="Texture2D" uid="uid://bq36kwenth3yi" path="res://art/final_art/item icons/health-pot-01.png" id="2_p17rr"]
 
 [resource]
 script = ExtResource("1_1bcx5")
+sprite = ExtResource("2_p17rr")
 ingredient_hierarchy = 1
 name = "Lesser Health"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsqqepfesw781"
-path="res://.godot/imported/old-gold-lifeherb.png-c11b96950a51526a46a97566e5740824.ctex"
+uid="uid://1t07q07uwlft"
+path="res://.godot/imported/old-gold-giantstone.png-42db992c7fd5b56fa1941cd095d367e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-lifeherb.png"
-dest_files=["res://.godot/imported/old-gold-lifeherb.png-c11b96950a51526a46a97566e5740824.ctex"]
+source_file="res://art/final_art/item icons/ingredients/old-gold-giantstone.png"
+dest_files=["res://.godot/imported/old-gold-giantstone.png-42db992c7fd5b56fa1941cd095d367e1.ctex"]
 
 [params]
 

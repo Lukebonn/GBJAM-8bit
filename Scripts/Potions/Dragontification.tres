@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://6t30h7ro0owl"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_wt705"]
+[ext_resource type="Texture2D" uid="uid://yfvi5putos4f" path="res://art/final_art/item icons/dragon-pot-01.png" id="2_mvyn0"]
 
 [resource]
 script = ExtResource("1_wt705")
+sprite = ExtResource("2_mvyn0")
 ingredient_hierarchy = 4
 name = "Dragontification"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

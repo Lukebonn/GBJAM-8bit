@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bdsxng0jw02un"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_gby2l"]
-[ext_resource type="Texture2D" uid="uid://dxd11e5yqw5ju" path="res://art/final_art/item icons/old-gold-shroombell.png" id="2_u7drs"]
+[ext_resource type="Texture2D" uid="uid://dxd11e5yqw5ju" path="res://art/final_art/item icons/ingredients/old-gold-shroombell.png" id="2_u7drs"]
 
 [resource]
 script = ExtResource("1_gby2l")

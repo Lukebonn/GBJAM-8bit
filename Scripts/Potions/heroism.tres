@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://c2uo0m36lnp0b"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_mslns"]
+[ext_resource type="Texture2D" uid="uid://mf8o3jmybyc4" path="res://art/final_art/item icons/heroism-pot-01.png" id="2_3eg5d"]
 
 [resource]
 script = ExtResource("1_mslns")
+sprite = ExtResource("2_3eg5d")
 ingredient_hierarchy = 2
 name = "Heroism"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://b8bk7ef10u85y"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_rhq8y"]
+[ext_resource type="Texture2D" uid="uid://fkqbhphxx7db" path="res://art/final_art/item icons/nightsBane-pot-01.png" id="2_l0115"]
 
 [resource]
 script = ExtResource("1_rhq8y")
+sprite = ExtResource("2_l0115")
 ingredient_hierarchy = 2
 name = "Nights Bane"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

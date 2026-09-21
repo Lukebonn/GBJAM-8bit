@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://cqcg1t843omlv"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_wtx5h"]
-[ext_resource type="Texture2D" uid="uid://cpf2g70fskx" path="res://art/final_art/item icons/old-gold-fireroot.png" id="2_3wsb3"]
+[ext_resource type="Texture2D" uid="uid://cpf2g70fskx" path="res://art/final_art/item icons/ingredients/old-gold-fireroot.png" id="2_3wsb3"]
 
 [resource]
 script = ExtResource("1_wtx5h")

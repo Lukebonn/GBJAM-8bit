@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bthqqg2r7abx"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_wfx2l"]
+[ext_resource type="Texture2D" uid="uid://t1151hn2y3d1" path="res://art/final_art/item icons/health-pot-04.png" id="2_h6nw6"]
 
 [resource]
 script = ExtResource("1_wfx2l")
+sprite = ExtResource("2_h6nw6")
 ingredient_hierarchy = 4
 name = "Absolute Healing"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

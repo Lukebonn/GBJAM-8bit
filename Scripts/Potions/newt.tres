@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bbfslhv1j8tqi"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_vgds4"]
+[ext_resource type="Texture2D" uid="uid://cjlwh3awkavf3" path="res://art/final_art/item icons/newt-pot-01.png" id="2_kug8e"]
 
 [resource]
 script = ExtResource("1_vgds4")
+sprite = ExtResource("2_kug8e")
 ingredient_hierarchy = 1
 name = "Newt"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

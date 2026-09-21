@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkdx45bk8vf2g"
-path="res://.godot/imported/old-gold-cherubwart.png-e1927c28d60c1023ecd2c82f58aca4cc.ctex"
+uid="uid://d0kjd8ljaex2"
+path="res://.godot/imported/health-pot-03.png-59a34a95e756f91adf58a467228835df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-cherubwart.png"
-dest_files=["res://.godot/imported/old-gold-cherubwart.png-e1927c28d60c1023ecd2c82f58aca4cc.ctex"]
+source_file="res://art/final_art/item icons/health-pot-03.png"
+dest_files=["res://.godot/imported/health-pot-03.png-59a34a95e756f91adf58a467228835df.ctex"]
 
 [params]
 

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bb42ejjieah0g"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_jfxyc"]
+[ext_resource type="Texture2D" uid="uid://wrf01ltnhvw5" path="res://art/final_art/item icons/invisibility-pot-01.png" id="2_e2tgq"]
 
 [resource]
 script = ExtResource("1_jfxyc")
+sprite = ExtResource("2_e2tgq")
 ingredient_hierarchy = 1
 name = "Invisibility"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

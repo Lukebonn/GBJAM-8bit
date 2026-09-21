@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu7eemkvfh7np"
-path="res://.godot/imported/old-gold-wtcheye.png-b0126ba7e7b57a6420e2446d56fa353a.ctex"
+uid="uid://by16r2fj5omy6"
+path="res://.godot/imported/Immortality-pot-03.png-9efdbb672cba0e6ce186e15b3887b734.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-wtcheye.png"
-dest_files=["res://.godot/imported/old-gold-wtcheye.png-b0126ba7e7b57a6420e2446d56fa353a.ctex"]
+source_file="res://art/final_art/item icons/Immortality-pot-03.png"
+dest_files=["res://.godot/imported/Immortality-pot-03.png-9efdbb672cba0e6ce186e15b3887b734.ctex"]
 
 [params]
 

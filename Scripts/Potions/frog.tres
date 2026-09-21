@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://cenjrapgs1bdm"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_0678o"]
+[ext_resource type="Texture2D" uid="uid://dk4fan43gfl38" path="res://art/final_art/item icons/frog-pot-01.png" id="2_ax1ke"]
 
 [resource]
 script = ExtResource("1_0678o")
+sprite = ExtResource("2_ax1ke")
 ingredient_hierarchy = 2
 name = "Frog"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

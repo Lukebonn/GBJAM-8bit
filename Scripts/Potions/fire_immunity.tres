@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://5cgrsb0das36"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_s6830"]
+[ext_resource type="Texture2D" uid="uid://bpn833mhte00u" path="res://art/final_art/item icons/fireImmunity-pot-01.png" id="2_8de8a"]
 
 [resource]
 script = ExtResource("1_s6830")
+sprite = ExtResource("2_8de8a")
 ingredient_hierarchy = 3
 name = "Fire Immunity"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

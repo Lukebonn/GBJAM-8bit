@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://dpeec3qvmpc1f"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_2q1cq"]
+[ext_resource type="Texture2D" uid="uid://cpwp7d08m2ifh" path="res://art/final_art/item icons/energy-pot-01.png" id="2_0u7ti"]
 
 [resource]
 script = ExtResource("1_2q1cq")
+sprite = ExtResource("2_0u7ti")
 ingredient_hierarchy = 1
 name = "energy"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

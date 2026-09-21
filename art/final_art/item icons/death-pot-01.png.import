@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnkp1w6u5fbeo"
-path="res://.godot/imported/old-gold-rose.png-8b68683013601263a4a8b1fd2946390c.ctex"
+uid="uid://2mg4nv65ghhx"
+path="res://.godot/imported/death-pot-01.png-5705671fe40116368610136a235b0295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-rose.png"
-dest_files=["res://.godot/imported/old-gold-rose.png-8b68683013601263a4a8b1fd2946390c.ctex"]
+source_file="res://art/final_art/item icons/death-pot-01.png"
+dest_files=["res://.godot/imported/death-pot-01.png-5705671fe40116368610136a235b0295.ctex"]
 
 [params]
 

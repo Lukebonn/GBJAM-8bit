@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1t07q07uwlft"
-path="res://.godot/imported/old-gold-giantstone.png-121cdb4a563f3cb140f8d45003931f94.ctex"
+uid="uid://dkk6dt11yox8p"
+path="res://.godot/imported/speed-pot-01.png-5941d3551d3336442ce3118e73441933.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-giantstone.png"
-dest_files=["res://.godot/imported/old-gold-giantstone.png-121cdb4a563f3cb140f8d45003931f94.ctex"]
+source_file="res://art/final_art/item icons/speed-pot-01.png"
+dest_files=["res://.godot/imported/speed-pot-01.png-5941d3551d3336442ce3118e73441933.ctex"]
 
 [params]
 

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://b5fn23x1m5ewu"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_fncex"]
+[ext_resource type="Texture2D" uid="uid://by16r2fj5omy6" path="res://art/final_art/item icons/Immortality-pot-03.png" id="2_pinyc"]
 
 [resource]
 script = ExtResource("1_fncex")
+sprite = ExtResource("2_pinyc")
 ingredient_hierarchy = 7
 name = "Immortality"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"

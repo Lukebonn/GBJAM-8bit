@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3mvjh3ugyxon"
-path="res://.godot/imported/old-gold-vampash.png-a0fcd10fa5ef2f509317f338e572d5d4.ctex"
+uid="uid://uheuoru7wuhn"
+path="res://.godot/imported/old-gold-tritontail.png-4283203d3a3b5005df1b3ce601bb29c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final_art/item icons/old-gold-vampash.png"
-dest_files=["res://.godot/imported/old-gold-vampash.png-a0fcd10fa5ef2f509317f338e572d5d4.ctex"]
+source_file="res://art/final_art/item icons/ingredients/old-gold-tritontail.png"
+dest_files=["res://.godot/imported/old-gold-tritontail.png-4283203d3a3b5005df1b3ce601bb29c7.ctex"]
 
 [params]
 
