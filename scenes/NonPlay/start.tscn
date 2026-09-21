@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ce0chyxxdhtrg"]
+
+[ext_resource type="Texture2D" uid="uid://di84rad4mpqjm" path="res://art/final_art/mapsprites/gb_jam_cover_final.png" id="1_j5er2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5cfxl"]
+texture = ExtResource("1_j5er2")
+
+[node name="Start" type="Panel" unique_id=1296521852]
+theme_override_styles/panel = SubResource("StyleBoxTexture_5cfxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=80592545]
+position = Vector2(72, 72)
+texture = ExtResource("1_j5er2")
+region_enabled = true
+region_rect = Rect2(0, 0, 181, 144)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=348506061]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_j5er2")
+expand_mode = 1
