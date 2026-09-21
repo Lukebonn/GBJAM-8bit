@@ -7,14 +7,16 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		In order to do that however, I need a potion to keep me topped up in battle. 
 		Could you send me a lesser health potion?",
 		POTION: "Lesser Healing",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 10
 	},
 	"The Adventurer 2": {
 		DESCRIPTION: "Thanks for the last potion! Because of you, I got to join a guild. 
 		I have met so many new people already! Some of us want to go into a dungeon to help fight 
 		The Evil that surrounds us. Could you send us a healing potion? Thanks in advance.",
 		POTION: "Healing",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 20
 	},
 	"The Adventurer 3": {
 		DESCRIPTION: "Thank you for the potions! We were able to clear that dungeon thanks to you. 
@@ -22,7 +24,8 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		it’s going to be easy with the lesser healing we have left over, but I’m not so sure. 
 		Can you send a potion of strength, just to be safe?",
 		POTION: "Strength",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 30
 	},
 	"The Adventurer 4": {
 		DESCRIPTION: "I am greatly indebted to you! We were overrun by monsters, 
@@ -30,7 +33,8 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		being targeted by The Evil. Could you send us a potion of greater healing? That should 
 		help us win this fight!",
 		POTION: "Greater Healing",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 40
 	},
 	"The Adventurer 5": {
 		DESCRIPTION: "The guild was destroyed by The Evil. No one survived, 
@@ -39,6 +43,7 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		potion of invincibility? I believe this will be my last fight so let me just say, thank you 
 		for your help and take care of yourself.",
 		POTION: "Invincibility",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 50
 	},
 }

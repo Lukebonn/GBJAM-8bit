@@ -9,7 +9,8 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		rewarded handsomely for your troubles. You don’t have to help me, of course, but I can't 
 		guarantee that your store won’t be targeted if you don’t. Thanks in advance!",
 		POTION: "Greater Healing",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 10
 	},
 	"The Evil 2": {
 		DESCRIPTION: "Wow, I can’t believe you actually sent me those supplies last time! You must be 
@@ -17,13 +18,15 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		flying potion so that my troops may conquer both land and sky? I’ll reward you the same as 
 		last time.",
 		POTION: "Flying",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 20
 	},
 	"The Evil 3": {
 		DESCRIPTION: "My army has never been more efficient! We can truly take over at this rate! 
 		Alchemist! Send me a mind control potion so that my army may grow even stronger.",
 		POTION: "Mind Control",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 30
 	},
 	"The Evil 4": {
 		DESCRIPTION: "You have been of real help lately, you should join my army as my right hand. 
@@ -31,13 +34,15 @@ static var QUESTS_DATA: Dictionary[String, Dictionary] = {
 		Regardless, we are pushing for the (current) ruler’s throne. Send me a potion of omniscience 
 		so that I may lead my army unobstructed.",
 		POTION: "Omnicient",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 40
 	},
 	"The Evil 5": {
 		DESCRIPTION: "I have pushed the ruler to the edge of the cliff. Now, there’s only one last 
 		thing I need to do to guarantee my rule. Make me a Midas potion, then there will be no one 
 		to stop me.",
 		POTION: "Midas",
-		COUNT: 1
+		COUNT: 1,
+		GOLD_REWARD: 50
 	},
 }
