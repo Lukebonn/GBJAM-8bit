@@ -19,7 +19,6 @@
 [ext_resource type="Resource" uid="uid://eqtwdte8xtwb" path="res://Scripts/Ingredients/vampyrs_ash.tres" id="17_r1ngp"]
 [ext_resource type="Resource" uid="uid://bgjrot68mjbpg" path="res://Scripts/Ingredients/wart_of_cherub.tres" id="18_tabjf"]
 [ext_resource type="Resource" uid="uid://qkdgw7vqlh2d" path="res://Scripts/Ingredients/witches_eye.tres" id="19_n7ugj"]
-[ext_resource type="PackedScene" uid="uid://dsqoug05lldhd" path="res://Scripts/Player/player.tscn" id="20_v6kjc"]
 
 [node name="Node2D" type="Node2D" unique_id=1179561258]
 
@@ -108,7 +107,5 @@ potion_stats = ExtResource("18_tabjf")
 [node name="ingredient15" parent="PotionPickups" unique_id=1648261332 instance=ExtResource("4_ef326")]
 position = Vector2(64, 40)
 potion_stats = ExtResource("19_n7ugj")
-
-[node name="Player" parent="." unique_id=1247013026 instance=ExtResource("20_v6kjc")]
 
 [editable path="Door_SW"]
