@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="PotionResource" format=3 uid="uid://bgdlvub131rgc"]
 
 [ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_k8eyt"]
+[ext_resource type="Texture2D" uid="uid://dsqqepfesw781" path="res://art/final_art/item icons/old-gold-lifeherb.png" id="2_fycvw"]
 
 [resource]
 script = ExtResource("1_k8eyt")
 item_category = 1
+sprite = ExtResource("2_fycvw")
 name = "Life Herb"
 metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
