@@ -1,3 +1,4 @@
+class_name Newt
 extends Quests
 
 static var QUESTS_DATA: Dictionary[String, Dictionary] = {

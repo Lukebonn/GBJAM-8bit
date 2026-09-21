@@ -1,3 +1,4 @@
+class_name Evil
 extends Quests
 
 static var QUESTS_DATA: Dictionary[String, Dictionary] = {
