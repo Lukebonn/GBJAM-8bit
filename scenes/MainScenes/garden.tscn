@@ -3,19 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://dhavtmvmh8kpw" path="res://art/final_art/mapsprites/old-gold-garden-01.png" id="1_w4wp5"]
 [ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="2_x0558"]
 [ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="3_vco7g"]
-[ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion1.tscn" id="4_hrvla"]
-[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="5_fit5d"]
-[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="6_mq2g2"]
-[ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_tn4gh"]
-[ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_1cwix"]
-
-[sub_resource type="Resource" id="Resource_p2vl4"]
-script = ExtResource("5_fit5d")
-sprite = ExtResource("6_mq2g2")
-ingredient_hierarchy = 1
-name = "Health Potion "
-description = "Life Herb + Moon Water + Rabbit Root"
-metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
+[ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/ingredient.tscn" id="4_ef326"]
+[ext_resource type="Resource" uid="uid://dpgwkc8stbbxr" path="res://Scripts/Ingredients/beetle_bulb.tres" id="5_mq2g2"]
+[ext_resource type="Resource" uid="uid://bsdjec2ntuxuv" path="res://Scripts/Ingredients/fairy_dust.tres" id="6_80xw0"]
+[ext_resource type="Resource" uid="uid://b67nnx4ojo0bc" path="res://Scripts/Ingredients/firegrass.tres" id="7_k0802"]
+[ext_resource type="Resource" uid="uid://cqcg1t843omlv" path="res://Scripts/Ingredients/fireroot.tres" id="8_v6kjc"]
+[ext_resource type="Resource" uid="uid://py8frxx5mwyk" path="res://Scripts/Ingredients/forbidden_rose.tres" id="9_vc5fk"]
+[ext_resource type="Resource" uid="uid://bfbx5drp4mvxv" path="res://Scripts/Ingredients/giants_stone.tres" id="10_qygb4"]
+[ext_resource type="Resource" uid="uid://drlm2l824fq2f" path="res://Scripts/Ingredients/hair_of_firstborn.tres" id="11_20cn8"]
+[ext_resource type="Resource" uid="uid://bgdlvub131rgc" path="res://Scripts/Ingredients/life_herb.tres" id="12_03cqr"]
+[ext_resource type="Resource" uid="uid://dfsu0asxjbmmp" path="res://Scripts/Ingredients/moon_water.tres" id="13_c20yo"]
+[ext_resource type="Resource" uid="uid://bhibqi3vyrjw3" path="res://Scripts/Ingredients/phoenix_blood.tres" id="14_vsdwl"]
+[ext_resource type="Resource" uid="uid://bdsxng0jw02un" path="res://Scripts/Ingredients/shroom_bell.tres" id="15_edw7m"]
+[ext_resource type="Resource" uid="uid://b3b1luppxp232" path="res://Scripts/Ingredients/spine_apple.tres" id="16_kkek2"]
+[ext_resource type="Resource" uid="uid://eqtwdte8xtwb" path="res://Scripts/Ingredients/vampyrs_ash.tres" id="17_r1ngp"]
+[ext_resource type="Resource" uid="uid://bgjrot68mjbpg" path="res://Scripts/Ingredients/wart_of_cherub.tres" id="18_tabjf"]
+[ext_resource type="Resource" uid="uid://qkdgw7vqlh2d" path="res://Scripts/Ingredients/witches_eye.tres" id="19_n7ugj"]
+[ext_resource type="PackedScene" uid="uid://dsqoug05lldhd" path="res://Scripts/Player/player.tscn" id="20_v6kjc"]
 
 [node name="Node2D" type="Node2D" unique_id=1179561258]
 
@@ -45,20 +49,66 @@ text = "Kitchen"
 
 [node name="PotionPickups" type="Node" parent="." unique_id=37966576]
 
-[node name="HealthPotion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("4_hrvla")]
-position = Vector2(152, 40)
+[node name="ingredient" parent="PotionPickups" unique_id=153120466 instance=ExtResource("4_ef326")]
+position = Vector2(16, 80)
+potion_stats = ExtResource("5_mq2g2")
 
-[node name="HealthPotion2" parent="PotionPickups" unique_id=123476525 instance=ExtResource("4_hrvla")]
-position = Vector2(144, 120)
-potion_stats = SubResource("Resource_p2vl4")
+[node name="ingredient2" parent="PotionPickups" unique_id=1182494325 instance=ExtResource("4_ef326")]
+position = Vector2(16, 64)
+potion_stats = ExtResource("6_80xw0")
 
-[node name="InvisPotion" parent="PotionPickups" unique_id=153120466 instance=ExtResource("7_tn4gh")]
-position = Vector2(32, 112)
+[node name="ingredient3" parent="PotionPickups" unique_id=1032066076 instance=ExtResource("4_ef326")]
+position = Vector2(16, 40)
+potion_stats = ExtResource("7_k0802")
 
-[node name="InvisPotion3" parent="PotionPickups" unique_id=1139236659 instance=ExtResource("7_tn4gh")]
-position = Vector2(32, 80)
+[node name="ingredient4" parent="PotionPickups" unique_id=432380948 instance=ExtResource("4_ef326")]
+position = Vector2(16, 16)
+potion_stats = ExtResource("8_v6kjc")
 
-[node name="SuperHealthPotion" parent="PotionPickups" unique_id=2111680303 instance=ExtResource("8_1cwix")]
-position = Vector2(112, 16)
+[node name="ingredient5" parent="PotionPickups" unique_id=1560672380 instance=ExtResource("4_ef326")]
+position = Vector2(40, 8)
+potion_stats = ExtResource("9_vc5fk")
+
+[node name="ingredient6" parent="PotionPickups" unique_id=1860584764 instance=ExtResource("4_ef326")]
+position = Vector2(136, 56)
+potion_stats = ExtResource("10_qygb4")
+
+[node name="ingredient7" parent="PotionPickups" unique_id=1011216809 instance=ExtResource("4_ef326")]
+position = Vector2(80, 8)
+potion_stats = ExtResource("11_20cn8")
+
+[node name="ingredient8" parent="PotionPickups" unique_id=2083187589 instance=ExtResource("4_ef326")]
+position = Vector2(112, 8)
+potion_stats = ExtResource("12_03cqr")
+
+[node name="ingredient9" parent="PotionPickups" unique_id=630944447 instance=ExtResource("4_ef326")]
+position = Vector2(152, 8)
+potion_stats = ExtResource("13_c20yo")
+
+[node name="ingredient10" parent="PotionPickups" unique_id=1059110610 instance=ExtResource("4_ef326")]
+position = Vector2(152, 32)
+potion_stats = ExtResource("14_vsdwl")
+
+[node name="ingredient11" parent="PotionPickups" unique_id=2006923909 instance=ExtResource("4_ef326")]
+position = Vector2(152, 80)
+potion_stats = ExtResource("15_edw7m")
+
+[node name="ingredient12" parent="PotionPickups" unique_id=1048884548 instance=ExtResource("4_ef326")]
+position = Vector2(136, 96)
+potion_stats = ExtResource("16_kkek2")
+
+[node name="ingredient13" parent="PotionPickups" unique_id=1574399481 instance=ExtResource("4_ef326")]
+position = Vector2(120, 32)
+potion_stats = ExtResource("17_r1ngp")
+
+[node name="ingredient14" parent="PotionPickups" unique_id=961712452 instance=ExtResource("4_ef326")]
+position = Vector2(152, 104)
+potion_stats = ExtResource("18_tabjf")
+
+[node name="ingredient15" parent="PotionPickups" unique_id=1648261332 instance=ExtResource("4_ef326")]
+position = Vector2(64, 40)
+potion_stats = ExtResource("19_n7ugj")
+
+[node name="Player" parent="." unique_id=1247013026 instance=ExtResource("20_v6kjc")]
 
 [editable path="Door_SW"]

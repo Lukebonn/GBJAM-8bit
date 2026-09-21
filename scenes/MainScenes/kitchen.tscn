@@ -5,11 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dsqoug05lldhd" path="res://Scripts/Player/player.tscn" id="3_8jid5"]
 [ext_resource type="PackedScene" uid="uid://cbkjxxojnodg2" path="res://objects/crafting_ui.tscn" id="4_6y12q"]
 [ext_resource type="PackedScene" uid="uid://ch6uotmy1wrxf" path="res://UI/Inventory/inventory.tscn" id="5_gf31d"]
-[ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion1.tscn" id="6_xeibd"]
-[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="7_6y12q"]
-[ext_resource type="PackedScene" uid="uid://4nj4o4mb1tm2" path="res://objects/potions/potion2.tscn" id="7_amw7w"]
-[ext_resource type="PackedScene" uid="uid://bohvbn2p0xrb2" path="res://objects/potions/potion3.tscn" id="8_3e70u"]
-[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="8_gf31d"]
+[ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion.tscn" id="6_xeibd"]
+[ext_resource type="Resource" uid="uid://bbfslhv1j8tqi" path="res://Scripts/Potions/newt.tres" id="7_8jid5"]
+[ext_resource type="Resource" uid="uid://bapnikljh5f7i" path="res://Scripts/Potions/midas_touch.tres" id="8_6y12q"]
 [ext_resource type="AudioStream" uid="uid://csse8xrm5xkw2" path="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3" id="9_vkb6d"]
 [ext_resource type="PackedScene" uid="uid://bxva2wu42ture" path="res://objects/inventory_stash_station.tscn" id="10_po357"]
 [ext_resource type="PackedScene" uid="uid://oxa1m1qhcbkf" path="res://objects/potion_craft_station.tscn" id="11_b42l8"]
@@ -18,8 +16,8 @@
 [ext_resource type="Resource" uid="uid://cxihpbboqwux5" path="res://objects/Recipes/invisibility_potion.tres" id="14_lfyek"]
 [ext_resource type="Resource" uid="uid://bx26jc3bjsw2a" path="res://objects/Recipes/super_health_potion_recipe.tres" id="15_11dgw"]
 [ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="16_5weih"]
-[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="17_c1aq1"]
 [ext_resource type="AudioStream" uid="uid://kkwvpnp7n67f" path="res://audio/Item_Fanfare.wav" id="17_acu1m"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="17_c1aq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y12q"]
 size = Vector2(20, 28)
@@ -28,14 +26,6 @@ size = Vector2(20, 28)
 size = Vector2(42, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeibd"]
-
-[sub_resource type="Resource" id="Resource_xeibd"]
-script = ExtResource("7_6y12q")
-sprite = ExtResource("8_gf31d")
-ingredient_hierarchy = 1
-name = "Health Potion "
-description = "Life Herb + Moon Water + Rabbit Root"
-metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
 
 [node name="Kitchen" type="Node2D" unique_id=1289256332]
 script = ExtResource("1_e0lbf")
@@ -74,21 +64,13 @@ visible = false
 
 [node name="PotionPickups" type="Node" parent="." unique_id=142006575]
 
-[node name="HealthPotion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("6_xeibd")]
-position = Vector2(152, 40)
-potion_stats = SubResource("Resource_xeibd")
+[node name="Potion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("6_xeibd")]
+position = Vector2(53, 52)
+potion_stats = ExtResource("7_8jid5")
 
-[node name="HealthPotion2" parent="PotionPickups" unique_id=1879218576 instance=ExtResource("6_xeibd")]
-position = Vector2(144, 120)
-
-[node name="InvisPotion" parent="PotionPickups" unique_id=153120466 instance=ExtResource("7_amw7w")]
-position = Vector2(32, 112)
-
-[node name="InvisPotion3" parent="PotionPickups" unique_id=591445578 instance=ExtResource("7_amw7w")]
-position = Vector2(32, 80)
-
-[node name="SuperHealthPotion" parent="PotionPickups" unique_id=2111680303 instance=ExtResource("8_3e70u")]
-position = Vector2(112, 16)
+[node name="Potion2" parent="PotionPickups" unique_id=1298395796 instance=ExtResource("6_xeibd")]
+position = Vector2(91, 53)
+potion_stats = ExtResource("8_6y12q")
 
 [node name="theme" type="AudioStreamPlayer2D" parent="." unique_id=1178990755]
 unique_name_in_owner = true
@@ -203,7 +185,7 @@ position = Vector2(0, 10)
 
 [node name="Door_SE" parent="Doors" unique_id=367883436 instance=ExtResource("16_5weih")]
 position = Vector2(144, 122)
-destination_level_tag = "world"
+destination_level_tag = "garden"
 destination_door_tag = "W"
 spawn_direction = "right"
 

@@ -15,6 +15,10 @@ func set_recipe_item_data(ItemData : PotionResource, StackSize : int) -> void:
 	sprite_2d.texture = ItemData.sprite
 	label.text = str(StackSize)
 	item_quantity = StackSize
+	if potion_held.item_category == potion_held.Item_Category.INGREDIENT:
+		sprite_2d.scale = Vector2(1.0, 1.0)
+	elif potion_held.item_category == potion_held.Item_Category.POTION:
+		sprite_2d.scale = Vector2(0.08, 0.08)
 
 func increase_item_quantity(amount_to_add):
 	item_quantity += amount_to_add

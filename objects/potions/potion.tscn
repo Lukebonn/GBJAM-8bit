@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://cpjnwjxvilulc"]
 
-[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_nh0yc"]
-[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="2_wyy6j"]
-[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="3_tdcet"]
+[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_o266d"]
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="2_sq06j"]
+[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="3_rfrog"]
+[ext_resource type="Texture2D" uid="uid://c3cri5fxthpri" path="res://art/final_art/item icons/antidote-pot-01.png" id="4_ggc65"]
 
 [sub_resource type="Resource" id="Resource_xmfuu"]
-script = ExtResource("2_wyy6j")
-sprite = ExtResource("3_tdcet")
+script = ExtResource("2_sq06j")
+sprite = ExtResource("3_rfrog")
 ingredient_hierarchy = 1
 name = "Health Potion "
 description = "Life Herb + Moon Water + Rabbit Root"
@@ -15,16 +16,16 @@ metadata/_custom_type_script = "uid://fg2mnxgwlbg8"
 [sub_resource type="CircleShape2D" id="CircleShape2D_nh0yc"]
 radius = 18.0
 
-[node name="HealthPotion" type="Node2D" unique_id=797666612 node_paths=PackedStringArray("sprite_2d")]
+[node name="Potion" type="Node2D" unique_id=797666612 node_paths=PackedStringArray("sprite_2d")]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_nh0yc")
+script = ExtResource("1_o266d")
 potion_stats = SubResource("Resource_xmfuu")
 sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
 unique_name_in_owner = true
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_tdcet")
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("4_ggc65")
 
 [node name="Label" type="Label" parent="." unique_id=1319244245]
 offset_left = 5.9999995

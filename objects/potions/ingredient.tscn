@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://4nj4o4mb1tm2"]
 
-[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_6bmhd"]
-[ext_resource type="Resource" uid="uid://668iag3bfa2p" path="res://objects/resources/invisibility_potion.tres" id="2_6bmhd"]
-[ext_resource type="Texture2D" uid="uid://jjrevmmym0qe" path="res://art/temp_art/Potions/8.png" id="3_8mb28"]
+[ext_resource type="Script" uid="uid://b003lkrb8yexy" path="res://Scripts/Potions/potion_actual.gd" id="1_hdkkv"]
+[ext_resource type="Resource" uid="uid://668iag3bfa2p" path="res://objects/resources/invisibility_potion.tres" id="2_64q1m"]
+[ext_resource type="Texture2D" uid="uid://c547ea15ayl48" path="res://art/final_art/item icons/ingredients/old-gold-beetlebulb.png" id="3_hdkkv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mb28"]
 radius = 18.0
 
-[node name="InvisPotion" type="Node2D" unique_id=153120466 node_paths=PackedStringArray("sprite_2d")]
+[node name="ingredient" type="Node2D" unique_id=153120466 node_paths=PackedStringArray("sprite_2d")]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_6bmhd")
-potion_stats = ExtResource("2_6bmhd")
+script = ExtResource("1_hdkkv")
+potion_stats = ExtResource("2_64q1m")
 sprite_2d = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281396966]
 unique_name_in_owner = true
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_8mb28")
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("3_hdkkv")
 
 [node name="Label" type="Label" parent="." unique_id=1603451411]
 offset_left = 5.9999995

@@ -102,7 +102,12 @@ func _on_potion_pickup(item : PotionResource) -> void:
 	standing_on_potion = true
 	sprite_2d.texture = item.sprite
 	inventory_potion = item
-
+	if inventory_potion.item_category == inventory_potion.Item_Category.INGREDIENT:
+		sprite_2d.scale = Vector2(1.0, 1.0)
+		sprite_2d.position = Vector2(0.0, -12.0)
+	elif inventory_potion.item_category == inventory_potion.Item_Category.POTION:
+		sprite_2d.scale = Vector2(0.1, 0.1)
+		sprite_2d.position = Vector2(-5.0, -14.0)
 func _on_potion_dropped(item : PotionResource) -> void:
 	sprite_2d.texture = null
 	inventory_potion = null

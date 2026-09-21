@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcfjuejx5icwr" path="res://Scripts/Player/PlayerMovement.gd" id="1_0s4r2"]
 [ext_resource type="Texture2D" uid="uid://dita0f7vnxx1r" path="res://art/final_art/old-gold-player.png" id="2_ejydr"]
-[ext_resource type="Texture2D" uid="uid://b3sgrfy55b3qe" path="res://art/temp_art/Potions/1.png" id="3_ejydr"]
+[ext_resource type="Texture2D" uid="uid://c3cri5fxthpri" path="res://art/final_art/item icons/antidote-pot-01.png" id="3_ejydr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ea7v2"]
 atlas = ExtResource("2_ejydr")
@@ -255,6 +255,9 @@ position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_2dxtk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=280257226]
-position = Vector2(0, -7.9999995)
-scale = Vector2(0.2, 0.2)
+unique_name_in_owner = true
+position = Vector2(-5, -14)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_ejydr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1528984132]
