@@ -9,6 +9,8 @@ extends CharacterBody2D
 #node to add potion objects to
 @onready var potion_pickups: Node = $"../PotionPickups"
 const POTION_1 = preload("uid://cpjnwjxvilulc")
+@onready var hud: HUD = $"../CanvasLayer/HUD"
+@onready var hud_label: Label = $"../CanvasLayer/HUD/Control/Label"
 
 @export var speed = 50
 
@@ -25,6 +27,8 @@ func _ready() -> void:
 	SignalBus.item_dropped.connect(_on_potion_dropped)
 	sprite_2d.texture = null
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	if hud:
+		hud.hide()
 	
 	
 func _on_spawn(spawn_position: Vector2, direction: String):
@@ -36,6 +40,11 @@ func _process(delta: float) -> void:
 	move_and_slide();
 	player_movement();
 	player_rotate();
+	if inventory_potion:
+		hud.show()
+		hud_label.text = inventory_potion.name
+	else:
+		hud.hide()
 
 func player_movement():
 	input_dir = Input.get_vector("left", "right", "up", "down")

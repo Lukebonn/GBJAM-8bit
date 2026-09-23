@@ -32,7 +32,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o05ws")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
-text = "Luke Bonniwell"
+text = "Jacob"
 
 [node name="TextEdit3" type="TextEdit" parent="." unique_id=1705752816]
 layout_mode = 0
@@ -43,7 +43,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o05ws")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
-text = "Luke Bonniwell"
+text = "Ted"
 
 [node name="TextEdit4" type="TextEdit" parent="." unique_id=1181107907]
 layout_mode = 0
@@ -54,7 +54,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o05ws")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
-text = "Luke Bonniwell"
+text = "codPSaid"
 
 [node name="TextEdit5" type="TextEdit" parent="." unique_id=1536040622]
 layout_mode = 0
@@ -65,7 +65,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o05ws")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
-text = "Luke Bonniwell"
+text = "Thatcher Bonniwell"
 
 [node name="TextEdit6" type="TextEdit" parent="." unique_id=694039149]
 layout_mode = 0
@@ -76,4 +76,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_o05ws")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
-text = "Luke Bonniwell"
+text = "Micheal Santillan"
+
+[node name="TextEdit7" type="TextEdit" parent="." unique_id=219960990]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 160.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o05ws")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wslpc")
+text = "Stella Taylor"

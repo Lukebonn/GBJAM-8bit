@@ -9,20 +9,20 @@ extends Area2D
 @onready var inventory: InventoryComponent = %Inventory
 @onready var label: Label = $Label
 
-@onready var item_crafted: CanvasLayer = $ItemCrafted
+@onready var item_crafted: Control = $ItemCrafted
 @onready var panel: Panel = $ItemCrafted/Panel
 @onready var slot_1: InventorySlot = $ItemCrafted/Slot1
 
-@onready var one_ingredient_ui: CanvasLayer = $OneIngredientUI
+@onready var one_ingredient_ui: Control = $OneIngredientUI
 @onready var panel_2: Panel = $OneIngredientUI/Panel2
 @onready var slot_2: InventorySlot = $OneIngredientUI/Slot2
 
-@onready var two_ingredient_ui: CanvasLayer = $TwoIngredientUI
+@onready var two_ingredient_ui: Control = $TwoIngredientUI
 @onready var panel_3: Panel = $TwoIngredientUI/Panel3
 @onready var slot_3: InventorySlot = $TwoIngredientUI/Slot3
 @onready var slot_4: InventorySlot = $TwoIngredientUI/Slot4
 
-@onready var three_ingredient_ui: CanvasLayer = $ThreeIngredientUI
+@onready var three_ingredient_ui: Control = $ThreeIngredientUI
 @onready var panel_4: Panel = $ThreeIngredientUI/Panel4
 @onready var slot_5: InventorySlot = $ThreeIngredientUI/Slot5
 @onready var slot_6: InventorySlot = $ThreeIngredientUI/Slot6
@@ -32,7 +32,8 @@ extends Area2D
 @onready var audio = $AudioStreamPlayer
 
 
-const POTION_1 = preload("uid://cpjnwjxvilulc")
+const POTION = preload("uid://cpjnwjxvilulc")
+const INGREDIENT = preload("uid://4nj4o4mb1tm2")
 @onready var potion_pickups: Node = $"../../PotionPickups"
 
 var crafting_item_pickup : PotionResource
@@ -131,7 +132,11 @@ func _unhandled_input(event : InputEvent) -> void:
 				print("sound played")
 				SignalBus.item_pickup
 	elif event.is_action_pressed("GB_SELECT") and not is_interactable and player.inventory_potion:
-		var new_potion = POTION_1.instantiate()
+		var new_potion
+		if player.inventory_potion.item_category == player.inventory_potion.Item_Category.INGREDIENT:
+			new_potion = INGREDIENT.instantiate()
+		else:
+			new_potion = POTION.instantiate()
 		potion_pickups.add_child(new_potion)
 		new_potion.create_instantiated_potion(player.global_position, player.inventory_potion)
 		player.sprite_2d.texture = null

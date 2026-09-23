@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GBJAM-8bit"
-run/main_scene="uid://b0d3n42osuvky"
+run/main_scene="uid://ce0chyxxdhtrg"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,9 +25,8 @@ NavigationManager="*uid://c11y7tilampyg"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/size/window_width_override=800
-window/size/window_height_override=720
-window/stretch/scale=5.0
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [input]
 

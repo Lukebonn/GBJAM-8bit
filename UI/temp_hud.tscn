@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bhl3kcq3yjplo"]
+
+[ext_resource type="Script" uid="uid://br50ea7uhkos1" path="res://UI/hud.gd" id="1_r536q"]
+[ext_resource type="Texture2D" uid="uid://p3h5o3wqra7q" path="res://art/final_art/ui/pause menu/inventory/menu inv slot a.png" id="2_aiyrf"]
+[ext_resource type="FontFile" uid="uid://dgov6lt2otnti" path="res://art/final_art/ZeldaOracles.ttf" id="4_pa0q6"]
+[ext_resource type="Texture2D" uid="uid://bhqy8md78io8x" path="res://art/final_art/ui/pause menu/header/menu icon inv.png" id="5_ax35y"]
+[ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="5_r536q"]
+
+[node name="HUD" type="CanvasLayer" unique_id=91761680]
+script = ExtResource("1_r536q")
+
+[node name="Control" type="Control" parent="." unique_id=1411312363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1134255078]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(1, 0.89411765, 0.6509804, 1)
+
+[node name="SlotA" type="TextureRect" parent="Control" unique_id=1207167348]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 23.0
+offset_bottom = 145.0
+texture = ExtResource("2_aiyrf")
+
+[node name="SlotA2" type="TextureRect" parent="Control" unique_id=8683601]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 135.0
+offset_bottom = 145.0
+texture = ExtResource("2_aiyrf")
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=1600641016]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -16.0
+offset_right = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(1, 0.89411765, 0.6509804, 1)
+
+[node name="GoldLabel" type="Label" parent="Control" unique_id=425451623]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 127.0
+offset_right = 160.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("4_pa0q6")
+theme_override_font_sizes/font_size = 8
+text = "100 G"
+horizontal_alignment = 2
+
+[node name="PotionIcon" type="TextureRect" parent="Control" unique_id=377419412]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 136.0
+offset_right = 160.0
+offset_bottom = 144.0
+texture = ExtResource("5_ax35y")
+
+[node name="PotionLabel" type="Label" parent="Control" unique_id=1965970483]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 135.0
+offset_right = 152.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0, 0, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("4_pa0q6")
+theme_override_font_sizes/font_size = 8
+text = "002"
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=1992017351]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 128.0
+offset_right = 130.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_r536q")
+theme_override_font_sizes/font_size = 10
+text = "Mind Obliteration"
+vertical_alignment = 1

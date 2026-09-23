@@ -1,9 +1,42 @@
 [gd_scene format=3 uid="uid://oxa1m1qhcbkf"]
 
 [ext_resource type="Script" uid="uid://ctnmhmbwljdy5" path="res://objects/potion_craft_station.gd" id="1_kw2fn"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="2_08exx"]
 [ext_resource type="Texture2D" uid="uid://ci68o8nsevkba" path="res://art/temp_art/KenneyTinyDungeon/Tiles/tile_0074.png" id="2_jy0cu"]
 [ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="3_7w3vv"]
+[ext_resource type="Resource" uid="uid://cay7f3r7a3hdl" path="res://Scripts/Recipes/absolute_health_recipe.tres" id="3_kxivq"]
+[ext_resource type="Resource" uid="uid://cvsc0rjcd0ijd" path="res://Scripts/Recipes/antidote_recipe.tres" id="4_3ia0n"]
 [ext_resource type="PackedScene" uid="uid://cxlu5hbkm7cpp" path="res://UI/Inventory/inventory_slot.tscn" id="4_7w3vv"]
+[ext_resource type="Resource" uid="uid://c0yu7o2iyax3n" path="res://Scripts/Recipes/death_recipe.tres" id="5_4l2pn"]
+[ext_resource type="Resource" uid="uid://ckyo3ja5rles2" path="res://Scripts/Recipes/divinity_recipe.tres" id="6_pvghw"]
+[ext_resource type="Resource" uid="uid://cgwlnq2pe3dd3" path="res://Scripts/Recipes/dragantification_recipe.tres" id="7_qanq0"]
+[ext_resource type="Resource" uid="uid://3vy7lfynlysh" path="res://Scripts/Recipes/dragons_breath_recipe.tres" id="8_r2kp2"]
+[ext_resource type="Resource" uid="uid://7gsujb1xdet0" path="res://Scripts/Recipes/earth_recipe.tres" id="9_2n6j4"]
+[ext_resource type="Resource" uid="uid://bb1psma3xutvo" path="res://Scripts/Recipes/energy_recipe.tres" id="10_ji38s"]
+[ext_resource type="Resource" uid="uid://7ayvbrsbn6ue" path="res://Scripts/Recipes/fire_immunity_recipe.tres" id="11_6rmwk"]
+[ext_resource type="Resource" uid="uid://budhbolfqinhj" path="res://Scripts/Recipes/flight_recipe.tres" id="12_t24sa"]
+[ext_resource type="Resource" uid="uid://cgdnhcf40i5ko" path="res://Scripts/Recipes/frog_recipe.tres" id="13_7kbvc"]
+[ext_resource type="Resource" uid="uid://bly4s5b8tcbsv" path="res://Scripts/Recipes/gigantify_recipe.tres" id="14_41mae"]
+[ext_resource type="Resource" uid="uid://cqp35ebw81f22" path="res://Scripts/Recipes/greater_health_recipe.tres" id="15_up43s"]
+[ext_resource type="Resource" uid="uid://dwlkxthqioymr" path="res://Scripts/Recipes/greater_strength_recipe.tres" id="16_ppr1j"]
+[ext_resource type="Resource" uid="uid://ce25vhuiqrcuc" path="res://Scripts/Recipes/health_recipe.tres" id="17_8uacy"]
+[ext_resource type="Resource" uid="uid://b3lfx25fq4d6b" path="res://Scripts/Recipes/heroism_recipe.tres" id="18_s42di"]
+[ext_resource type="Resource" uid="uid://wusp1yqlddxx" path="res://Scripts/Recipes/immortality_recipe.tres" id="19_ls7mq"]
+[ext_resource type="Resource" uid="uid://22lclitkd0sx" path="res://Scripts/Recipes/invincibility_recipe.tres" id="20_7nmng"]
+[ext_resource type="Resource" uid="uid://cs1bk76npt1b6" path="res://Scripts/Recipes/lesser_health_potion_recipe.tres" id="21_g0emk"]
+[ext_resource type="Resource" uid="uid://nnvug0benorb" path="res://Scripts/Recipes/love_antidote_recipe.tres" id="22_6wwlt"]
+[ext_resource type="Resource" uid="uid://cvw2u0vj7du2q" path="res://Scripts/Recipes/love_recipe.tres" id="23_fbr0l"]
+[ext_resource type="Resource" uid="uid://boyfdpnflwr6m" path="res://Scripts/Recipes/memory_obliteration_recipe.tres" id="24_eh04c"]
+[ext_resource type="Resource" uid="uid://d0dv0ee3iv0wv" path="res://Scripts/Recipes/midas_touch_recipe.tres" id="25_mmhhl"]
+[ext_resource type="Resource" uid="uid://dfnk0e5nen40n" path="res://Scripts/Recipes/mind_control_recipe.tres" id="26_luuf7"]
+[ext_resource type="Resource" uid="uid://7ls817fycf77" path="res://Scripts/Recipes/newt_recipe.tres" id="27_fm5el"]
+[ext_resource type="Resource" uid="uid://djess2flk8ie5" path="res://Scripts/Recipes/nights_bane_recipe.tres" id="28_1sug0"]
+[ext_resource type="Resource" uid="uid://dfylxvebucq78" path="res://Scripts/Recipes/omnipotence_recipe.tres" id="29_oa3tm"]
+[ext_resource type="Resource" uid="uid://c0bg6euukktki" path="res://Scripts/Recipes/poison_recipe.tres" id="30_qqwwn"]
+[ext_resource type="Resource" uid="uid://d2e7aeb3ggkle" path="res://Scripts/Recipes/speed_recipe.tres" id="31_jayqv"]
+[ext_resource type="Resource" uid="uid://bip72nnms4y2v" path="res://Scripts/Recipes/telepath_recipe.tres" id="32_vl8xl"]
+[ext_resource type="Resource" uid="uid://blnquw2sbior5" path="res://Scripts/Recipes/tongues_recipe.tres" id="33_u8kdb"]
+[ext_resource type="Resource" uid="uid://c32wefc72prl3" path="res://Scripts/Recipes/true_form_recipe.tres" id="34_a8ms6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w3vv"]
 size = Vector2(23, 36)
@@ -24,6 +57,7 @@ corner_detail = 5
 
 [node name="PotionCraftStation" type="Area2D" unique_id=966884031]
 script = ExtResource("1_kw2fn")
+recipe_array = Array[ExtResource("2_08exx")]([ExtResource("3_kxivq"), ExtResource("4_3ia0n"), ExtResource("5_4l2pn"), ExtResource("6_pvghw"), ExtResource("7_qanq0"), ExtResource("8_r2kp2"), ExtResource("9_2n6j4"), ExtResource("10_ji38s"), ExtResource("11_6rmwk"), ExtResource("12_t24sa"), ExtResource("13_7kbvc"), ExtResource("14_41mae"), ExtResource("15_up43s"), ExtResource("16_ppr1j"), ExtResource("17_8uacy"), ExtResource("18_s42di"), ExtResource("19_ls7mq"), ExtResource("20_7nmng"), ExtResource("21_g0emk"), ExtResource("22_6wwlt"), ExtResource("23_fbr0l"), ExtResource("24_eh04c"), ExtResource("25_mmhhl"), ExtResource("26_luuf7"), ExtResource("27_fm5el"), ExtResource("28_1sug0"), ExtResource("29_oa3tm"), ExtResource("30_qqwwn"), ExtResource("31_jayqv"), ExtResource("32_vl8xl"), ExtResource("33_u8kdb"), ExtResource("34_a8ms6")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156503912]
 position = Vector2(0.5, -6)
@@ -42,9 +76,14 @@ theme_override_fonts/font = ExtResource("3_7w3vv")
 theme_override_font_sizes/font_size = 7
 text = "Not enough ingredients"
 
-[node name="ItemCrafted" type="CanvasLayer" parent="." unique_id=143678723]
+[node name="ItemCrafted" type="Control" parent="." unique_id=1058520888]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="ItemCrafted" unique_id=149769469]
+layout_mode = 0
 offset_left = -10.0
 offset_top = -23.0
 offset_right = 10.0
@@ -53,14 +92,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_7w3vv")
 
 [node name="Slot1" parent="ItemCrafted" unique_id=1629741074 instance=ExtResource("4_7w3vv")]
 custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
 offset_left = -9.0
 offset_top = -25.0
 offset_right = 9.0
 offset_bottom = -7.0
 
-[node name="OneIngredientUI" type="CanvasLayer" parent="." unique_id=162201243]
+[node name="OneIngredientUI" type="Control" parent="." unique_id=1762328945]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Panel2" type="Panel" parent="OneIngredientUI" unique_id=684221105]
+layout_mode = 0
 offset_left = -10.0
 offset_top = -23.0
 offset_right = 10.0
@@ -69,14 +114,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
 
 [node name="Slot2" parent="OneIngredientUI" unique_id=2141691236 instance=ExtResource("4_7w3vv")]
 custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
 offset_left = -9.0
 offset_top = -25.0
 offset_right = 9.0
 offset_bottom = -7.0
 
-[node name="TwoIngredientUI" type="CanvasLayer" parent="." unique_id=1798651957]
+[node name="TwoIngredientUI" type="Control" parent="." unique_id=1087947741]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Panel3" type="Panel" parent="TwoIngredientUI" unique_id=285811047]
+layout_mode = 0
 offset_left = -12.0
 offset_top = -23.0
 offset_right = 13.0
@@ -85,42 +136,52 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
 
 [node name="Slot3" parent="TwoIngredientUI" unique_id=197959471 instance=ExtResource("4_7w3vv")]
 custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
 offset_left = -18.0
 offset_top = -25.0
 offset_bottom = -7.0
 
 [node name="Slot4" parent="TwoIngredientUI" unique_id=537870948 instance=ExtResource("4_7w3vv")]
 custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
 offset_top = -25.0
 offset_right = 18.0
 offset_bottom = -7.0
 
-[node name="ThreeIngredientUI" type="CanvasLayer" parent="." unique_id=220556398]
+[node name="ThreeIngredientUI" type="Control" parent="." unique_id=231638862]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Panel4" type="Panel" parent="ThreeIngredientUI" unique_id=157668829]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -95.0
+offset_left = -35.0
 offset_top = -23.0
-offset_right = -65.0
+offset_right = -5.0
 offset_bottom = -8.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4f58w")
 
 [node name="Slot5" parent="ThreeIngredientUI" unique_id=1250574718 instance=ExtResource("4_7w3vv")]
+layout_mode = 0
 offset_left = -27.0
 offset_top = -25.0
 offset_right = -9.0
 offset_bottom = -7.0
 
 [node name="Slot6" parent="ThreeIngredientUI" unique_id=536104633 instance=ExtResource("4_7w3vv")]
+layout_mode = 0
 offset_left = -9.0
 offset_top = -25.0
 offset_right = 9.0
 offset_bottom = -7.0
 
 [node name="Slot7" parent="ThreeIngredientUI" unique_id=601805661 instance=ExtResource("4_7w3vv")]
+layout_mode = 0
 offset_left = 9.0
 offset_top = -25.0
 offset_right = 27.0

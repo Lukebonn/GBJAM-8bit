@@ -8,16 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://cbkjxxojnodg2" path="res://objects/crafting_ui.tscn" id="4_6y12q"]
 [ext_resource type="PackedScene" uid="uid://ch6uotmy1wrxf" path="res://UI/Inventory/inventory.tscn" id="5_gf31d"]
 [ext_resource type="PackedScene" uid="uid://cpjnwjxvilulc" path="res://objects/potions/potion.tscn" id="6_xeibd"]
-[ext_resource type="Resource" uid="uid://bbfslhv1j8tqi" path="res://Scripts/Potions/newt.tres" id="7_8jid5"]
 [ext_resource type="Resource" uid="uid://bapnikljh5f7i" path="res://Scripts/Potions/midas_touch.tres" id="8_6y12q"]
-[ext_resource type="AudioStream" uid="uid://csse8xrm5xkw2" path="res://art/temp_art/Mission Impossible III - Michael Giacchino - Schifrin And Variations.mp3" id="9_vkb6d"]
+[ext_resource type="Resource" uid="uid://dpgwkc8stbbxr" path="res://Scripts/Ingredients/beetle_bulb.tres" id="9_k6wm8"]
 [ext_resource type="PackedScene" uid="uid://bxva2wu42ture" path="res://objects/inventory_stash_station.tscn" id="10_po357"]
 [ext_resource type="PackedScene" uid="uid://oxa1m1qhcbkf" path="res://objects/potion_craft_station.tscn" id="11_b42l8"]
 [ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="12_hxx5u"]
 [ext_resource type="Resource" uid="uid://cay7f3r7a3hdl" path="res://Scripts/Recipes/absolute_health_recipe.tres" id="15_k6wm8"]
 [ext_resource type="PackedScene" uid="uid://bejxwatnal3lf" path="res://scenes/door.tscn" id="16_5weih"]
 [ext_resource type="Resource" uid="uid://cvsc0rjcd0ijd" path="res://Scripts/Recipes/antidote_recipe.tres" id="16_6m5r3"]
-[ext_resource type="AudioStream" uid="uid://kkwvpnp7n67f" path="res://audio/Item_Fanfare.wav" id="17_acu1m"]
+[ext_resource type="PackedScene" uid="uid://bhl3kcq3yjplo" path="res://UI/temp_hud.tscn" id="16_e0lbf"]
 [ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="17_c1aq1"]
 [ext_resource type="Resource" uid="uid://c0yu7o2iyax3n" path="res://Scripts/Recipes/death_recipe.tres" id="17_pbu6o"]
 [ext_resource type="Resource" uid="uid://ckyo3ja5rles2" path="res://Scripts/Recipes/divinity_recipe.tres" id="18_nqb6a"]
@@ -31,14 +30,11 @@
 [ext_resource type="Resource" uid="uid://bly4s5b8tcbsv" path="res://Scripts/Recipes/gigantify_recipe.tres" id="26_l8oga"]
 [ext_resource type="Resource" uid="uid://cqp35ebw81f22" path="res://Scripts/Recipes/greater_health_recipe.tres" id="27_ji8dt"]
 [ext_resource type="Resource" uid="uid://dwlkxthqioymr" path="res://Scripts/Recipes/greater_strength_recipe.tres" id="28_px1v0"]
-[ext_resource type="Resource" uid="uid://bgkn6cwh4tiy0" path="res://Scripts/Recipes/health_potion.tres" id="29_ve1t6"]
 [ext_resource type="Resource" uid="uid://ce25vhuiqrcuc" path="res://Scripts/Recipes/health_recipe.tres" id="30_5o0yp"]
 [ext_resource type="Resource" uid="uid://b3lfx25fq4d6b" path="res://Scripts/Recipes/heroism_recipe.tres" id="31_at664"]
 [ext_resource type="Resource" uid="uid://wusp1yqlddxx" path="res://Scripts/Recipes/immortality_recipe.tres" id="32_i4sod"]
 [ext_resource type="Resource" uid="uid://22lclitkd0sx" path="res://Scripts/Recipes/invincibility_recipe.tres" id="33_tw7xt"]
-[ext_resource type="Resource" uid="uid://b5gjhx704a01p" path="res://Scripts/Recipes/invisibility.tres" id="34_bwrtx"]
 [ext_resource type="Resource" uid="uid://cs1bk76npt1b6" path="res://Scripts/Recipes/lesser_health_potion_recipe.tres" id="35_7fxwq"]
-[ext_resource type="Resource" uid="uid://66a81u8jl4dr" path="res://Scripts/Recipes/love_antidote.tres" id="36_lwk8p"]
 [ext_resource type="Resource" uid="uid://nnvug0benorb" path="res://Scripts/Recipes/love_antidote_recipe.tres" id="37_fnest"]
 [ext_resource type="Resource" uid="uid://cvw2u0vj7du2q" path="res://Scripts/Recipes/love_recipe.tres" id="38_120bu"]
 [ext_resource type="Resource" uid="uid://boyfdpnflwr6m" path="res://Scripts/Recipes/memory_obliteration_recipe.tres" id="39_wfqli"]
@@ -49,6 +45,7 @@
 [ext_resource type="Resource" uid="uid://dfylxvebucq78" path="res://Scripts/Recipes/omnipotence_recipe.tres" id="44_wceha"]
 [ext_resource type="Resource" uid="uid://c0bg6euukktki" path="res://Scripts/Recipes/poison_recipe.tres" id="45_pt0je"]
 [ext_resource type="Resource" uid="uid://d2e7aeb3ggkle" path="res://Scripts/Recipes/speed_recipe.tres" id="46_jqned"]
+[ext_resource type="Resource" uid="uid://ddxg7vn1siagt" path="res://Scripts/Recipes/strength_recipe.tres" id="47_sr4xj"]
 [ext_resource type="Resource" uid="uid://bip72nnms4y2v" path="res://Scripts/Recipes/telepath_recipe.tres" id="47_x58jv"]
 [ext_resource type="Resource" uid="uid://blnquw2sbior5" path="res://Scripts/Recipes/tongues_recipe.tres" id="48_08mra"]
 [ext_resource type="Resource" uid="uid://c32wefc72prl3" path="res://Scripts/Recipes/true_form_recipe.tres" id="49_nwm2y"]
@@ -60,6 +57,42 @@ size = Vector2(20, 28)
 size = Vector2(42, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeibd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0lbf"]
+size = Vector2(25, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1aq1"]
+size = Vector2(6, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jid5"]
+size = Vector2(41, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amw7w"]
+size = Vector2(140, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3e70u"]
+size = Vector2(35, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkb6d"]
+size = Vector2(22, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po357"]
+size = Vector2(5, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b42l8"]
+size = Vector2(143, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxx5u"]
+size = Vector2(159, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1n7ff"]
+size = Vector2(4, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfyek"]
+size = Vector2(161, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11dgw"]
+size = Vector2(5, 101)
 
 [node name="Kitchen" type="Node2D" unique_id=1289256332]
 script = ExtResource("1_e0lbf")
@@ -143,6 +176,54 @@ shape = SubResource("RectangleShape2D_gf31d")
 position = Vector2(-52, -41)
 shape = SubResource("RectangleShape2D_xeibd")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=438523240]
+position = Vector2(-17.5, 12)
+shape = SubResource("RectangleShape2D_e0lbf")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1864738363]
+position = Vector2(-72, 12.5)
+shape = SubResource("RectangleShape2D_c1aq1")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1329992863]
+position = Vector2(-49.5, 14.5)
+shape = SubResource("RectangleShape2D_8jid5")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1453838283]
+position = Vector2(0, 64.5)
+shape = SubResource("RectangleShape2D_amw7w")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1337832429]
+position = Vector2(-0.5, -40)
+shape = SubResource("RectangleShape2D_3e70u")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=145466854]
+position = Vector2(28, -50)
+shape = SubResource("RectangleShape2D_vkb6d")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1542236536]
+position = Vector2(67.5, -16)
+shape = SubResource("RectangleShape2D_po357")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=229513436]
+position = Vector2(-1, 64.5)
+shape = SubResource("RectangleShape2D_b42l8")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=118876372]
+position = Vector2(159.5, 69.5)
+shape = SubResource("RectangleShape2D_hxx5u")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=2035292861]
+position = Vector2(243, 0)
+shape = SubResource("RectangleShape2D_1n7ff")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1605297931]
+position = Vector2(160.5, -71.5)
+shape = SubResource("RectangleShape2D_lfyek")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=257185195]
+position = Vector2(78.5, -19.5)
+shape = SubResource("RectangleShape2D_11dgw")
+
 [node name="Player" parent="." unique_id=1247013026 instance=ExtResource("3_8jid5")]
 unique_name_in_owner = true
 position = Vector2(128, 56)
@@ -161,108 +242,26 @@ visible = false
 
 [node name="Potion" parent="PotionPickups" unique_id=797666612 instance=ExtResource("6_xeibd")]
 position = Vector2(53, 52)
-potion_stats = ExtResource("7_8jid5")
+potion_stats = ExtResource("9_k6wm8")
 
 [node name="Potion2" parent="PotionPickups" unique_id=1298395796 instance=ExtResource("6_xeibd")]
 position = Vector2(91, 53)
 potion_stats = ExtResource("8_6y12q")
-
-[node name="theme" type="AudioStreamPlayer2D" parent="." unique_id=1178990755]
-unique_name_in_owner = true
-stream = ExtResource("9_vkb6d")
-parameters/looping = true
 
 [node name="Stations" type="Node" parent="." unique_id=1595047793]
 
 [node name="InventoryStashStation" parent="Stations" unique_id=1416888601 instance=ExtResource("10_po357")]
 position = Vector2(80, 128)
 
+[node name="Sprite2D" parent="Stations/InventoryStashStation" index="1" unique_id=192352988]
+visible = false
+
 [node name="PotionCraftStation" parent="Stations" unique_id=966884031 instance=ExtResource("11_b42l8")]
-position = Vector2(91, 81)
-recipe_array = Array[ExtResource("12_hxx5u")]([ExtResource("15_k6wm8"), ExtResource("16_6m5r3"), ExtResource("17_pbu6o"), ExtResource("18_nqb6a"), ExtResource("19_w04tw"), ExtResource("20_me48f"), ExtResource("21_pbad5"), ExtResource("22_qwrjv"), ExtResource("23_1g12t"), ExtResource("24_3vof7"), ExtResource("25_vdyxm"), ExtResource("26_l8oga"), ExtResource("27_ji8dt"), ExtResource("28_px1v0"), ExtResource("29_ve1t6"), ExtResource("30_5o0yp"), ExtResource("31_at664"), ExtResource("32_i4sod"), ExtResource("33_tw7xt"), ExtResource("34_bwrtx"), ExtResource("35_7fxwq"), ExtResource("36_lwk8p"), ExtResource("37_fnest"), ExtResource("38_120bu"), ExtResource("39_wfqli"), ExtResource("40_id1uj"), ExtResource("41_ug2tm"), ExtResource("42_p60ce"), ExtResource("43_o52ag"), ExtResource("44_wceha"), ExtResource("45_pt0je"), ExtResource("46_jqned"), ExtResource("47_x58jv"), ExtResource("48_08mra"), ExtResource("49_nwm2y")])
+position = Vector2(96, 80)
+recipe_array = Array[ExtResource("12_hxx5u")]([ExtResource("15_k6wm8"), ExtResource("16_6m5r3"), ExtResource("17_pbu6o"), ExtResource("18_nqb6a"), ExtResource("19_w04tw"), ExtResource("20_me48f"), ExtResource("21_pbad5"), ExtResource("22_qwrjv"), ExtResource("23_1g12t"), ExtResource("24_3vof7"), ExtResource("25_vdyxm"), ExtResource("26_l8oga"), ExtResource("27_ji8dt"), ExtResource("28_px1v0"), ExtResource("30_5o0yp"), ExtResource("31_at664"), ExtResource("32_i4sod"), ExtResource("33_tw7xt"), ExtResource("35_7fxwq"), ExtResource("37_fnest"), ExtResource("38_120bu"), ExtResource("39_wfqli"), ExtResource("40_id1uj"), ExtResource("41_ug2tm"), ExtResource("42_p60ce"), ExtResource("43_o52ag"), ExtResource("44_wceha"), ExtResource("45_pt0je"), ExtResource("46_jqned"), ExtResource("47_x58jv"), ExtResource("48_08mra"), ExtResource("49_nwm2y"), ExtResource("47_sr4xj")])
 
 [node name="Label" parent="Stations/PotionCraftStation" index="2" unique_id=1999802068]
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel" parent="Stations/PotionCraftStation/ItemCrafted" parent_id_path=PackedInt32Array(966884031, 143678723) index="0" unique_id=149769469]
-offset_left = 81.0
-offset_top = 58.0
-offset_right = 101.0
-offset_bottom = 73.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot1" parent="Stations/PotionCraftStation/ItemCrafted" parent_id_path=PackedInt32Array(966884031, 143678723) index="1" unique_id=1629741074]
-offset_left = 82.0
-offset_top = 56.0
-offset_right = 100.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel2" parent="Stations/PotionCraftStation/OneIngredientUI" parent_id_path=PackedInt32Array(966884031, 162201243) index="0" unique_id=684221105]
-offset_left = 81.0
-offset_top = 58.0
-offset_right = 101.0
-offset_bottom = 73.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot2" parent="Stations/PotionCraftStation/OneIngredientUI" parent_id_path=PackedInt32Array(966884031, 162201243) index="1" unique_id=2141691236]
-offset_left = 82.0
-offset_top = 56.0
-offset_right = 100.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel3" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="0" unique_id=285811047]
-offset_left = 79.0
-offset_top = 58.0
-offset_right = 104.0
-offset_bottom = 73.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot3" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="1" unique_id=197959471]
-offset_left = 73.0
-offset_top = 56.0
-offset_right = 91.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot4" parent="Stations/PotionCraftStation/TwoIngredientUI" parent_id_path=PackedInt32Array(966884031, 1798651957) index="2" unique_id=537870948]
-offset_left = 91.0
-offset_top = 56.0
-offset_right = 109.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel4" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="0" unique_id=157668829]
-offset_left = -4.0
-offset_top = 58.0
-offset_right = 26.0
-offset_bottom = 73.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot5" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="1" unique_id=1250574718]
-offset_left = 64.0
-offset_top = 56.0
-offset_right = 82.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot6" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="2" unique_id=536104633]
-offset_left = 82.0
-offset_top = 56.0
-offset_right = 100.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot7" parent="Stations/PotionCraftStation/ThreeIngredientUI" parent_id_path=PackedInt32Array(966884031, 220556398) index="3" unique_id=601805661]
-offset_left = 100.0
-offset_top = 56.0
-offset_right = 118.0
-offset_bottom = 74.0
-metadata/_edit_use_anchors_ = true
-
-[node name="ItemPickup" type="AudioStreamPlayer" parent="Stations/PotionCraftStation" unique_id=485368768]
-stream = ExtResource("17_acu1m")
+text = ""
 
 [node name="Doors" type="Node" parent="." unique_id=2074049798]
 
@@ -312,8 +311,15 @@ theme_override_font_sizes/font_size = 5
 text = "Garden
 "
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1730439411]
+
+[node name="HUD" parent="CanvasLayer" unique_id=91761680 instance=ExtResource("16_e0lbf")]
+visible = false
+
 [editable path="Garden"]
 [editable path="Garden/Door_SW"]
+[editable path="Stations/InventoryStashStation"]
 [editable path="Stations/PotionCraftStation"]
 [editable path="Doors/Door_NE"]
 [editable path="Doors/Door_SE"]
+[editable path="CanvasLayer/HUD"]

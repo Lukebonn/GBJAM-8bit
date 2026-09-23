@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" format=3 uid="uid://ddxg7vn1siagt"]
+
+[ext_resource type="Script" uid="uid://fg2mnxgwlbg8" path="res://Scripts/Potions/potion_resource.gd" id="1_si60t"]
+[ext_resource type="Resource" uid="uid://dpgwkc8stbbxr" path="res://Scripts/Ingredients/beetle_bulb.tres" id="2_3b0fw"]
+[ext_resource type="Resource" uid="uid://b67nnx4ojo0bc" path="res://Scripts/Ingredients/firegrass.tres" id="3_2h0k1"]
+[ext_resource type="Resource" uid="uid://bxtmibpg3ym5r" path="res://Scripts/Potions/strength.tres" id="4_petp7"]
+[ext_resource type="Script" uid="uid://khehtvgm40y8" path="res://objects/Recipes/ItemRecipes.gd" id="5_mv77o"]
+
+[resource]
+script = ExtResource("5_mv77o")
+recipe_name = "Strength"
+recipe_output = ExtResource("4_petp7")
+recipe_material_array = Array[ExtResource("1_si60t")]([ExtResource("2_3b0fw"), ExtResource("3_2h0k1")])
+metadata/_custom_type_script = "uid://khehtvgm40y8"

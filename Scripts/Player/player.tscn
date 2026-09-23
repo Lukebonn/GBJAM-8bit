@@ -260,4 +260,4 @@ position = Vector2(-5, -14)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_ejydr")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=308303094]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1124127514]
