@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var theme: AudioStreamPlayer2D = %theme
 @onready var player: PlayerEntity = %Player
 @onready var camera: Camera2D = $Player/Camera2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 const SCREEN_SIZE := Vector2(160, 144)
 const SCROLL_TIME := 0.6 
@@ -13,13 +13,13 @@ var scrolling := false
 var exits := {}
 
 func _ready() -> void:
-	#theme.play()sssss
 
 	camera.top_level = true
 	camera.anchor_mode = Camera2D.ANCHOR_MODE_FIXED_TOP_LEFT   
 	camera.position_smoothing_enabled = false
 	camera.global_position = Vector2.ZERO                
-
+	
+	audio_stream_player_2d.play()
 	
 	_register_exit($Doors/Door_SE, Vector2.RIGHT)   
 	_register_exit($Garden/Door_SW, Vector2.LEFT)   

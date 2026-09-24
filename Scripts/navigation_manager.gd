@@ -1,6 +1,6 @@
 extends Node
 
-const scene_kitchen = preload('res://scenes/kitchen.tscn')
+const scene_kitchen = preload("uid://b0d3n42osuvky")
 const scene_world = preload("res://scenes/world.tscn")
 const CREDITS = preload("uid://dhj70bvf5lsbu")
 const GARDEN = preload("uid://3c2sqxyv1ik3")
@@ -9,7 +9,6 @@ const GARDEN = preload("uid://3c2sqxyv1ik3")
 
 #var spawn_door_tag
 signal on_trigger_player_spawn
-
 
 func go_to_level(level_tag : String, destination_tag: String):
 	var scene_to_load

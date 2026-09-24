@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://di84rad4mpqjm" path="res://art/final_art/mapsprites/gb_jam_cover_final.png" id="1_j5er2"]
 [ext_resource type="Script" uid="uid://cuiq43ch2xojn" path="res://scenes/NonPlay/start.gd" id="2_5cfxl"]
 [ext_resource type="FontFile" uid="uid://dtrybqlonylbs" path="res://art/final_art/ZeldaDXTTBRK.ttf" id="2_monqm"]
+[ext_resource type="AudioStream" uid="uid://ht04mtfwr8ye" path="res://audio/Medieval_Title_Screen.wav" id="4_1uuqn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_monqm"]
 
@@ -23,3 +24,7 @@ theme_override_font_sizes/font_size = 9
 theme_override_styles/normal = SubResource("StyleBoxEmpty_monqm")
 text = "Press Any Button"
 script = ExtResource("2_5cfxl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1867037411]
+stream = ExtResource("4_1uuqn")
+playback_type = 1

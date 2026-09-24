@@ -49,6 +49,7 @@
 [ext_resource type="Resource" uid="uid://bip72nnms4y2v" path="res://Scripts/Recipes/telepath_recipe.tres" id="47_x58jv"]
 [ext_resource type="Resource" uid="uid://blnquw2sbior5" path="res://Scripts/Recipes/tongues_recipe.tres" id="48_08mra"]
 [ext_resource type="Resource" uid="uid://c32wefc72prl3" path="res://Scripts/Recipes/true_form_recipe.tres" id="49_nwm2y"]
+[ext_resource type="AudioStream" uid="uid://bbjhasqmgs25j" path="res://audio/Medieval_Game_Main_Theme.wav" id="50_sr4xj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y12q"]
 size = Vector2(20, 28)
@@ -314,7 +315,9 @@ text = "Garden
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1730439411]
 
 [node name="HUD" parent="CanvasLayer" unique_id=91761680 instance=ExtResource("16_e0lbf")]
-visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1395249756]
+stream = ExtResource("50_sr4xj")
 
 [editable path="Garden"]
 [editable path="Garden/Door_SW"]
