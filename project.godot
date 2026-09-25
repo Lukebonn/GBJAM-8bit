@@ -25,7 +25,7 @@ NavigationManager="*uid://c11y7tilampyg"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [input]
